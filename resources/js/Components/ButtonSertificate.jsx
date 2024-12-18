@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const ButtonViewCertificate = ({ userName, status }) => {
     const handleViewCertificate = () => {
-        const folderId = '1R9Q3GWaLoUIKSWwN8S6K_BwuNSfd39tt';
+        const folderId = '1ZB5s7k-z7zGTftP87u2M_tjjOZCkyEtw';
         const searchUrl = `https://drive.google.com/drive/u/0/folders/${folderId}?q=${encodeURIComponent(
-            `${userName}.png`
+            `${userName}.jpg`
         )}`;
         window.open(searchUrl, '_blank');
     };
