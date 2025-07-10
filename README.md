@@ -4,7 +4,7 @@ This is the website for Basic Understanding In Learning & Developing It managed 
 This website is a revamp website from the [BUILD IT 2024 Website](https://github.com/Build-IT-ML/Build-IT)
 
 ## GET STARTED
-1. Clone this
+1. Clone this repository
 2. Run ```npm install``` and ```composer install```
 3. Setup .env file and run  ```php artisan key: generate```
 4. Run ```php artisan migrate``` if there's a migration
