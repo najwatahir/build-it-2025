@@ -1,4 +1,7 @@
 # BUILD IT 2025 WEBSITE
+This is the website for Basic Understanding In Learning & Developing It managed by Himpunan Mahasiswa Teknologi Informasi Universitas Udayana 2025.
+
+This website is a revamp website from the [BUILD IT 2024 Website](https://github.com/Build-IT-ML/Build-IT)
 
 ## GET STARTED
 1. Clone this
@@ -17,8 +20,11 @@ example: feat: create about section
 
 ## List of commit message types:
 1. feat: create new feature, page, section, or component
-2. fix: bug fix
-3. docs: documentation change
-4. style: code styling, typo, semicolons
-5. refactor: variable renaming, optimizing, etc.
-6. chore: grunt tasks (config, tidying up. anything that doesn't affect end-user)
+2. update: updating previous feature/page
+3. fix: bug fix
+4. docs: documentation change
+5. style: code styling, typo, semicolons
+6. refactor: variable renaming, optimizing, etc.
+7. chore: grunt tasks (config, tidying up. anything that doesn't affect end-user)
+8. api: change API endpoints
+9. db: database schema or migration
