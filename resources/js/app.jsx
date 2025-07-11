@@ -9,7 +9,7 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/primereact.min.css';
 import { PrimeReactProvider } from "primereact/api";
 import Tailwind from 'primereact/passthrough/tailwind';
-import '@fontsource/poppins';
+import "@fontsource/montserrat";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import DisableInspect from './Utils/disableInspect';
