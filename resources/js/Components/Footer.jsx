@@ -64,7 +64,7 @@ export default function Footer() {
                     </p>
                     <div className="social-media mt-10 flex items-center space-x-3 relative bottom-0">
                         <a
-                            className="flex items-center"
+                            className="text-[#201349] flex items-center "
                             href="https://www.instagram.com/hmtiudayana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                             target="_blank"
                             rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export default function Footer() {
                             INSTAGRAM
                         </a>
                         <a
-                            className="flex items-center"
+                            className="text-[#201349] flex items-center"
                             href="https://www.tiktok.com/@hmtiudayana?_t=8oS3HHpAO92&_r=1"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export default function Footer() {
                             TIKTOK
                         </a>
                         <a
-                            className="flex items-center"
+                            className="text-[#201349] flex items-center"
                             href="https://www.facebook.com/HMTIUdayana/?locale=id_ID"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function Footer() {
                             FACEBOOK
                         </a>
                         <a
-                            className="flex items-center"
+                            className="text-[#201349] flex items-center"
                             href="https://www.youtube.com/@hmtiuniversitasudayana2028"
                             target="_blank"
                             rel="noopener noreferrer"
