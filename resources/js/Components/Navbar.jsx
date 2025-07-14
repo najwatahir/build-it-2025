@@ -4,7 +4,7 @@ import ApplicationLogo from "./AplicationLogo";
 import { IconUser } from "./Icons/LandingPage";
 
 export default function Navbar() {
-    const { auth } = usePage().props; // Mendapatkan data auth dari Inertia props
+    const { auth } = usePage().props;
     const [show, setIsShow] = useState(false);
     const [showNav, setIsShowNav] = useState(false);
     const [scrolled, setIsScrolled] = useState(false);

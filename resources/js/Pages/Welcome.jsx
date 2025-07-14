@@ -258,52 +258,39 @@ export default function Welcome() {
                         </div>
                     </div>
 
-                    {/* 3 card */}
-                    <div className="px-6 md:px-24 py-10 bg-gradient-to-t from-secondary to-primary flex flex-col md:flex-row justify-between gap-5 h-full md:h-max z-50">
-                        <div
-                            className="bg-white w-full h-max md:w-[420px] md:h-[288px] rounded-[10px] p-10 flex flex-col transition-transform transform hover:scale-105 active:scale-110"
-                            data-aos="fade-right"
+                    {/* Sponsor*/}
+                    <div
+                        className="mt-24 sm:mt-32 text-center"
+                        data-aos="fade-up"
+                        data-aos-delay="900"
+                    >
+                        <h3
+                            className="font-[Montserrat] font-bold text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
+               tracking-[2px]"
+                            style={{ fontSize: "clamp(1.125rem, 2vw, 1.5rem)" }}
                         >
-                            <IconHouseOffline />
-                            <div className="divider h-[2px] w-[50px] bg-primary mt-3"></div>
-                            <p className="mt-3 font-bold text-[16px] leading-[24px] tracking-[0.01em]">
-                                3 Pelatihan Tatap Muka
-                            </p>
-                            <p className="text-[#737373] mt-3 font-normal text-[14px] leading-[20px] tracking-[0.02em] w-full">
-                                Membantu mahasiswa baru memahami mata kuliah
-                                dasar di perkuliahan seperti Algoritma &
-                                Pemrograman, Basis Data, dan Jaringan Komputer &
-                                Komunikasi
-                            </p>
-                        </div>
+                            OUR SPONSOR
+                        </h3>
+                    </div>
+                    <div className="relative w-full px-0 mt-4 overflow-hidden">
                         <div
-                            className="bg-white w-full h-max md:w-[420px] md:h-[288px] rounded-[10px] p-10 flex flex-col transition-transform transform hover:scale-105 active:scale-110"
-                            data-aos="fade-up"
+                            className="relative w-full max-w-7xl mx-auto h-[180px] sm:h-[200px] flex items-center justify-center rounded-2xl shadow-md"
+                            style={{
+                                background:
+                                    "linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 25%, #ffffff 75%, rgba(255,255,255,0) 100%)",
+                            }}
                         >
-                            <IconBookSharing />
-                            <div className="divider h-[2px] w-[50px] bg-primary mt-3"></div>
-                            <p className="mt-3 font-bold text-[16px] leading-[24px] tracking-[0.01em]">
-                                Sosialisasi Lomba & Penjurusan
-                            </p>
-                            <p className="text-[#737373] mt-3 font-normal text-[14px] leading-[20px] tracking-[0.02em]">
-                                Sosialisasi ini akan dipandu oleh dosen dan
-                                mahasiswa Teknologi Informasi
-                            </p>
-                        </div>
-                        <div
-                            className="bg-white w-full h-max md:w-[420px] md:h-[288px] rounded-[10px] p-10 flex flex-col transition-transform transform hover:scale-105 active:scale-110"
-                            data-aos="fade-left"
-                        >
-                            <IconHumanSharing />
-                            <div className="divider h-[2px] w-[50px] bg-primary mt-3"></div>
-                            <p className="mt-3 font-bold text-[16px] leading-[24px] tracking-[0.01em]">
-                                Sharing Session Hacktiv8
-                            </p>
-                            <p className="text-[#737373] mt-3 font-normal text-[14px] leading-[20px] tracking-[0.02em]">
-                                Akan ada sharing session bersama Hacktiv8 yang
-                                merupakan pelatihan coding bootcamp terbaik di
-                                Indonesia.
-                            </p>
+                            <div className="absolute left-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
+                            <div className="absolute right-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
+                            <div
+                                className="w-full max-w-[403px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
+                                data-aos="fade-up"
+                                data-aos-delay="900"
+                                style={{
+                                    backgroundImage:
+                                        "url('../asset/images/sponsor.png')",
+                                }}
+                            ></div>
                         </div>
                     </div>
 
