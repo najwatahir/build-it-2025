@@ -783,6 +783,7 @@ const MerchPopup = ({ isOpen, onClose }) => {
                     </a>
                 </div>
             </div>
+            
         </div>
     );
 };
