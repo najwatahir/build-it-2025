@@ -117,7 +117,7 @@ export default function Navbar() {
                 <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <a href="/#Contact">Contact</a>
                 </li>
-                <li className="hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <a href="/#Merch">Merchandise</a>
                 </li>
                 <li>
