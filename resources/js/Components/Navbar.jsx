@@ -63,15 +63,15 @@ export default function Navbar() {
                     !showNav ? "hidden" : "flex"
                 } flex-col justify-center md:w-max-content rounded bg-white top-20 left-12 right-12 border border-gray-300 py-6 px-4 md:px-12 space-y-3 absolute shadow text-#000 z-10 md:flex md:relative md:flex-row md:items-center md:top-0 md:space-y-0 md:space-x-6 md:left-0 md:right-0 md:py-0 md:border-none md:shadow-none`}
             >
-                <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <Link href={route("Welcome")}>Home</Link>
                 </li>
-                <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <a href="/#About">About</a>
                 </li>
                 <li className="space-x-1 relative" ref={dropdownRef}>
                     <div
-                        className="flex flex-row gap-1 cursor-pointer transition-all duration-300 hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-3"
+                        className="flex font-montserrat flex-row gap-1 cursor-pointer transition-all duration-300 hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-3"
                         onClick={showDropDown}
                     >
                         <a href="#">Modul</a>
@@ -81,7 +81,7 @@ export default function Navbar() {
                             } mt-1`}
                         ></i>
                     </div>
-                    <ul>
+                    <ul className="font-montserrat">
                         <li
                             className={`md:absolute bg-white mt-3 p-2 min-w-max shadow-none md:shadow-md border-none md:border-[1px] hover:text-primary border-gray-200 rounded flex-col space-y-2 transition-all duration-300 ${
                                 !show ? "hidden" : "flex"
@@ -111,13 +111,13 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </li>
-                <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <a href="/#Faq">FAQ</a>
                 </li>
-                <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <a href="/#Contact">Contact</a>
                 </li>
-                <li className="hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <a href="/#Merch">Merchandise</a>
                 </li>
                 <li>

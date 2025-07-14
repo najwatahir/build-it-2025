@@ -59,10 +59,11 @@ export default function Footer() {
                         BUILD IT'25
                     </h5>
 
-                    <p className="font-medium capitalize mt-5 w-auto md:w-[450px] my-4 text-[#333] font-[Montserrat] text-base leading-none tracking-[1.6px]">
-                        Master the basics, Unlock your IT Superpower
+                    <p className="font-medium capitalize mt-5 w-auto md:w-[450px] my-4 text-[#333] font-montserrat text-base leading-none tracking-[1.6px]">
+                        Master the basics, <br className="mb-2" /> Unlock your
+                        IT Superpower
                     </p>
-                    <div className="social-media mt-10 flex items-center space-x-3 relative bottom-0">
+                    <div className="social-media font-montserrat mt-10 flex items-center space-x-3 relative bottom-0">
                         <a
                             className="text-[#201349] flex items-center "
                             href="https://www.instagram.com/hmtiudayana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -97,7 +98,7 @@ export default function Footer() {
                         </a>
                     </div>
                 </aside>
-                <nav className="w-full relative z-10 md:w-1/4">
+                <nav className="w-full relative z-10 md:w-1/4 font-montserrat">
                     <h5 className="font-bold text-2xl text-[#201349] mb-4">
                         Quick Links
                     </h5>
@@ -132,7 +133,7 @@ export default function Footer() {
                         </a>
                     </div>
                 </nav>
-                <nav className="w-full relative z-10 md:w-1/5 items-end">
+                <nav className="w-full relative z-10 md:w-1/5 items-end font-montserrat">
                     <h5 className="font-bold text-2xl text-[#201349] mb-4">
                         Modul Pelatihan
                     </h5>
