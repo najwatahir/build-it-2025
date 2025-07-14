@@ -260,9 +260,9 @@ export default function Welcome() {
 
                     {/* Sponsor*/}
                     <div
-                        className="mt-24 sm:mt-32 text-center"
+                        className="mt-80 sm:mt-92 lg:mt-100 text-center"
                         data-aos="fade-up"
-                        data-aos-delay="900"
+                        data-aos-delay="500"
                     >
                         <h3
                             className="font-[Montserrat] font-bold text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
@@ -291,6 +291,58 @@ export default function Welcome() {
                                         "url('../asset/images/sponsor.png')",
                                 }}
                             ></div>
+                        </div>
+                    </div>
+
+                    {/* 3 Card event  */}
+                    <div
+                        className="mt-16 px-4 sm:px-8 max-w-7xl mx-auto"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                    >
+                        <div
+                            className="absolute inset-0 flex justify-center z-0"
+                            aria-hidden="true"
+                        >
+                            <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[550px] bg-[rgba(81,62,152,0.12)] rounded-[1198px] blur-[80px] z-0"></div>
+                        </div>
+
+                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-20">
+                            {/* Card 1 */}
+                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
+                                    3 Pelatihan tatap muka
+                                </h4>
+                                <p className="pl-8 text-sm text-gray-600 text-balance">
+                                    Membantu mahasiswa baru memahami mata kuliah
+                                    dasar di perkuliahan seperti Algoritma &
+                                    Pemrograman, Basis Data, dan Jaringan
+                                    Komputer & Komunikasi
+                                </p>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className=" bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
+                                    Sosialisasi Lomba & penjurusan
+                                </h4>
+                                <p className="pl-8 text-sm text-gray-600 text-balance">
+                                    Sosialisasi ini akan dipandu oleh dosen dan
+                                    mahasiswa Teknologi Informasi
+                                </p>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
+                                    Sharing Session Hacktiv8
+                                </h4>
+                                <p className="pl-8 text-sm text-gray-600 text-balance">
+                                    Akan ada sharing session bersama Hacktiv8
+                                    yang merupakan pelatihan coding bootcamp
+                                    terbaik di Indonesia.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
