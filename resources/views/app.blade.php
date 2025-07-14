@@ -17,11 +17,11 @@
     <meta property="og:instagram" content="">
 
     <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('asset/images/navbar-logo.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('asset/images/faicon-76x76.png') }}">
     <!-- Regular Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('asset/images/navbar-logo.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('asset/images/faicon-32x32.png') }}">
     <!-- Large Favicon -->
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('asset/images/navbar-logo.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('asset/images/faicon-96x96.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
