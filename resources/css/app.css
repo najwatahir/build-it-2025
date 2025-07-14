@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Varsity';
+  src: url("/public/asset/fonts/varsity_regular.ttf");
+}
+
+@theme {
+  --font-varsity: Varsity, "sans-serif"
+}
+
 .transform-style-preserve-3d {
   transform-style: preserve-3d;
 }

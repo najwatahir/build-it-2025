@@ -17,6 +17,10 @@ export default {
                     "sans-serif",
                     ...defaultTheme.fontFamily.sans,
                 ],
+                varsity: [
+                    "Varsity",
+                    "sans-serif"
+                ],
             },
             colors: {
                 primary: "#513E99",
