@@ -53,7 +53,7 @@ export default function Footer() {
                                 "linear-gradient(90deg, #201349 0%, #513E99 100%)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
-                            fontFamily: '"Varsity Regular"',
+                            fontFamily: "Varsity",
                         }}
                     >
                         BUILD IT'25
