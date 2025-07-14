@@ -38,10 +38,16 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="px-6 py-12 md:px-24 space-y-10 md:space-y-0 text-#808080  flex flex-wrap justify-between">
-                <aside className="w-full relative md:w-2/4">
+            <footer
+                className="relative overflow-hidden px-6 py-12 md:px-24 space-y-10 md:space-y-0 text-#808080  flex flex-wrap justify-between"
+                style={{
+                    backgroundImage: `linear-gradient(0deg, rgba(255, 255, 255, 0.00) 20%, #FFF 100%), linear-gradient(0deg, rgba(81, 62, 152, 0.01) 0%, rgba(32, 19, 73, 0.05) 100%)`,
+                    boxShadow: `inset 0px 3px 20px rgba(0, 0, 0, 0.05)`,
+                }}
+            >
+                <aside className="w-full relative z-10 md:w-2/4">
                     <h5
-                        className="text-2xl mb-4 font-normal uppercase leading-normal"
+                        className="text-[64px] font-normal uppercase leading-normal mb-4"
                         style={{
                             background:
                                 "linear-gradient(90deg, #201349 0%, #513E99 100%)",
@@ -50,10 +56,10 @@ export default function Footer() {
                             fontFamily: '"Varsity Regular"',
                         }}
                     >
-                        HMTI Udayana
+                        BUILD IT'25
                     </h5>
 
-                    <p className="capitalize mt-5 w-auto md:w-[450px] my-4 ">
+                    <p className="font-medium capitalize mt-5 w-auto md:w-[450px] my-4 text-[#333] font-[Montserrat] text-base leading-none tracking-[1.6px]">
                         Master the basics, Unlock your IT Superpower
                     </p>
                     <div className="social-media mt-10 flex items-center space-x-3 relative bottom-0">
@@ -91,8 +97,10 @@ export default function Footer() {
                         </a>
                     </div>
                 </aside>
-                <nav className="w-full md:w-1/4">
-                    <h5 className="font-bold text-2xl mb-4">Quick Links</h5>
+                <nav className="w-full relative z-10 md:w-1/4">
+                    <h5 className="font-bold text-2xl text-[#201349] mb-4">
+                        Quick Links
+                    </h5>
                     <div className="quick-links">
                         <a
                             className="group mb-3 flex items-center"
@@ -124,8 +132,10 @@ export default function Footer() {
                         </a>
                     </div>
                 </nav>
-                <nav className="w-full md:w-1/5 items-end">
-                    <h5 className="font-bold text-2xl mb-4">Modul Pelatihan</h5>
+                <nav className="w-full relative z-10 md:w-1/5 items-end">
+                    <h5 className="font-bold text-2xl text-[#201349] mb-4">
+                        Modul Pelatihan
+                    </h5>
                     <a
                         className="group mb-3 flex items-center"
                         href="/modul/alprog"
@@ -149,9 +159,15 @@ export default function Footer() {
                     </a>
                 </nav>
             </footer>
-            <footer className="px-6 md:px-24 bg-white text-white">
+            <footer
+                className="px-6 md:px-24 bg-white text-white"
+                style={{
+                    backgroundImage: `linear-gradient(0deg, rgba(255, 255, 255, 0.00) 20%, #FFF 100%), linear-gradient(0deg, rgba(81, 62, 152, 0.01) 0%, rgba(32, 19, 73, 0.05) 100%)`,
+                    boxShadow: `inset 0px 3px 20px rgba(0, 0, 0, 0.05)`,
+                }}
+            >
                 <div className="flex justify-between">
-                    <p className="text-[#333] my-4  w-fit">
+                    <p className="text-[#201349] font-bold my-4  w-fit">
                         Copyright © 2025 All rights reserved.{" "}
                     </p>
                     <Button
