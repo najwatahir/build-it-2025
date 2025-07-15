@@ -345,7 +345,7 @@ export default function Welcome() {
                         </div>
                     </div>
 
-                    {/*about section*/}
+                    {/*about section dan card matkul dasar*/}
                     <div
                         id="about"
                         className="relative mt-20 w-full max-w-[1440px] 
@@ -375,6 +375,131 @@ export default function Welcome() {
                             data-aos="fade-up"
                             data-aos-delay="300"
                         />
+                        <p
+                            className="max-w-[938px] text-[#4D4D4D] text-justify 
+             font-[Montserrat] text-[20px] font-normal
+             leading-[34px] px-6"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        >
+                            <span className="block">
+                                <strong>
+                                    Basic Understanding in Learning and
+                                    Developing Information Technology
+                                </strong>{" "}
+                                atau yang disingkat “BUILD IT” merupakan
+                                kegiatan yang bertujuan mewadahi mahasiswa untuk
+                                menerima pemahaman lebih tentang materi dasar
+                                perkuliahan di luar kegiatan belajar mengajar
+                                serta mempersiapkan diri untuk mengikuti
+                                perlombaan di bidang Teknologi Informasi melalui
+                                Sosialisasi Lomba & Penjurusan.
+                            </span>
+                        </p>
+                        <div className="mt-40 w-full flex flex-col items-center gap-12 px-4">
+                            {/* Judul */}
+                            <h3
+                                className="text-center text-[24px] sm:text-[28px] md:text-[32px] font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat]"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
+                                MATA KULIAH DASAR
+                            </h3>
+
+                            {/* Grid Card */}
+                            <div
+                                className="w-full px-12 sm:px-14 md:px-16"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
+                                <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {/* Card 1 */}
+                                    <div className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto">
+                                        <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
+                                            Algoritma & Pemrograman
+                                        </h4>
+                                        <img
+                                            src="../asset/images/algoritma.png"
+                                            alt="Algoritma"
+                                            className="w-40 h-40 object-contain mb-4"
+                                        />
+                                        <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
+                                            Pemahaman logika pemrograman dasar
+                                            dan struktur algoritma untuk
+                                            membangun solusi perangkat lunak.
+                                        </p>
+                                        <button
+                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+             bg-gradient-to-r from-[#201349] to-[#513E99] 
+             shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
+             text-white font-[Montserrat] text-[14px] font-semibold 
+             leading-[30px] tracking-[0.1em] uppercase w-full hover:text-secondary transition-all duration-300"
+                                        >
+                                            Lebih Lanjut{" "}
+                                            <span className="pl-16 text-xl">
+                                                →
+                                            </span>
+                                        </button>
+                                    </div>
+                                    {/* Card 2 */}
+                                    <div className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto">
+                                        <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
+                                            Basis Data
+                                        </h4>
+                                        <img
+                                            src="../asset/images/algoritma.png"
+                                            alt="Algoritma"
+                                            className="w-40 h-40 object-contain mb-4"
+                                        />
+                                        <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
+                                            Pemahaman logika pemrograman dasar
+                                            dan struktur algoritma untuk
+                                            membangun solusi perangkat lunak.
+                                        </p>
+                                        <button
+                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+             bg-gradient-to-r from-[#201349] to-[#513E99] 
+             shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
+             text-white font-[Montserrat] text-[14px] font-semibold 
+             leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
+                                        >
+                                            Lebih Lanjut
+                                            <span className="pl-16 text-xl">
+                                                →
+                                            </span>
+                                        </button>
+                                    </div>
+                                    {/* Card 3 */}
+                                    <div className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto">
+                                        <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
+                                            Jaringan Komputer
+                                        </h4>
+                                        <img
+                                            src="../asset/images/algoritma.png"
+                                            alt="Algoritma"
+                                            className="w-40 h-40 object-contain mb-4"
+                                        />
+                                        <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
+                                            Pemahaman logika pemrograman dasar
+                                            dan struktur algoritma untuk
+                                            membangun solusi perangkat lunak.
+                                        </p>
+                                        <button
+                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+             bg-gradient-to-r from-[#201349] to-[#513E99] 
+             shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
+             text-white font-[Montserrat] text-[14px] font-semibold 
+             leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
+                                        >
+                                            Lebih Lanjut{" "}
+                                            <span className="pl-16 text-xl">
+                                                →
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Timeline Build IT */}
