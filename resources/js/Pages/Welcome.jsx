@@ -296,18 +296,18 @@ export default function Welcome() {
 
                     {/* 3 Card event  */}
                     <div
-                        className="mt-16 px-4 sm:px-8 max-w-7xl mx-auto"
+                        className="mt-16 px-4 sm:px-8 max-w-7xl mx-auto relative"
                         data-aos="fade-up"
                         data-aos-delay="500"
                     >
-                        <div
-                            className="absolute inset-0 flex justify-center z-0"
-                            aria-hidden="true"
-                        >
-                            <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[550px] bg-[rgba(81,62,152,0.12)] rounded-[1198px] blur-[80px] z-0"></div>
-                        </div>
+                        {/* Background Layer 1 */}
+                        <div className="absolute -top-[120px] left-1/2 -translate-x-1/2 w-[1850px] h-[1700px] rounded-t-[750px] bg-[rgba(255,255,255,0.10)] shadow-[0_-30px_250px_0px_rgba(81,62,153,0.10)] z-0"></div>
 
-                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-20">
+                        {/* Background Layer 2 */}
+                        <div className="absolute  -top-[30px] left-1/2 -translate-x-1/2 w-[1682px] h-[1059px] rounded-t-[650px] bg-white border-[5px] border-white shadow-[0_-20px_250px_0px_rgba(81,62,153,0.10)] z-10"></div>
+
+                        {/* Card Grid */}
+                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30">
                             {/* Card 1 */}
                             <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
                                 <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
@@ -315,20 +315,19 @@ export default function Welcome() {
                                 </h4>
                                 <p className="pl-8 text-sm text-gray-600 text-balance">
                                     Membantu mahasiswa baru memahami mata kuliah
-                                    dasar di perkuliahan seperti Algoritma &
-                                    Pemrograman, Basis Data, dan Jaringan
-                                    Komputer & Komunikasi
+                                    dasar seperti Algoritma & Pemrograman, Basis
+                                    Data, dan Jaringan Komputer & Komunikasi.
                                 </p>
                             </div>
 
                             {/* Card 2 */}
-                            <div className=" bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
                                 <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
                                     Sosialisasi Lomba & penjurusan
                                 </h4>
                                 <p className="pl-8 text-sm text-gray-600 text-balance">
                                     Sosialisasi ini akan dipandu oleh dosen dan
-                                    mahasiswa Teknologi Informasi
+                                    mahasiswa Teknologi Informasi.
                                 </p>
                             </div>
 
@@ -346,100 +345,36 @@ export default function Welcome() {
                         </div>
                     </div>
 
-                    {/* about built it */}
+                    {/*about section*/}
                     <div
-                        className="px-6 md:px-24 md:mt-20 mt-10 flex flex-col md:flex-row gap-20 justify-between md:justify-center items-center"
-                        id="About"
-                    >
-                        <img
-                            src="asset/images/landing-page/icon-build-it.png"
-                            alt=""
-                            className="mx-12 w-[390px] h-[410px] animate-bounce-custom"
-                        />
-                        <div className="mt-12 flex flex-col items-center md:items-start">
-                            <p
-                                className="text-[24px] md:text-[36px] text-primary font-bold tracking-[0.16em]"
-                                data-aos="fade-left"
-                            >
-                                TENTANG BUILD IT
-                            </p>
-                            <div className="divider h-[2px] w-full md:w-[420px] bg-primary mt-2"></div>
-                            <p
-                                className="mt-3 text-[18px] md:text-[24px] leading-[28px] tracking-[0.2px]"
-                                data-aos="fade-right"
-                            >
-                                Apa itu BUILD IT 2024?
-                            </p>
-                            <p
-                                className="mt-10 font-normal text-[14px] md:text-[20px] w-full md:w-[724px] text-center md:text-justify"
-                                data-aos="fade-up"
-                            >
-                                <span className="font-extrabold">
-                                    Basic Understanding in Learning and
-                                    Developing Information Technology
-                                </span>{" "}
-                                atau yang disingkat “BUILD IT” merupakan
-                                kegiatan yang bertujuan mewadahi mahasiswa untuk
-                                menerima pemahaman lebih tentang materi dasar
-                                perkuliahan di luar kegiatan belajar mengajar
-                                serta mempersiapkan diri untuk mengikuti
-                                perlombaan di bidang Teknologi Informasi melalui
-                                Sosialisasi Lomba & Penjurusan.
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        className="flex relative mt-20 left-[800px] animate-pulse animate-bounce-custom"
-                        width={40}
-                        height={40}
+                        id="about"
+                        className="relative mt-20 w-full max-w-[1440px] 
+             h-auto py-20 sm:py-28 md:py-36 
+             mx-auto 
+             rounded-t-[150px] sm:rounded-t-[250px] md:rounded-t-[300px] lg:rounded-t-[350px] 
+             bg-white 
+             shadow-[0_-60px_90px_rgba(81,62,153,0.10)] 
+             flex flex-col items-center gap-8"
                         data-aos="fade-up"
+                        data-aos-delay="300"
                     >
-                        <IconKotakBottom />
-                    </div>
+                        <h2
+                            className="text-[32px] font-bold tracking-[0.2em] text-transparent 
+               bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] 
+               font-[Montserrat] text-center"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        >
+                            TENTANG BUILD IT
+                        </h2>
 
-                    {/* mata kuliah dasar build it */}
-                    <div className="px-6 md:px-24 md:mt-36 mt-18 flex flex-col justify-center">
-                        <div className="flex flex-col justify-center items-center">
-                            <p
-                                className="text-center text-primary font-bold text-[24px] md:text-[36px] leading-[50px] tracking-[0.16em]"
-                                data-aos="fade-left"
-                            >
-                                MATA KULIAH DASAR
-                            </p>
-                            <div className="divider h-[2px] w-full md:w-[706px] bg-primary mt-2"></div>
-                            <p
-                                className="w-full md:w-[700px] text-center mt-3 text-[18px] md:text-[20px] leading-[28px] tracking-[0.2px]"
-                                data-aos="fade-right"
-                            >
-                                Mewadahi mahasiswa baru untuk menerima pemahaman
-                                lebih tentang materi dasar perkuliahan di luar
-                                kegiatan belajar mengajar
-                            </p>
-                        </div>
-
-                        <div className="mt-10 flex flex-col md:flex-row justify-around gap-5 items-center md:items-start">
-                            <CardMatkul
-                                heading="Algoritma dan Pemrograman"
-                                description="Matakuliah Algoritma dan Pemrograman adalah mata kuliah dasar yang memperkenalkan konsep-konsep fundamental dalam pemrograman komputer dan pemecahan masalah menggunakan algoritma. Dalam mata kuliah ini, mahasiswa akan mempelajari cara merancang, mengembangkan, dan menganalisis algoritma yang efisien untuk menyelesaikan berbagai jenis masalah komputasional."
-                                button="Lebih lanjut"
-                                image="asset/images/landing-page/icon-alprog.png"
-                                url="/modul/alprog"
-                            />
-                            <CardMatkul
-                                heading="Basis Data"
-                                description="Matakuliah Basis Data merupakan mata kuliah yang berfokus pada konsep, desain, implementasi, dan manajemen sistem basis data. Mahasiswa akan mempelajari bagaimana data diorganisasikan, disimpan, dan diakses secara efisien. Selain itu, mahasiswa akan belajar tentang penggunaan SQL (Structured Query Language) untuk mengelola dan memanipulasi data dalam basis data."
-                                button="Lebih lanjut"
-                                image="asset/images/landing-page/icon-basis-data.png"
-                                url="/modul/basisdata"
-                            />
-                            <CardMatkul
-                                heading="Jaringan Komputer dan Komunikasi"
-                                description="Matakuliah Jaringan Komputer dan Komunikasi merupakan matakuliah yang mempelajari konsep, arsitektur, dan teknologi yang mendasari sistem jaringan komputer serta proses komunikasi data antar perangkat. Mahasiswa akan memahami cara kerja jaringan mulai dari lapisan fisik hingga aplikasi, termasuk protokol-protokol jaringan seperti TCP/IP, routing, switching, serta keamanan jaringan."
-                                button="Lebih lanjut"
-                                image="asset/images/landing-page/icon-jaringan-komputer.png"
-                                url="/modul/jarkom"
-                            />
-                        </div>
+                        <img
+                            src="../asset/images/Logo.png"
+                            alt="Logo Build IT"
+                            className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[269px] aspect-[269/337] object-contain"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        />
                     </div>
 
                     {/* Timeline Build IT */}
