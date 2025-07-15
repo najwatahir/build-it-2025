@@ -53,7 +53,7 @@ export default function JaringanKomputer() {
                                     JARINGAN KOMPUTER DAN KOMUNIKASI
                                 </p>
                                 <p
-                                    className="text-black font-montserrat my-10 mx-4 md:mx-0 text-[16px] md:text-start md:text-[20px] md:w-[817px] w-5/6 text-balance leading-10 tracking-widest text-justify justify-start"
+                                    className="text-black font-montserrat my-10 mx-4 md:mx-0 text-[16px] md:text-[20px] md:w-[817px] w-5/6 text-balance leading-10 tracking-widest text-justify justify-start"
                                     data-aos="fade-up"
                                 >
                                     Mata kuliah Jaringan Komputer dan Komunikasi
