@@ -12,15 +12,6 @@ import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 
 import {
-    IconBuiltIT,
-    IconKotakTop,
-    IconKotakCenter,
-    IconKotakBottom,
-    IconHouseOffline,
-    IconBookSharing,
-    IconHumanSharing,
-    ArrowRight,
-    IconKotakTimeLine,
     IconFaq,
     IconContactCard,
     IconContactBanner,
@@ -119,6 +110,51 @@ export default function Welcome() {
     const hideModal = () => {
         setModalVisible(false);
     };
+
+    const timelineEvents = [
+        {
+            title: "Open Registration",
+            date: "Batch I : 14 Agustus - 19 Agustus 2024 Batch II : 21 Agustus - 25 Agustus 2024",
+            location: "https://buildit.hmtiudayana.id/",
+            side: "left",
+        },
+        {
+            title: "Pembukaan dan Pelatihan Jaringan Komputer & Komunikasi",
+            date: "3 Agustus 2025",
+            location: "Gedung TI, Fakultas Teknik, Jimbaran",
+            side: "right",
+        },
+        {
+            title: "Pelatihan Algoritma & Pemrograman",
+            date: "6 Agustus 2025",
+            location: "Lab Algoritma",
+            side: "left",
+        },
+        {
+            title: "Pelatihan Basis Data",
+            date: "8 Agustus 2025",
+            location: "Gedung C",
+            side: "right",
+        },
+        {
+            title: "Deadline Pengumpulan Tugas",
+            date: "10 Agustus 2025",
+            location: "Online",
+            side: "left",
+        },
+        {
+            title: "Sosialisasi Penjurusan & Lomba-lomba",
+            date: "12 Agustus 2025",
+            location: "Aula Besar",
+            side: "right",
+        },
+        {
+            title: "Sharing Session Hacktiv8",
+            date: "15 Agustus 2025",
+            location: "Auditorium",
+            side: "left",
+        },
+    ];
 
     return (
         <>
@@ -236,7 +272,7 @@ export default function Welcome() {
                             <div
                                 className="flex flex-col sm:flex-row gap-4 items-center justify-center"
                                 data-aos="fade-up"
-                                data-aos-delay="800"
+                                data-aos-delay="100"
                             >
                                 <button
                                     className="px-6 py-3 rounded-full bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
@@ -347,7 +383,7 @@ export default function Welcome() {
 
                     {/*about section dan card matkul dasar*/}
                     <div
-                        id="about"
+                        id="About"
                         className="relative mt-20 w-full max-w-[1440px] 
              h-auto py-20 sm:py-28 md:py-36 
              mx-auto 
@@ -414,12 +450,16 @@ export default function Welcome() {
                             >
                                 <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {/* Card 1 */}
-                                    <div className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto">
+                                    <div
+                                        className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
+                                        data-aos="fade-up"
+                                        data-aos-delay="100"
+                                    >
                                         <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
                                             Algoritma & Pemrograman
                                         </h4>
                                         <img
-                                            src="../asset/images/algoritma.png"
+                                            src="../asset/images/alprog.png"
                                             alt="Algoritma"
                                             className="w-40 h-40 object-contain mb-4"
                                         />
@@ -442,12 +482,16 @@ export default function Welcome() {
                                         </button>
                                     </div>
                                     {/* Card 2 */}
-                                    <div className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto">
+                                    <div
+                                        className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
+                                        data-aos="fade-up"
+                                        data-aos-delay="100"
+                                    >
                                         <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
                                             Basis Data
                                         </h4>
                                         <img
-                                            src="../asset/images/algoritma.png"
+                                            src="../asset/images/basisdata.png"
                                             alt="Algoritma"
                                             className="w-40 h-40 object-contain mb-4"
                                         />
@@ -470,12 +514,16 @@ export default function Welcome() {
                                         </button>
                                     </div>
                                     {/* Card 3 */}
-                                    <div className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto">
+                                    <div
+                                        className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
+                                        data-aos="fade-up"
+                                        data-aos-delay="300"
+                                    >
                                         <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
                                             Jaringan Komputer
                                         </h4>
                                         <img
-                                            src="../asset/images/algoritma.png"
+                                            src="../asset/images/jarkom.png"
                                             alt="Algoritma"
                                             className="w-40 h-40 object-contain mb-4"
                                         />
@@ -503,330 +551,284 @@ export default function Welcome() {
                     </div>
 
                     {/* Timeline Build IT */}
-                    <div className="px-6 md:px-24 mt-36" id="Timeline">
-                        <div className="flex flex-col justify-center items-center z-10">
-                            <h1
-                                className="font-sans text-center font-bold text-primary text-[24px] md:text-[36px] tracking-widest"
-                                data-aos="fade-left"
+                    <div
+                        id="timeline"
+                        className="relative mt-40 w-full max-w-[1440px] mx-auto rounded-[150px] border-t border-[#513E98]/50 bg-[linear-gradient(180deg,_#FAFAFA_50%,_#FFF_100%)] flex flex-col items-center py-24 px-4 sm:px-8 md:px-16 overflow-hidden"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        {/* Background */}
+                        <div className="absolute inset-0 z-0 rotate-[3.779deg]">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1440 947"
+                                preserveAspectRatio="xMidYMid slice"
+                                fill="none"
+                                className="w-full h-full"
                             >
-                                TIMELINE BUILD-IT 2024
-                            </h1>
-                            <div className="divider h-[2px] w-full md:w-[692px] bg-primary mt-2"></div>
-                            <p
-                                className="w-full md:w-[700px] text-center mt-3 text-[18px] md:text-[20px] leading-[28px] tracking-[0.2px] z-20"
-                                data-aos="fade-right"
-                            >
-                                Setiap detik adalah kesempatan untuk belajar,
-                                berbagi, dan terhubung dengan komunitas kreatif.
-                                Catat tanggalnya dan pastikan Anda tidak
-                                melewatkan momen di BUILD-IT 2024.
-                            </p>
+                                <g filter="url(#filter0_i_304_732)">
+                                    <path
+                                        d="M1583.69 301.652C1616.16 323.137 1624.86 366.992 1603.04 399.245L1457.69 614.179C1457.5 614.461 1457.11 614.537 1456.83 614.349C1456.54 614.16 1456.16 614.237 1455.97 614.522L1311.6 830.344C1290.11 862.477 1246.63 871.102 1214.5 849.607L1055.11 742.991C1022.98 721.496 1014.35 678.022 1035.85 645.888L1140.51 489.421C1162.08 457.173 1153.31 413.532 1120.95 392.123L968.482 291.242C936.355 269.985 893.091 278.682 871.673 310.701L731.164 520.757C731.096 520.859 730.958 520.886 730.856 520.818C730.755 520.75 730.617 520.777 730.549 520.878L704.169 559.884C689.407 581.712 695.215 611.382 717.117 626.033L765.73 658.552C797.864 680.047 806.488 723.521 784.994 755.654L678.376 915.042C656.882 947.175 613.407 955.8 581.274 934.305L404.509 816.065C381.973 800.99 375.924 770.5 390.999 747.963C406.127 725.345 399.975 694.738 377.281 679.723L311.94 636.491C279.813 615.235 236.549 623.932 215.131 655.951L208.938 665.21C187.444 697.344 143.969 705.968 111.836 684.474L-47.5521 577.857C-79.6859 556.363 -88.3104 512.888 -66.8156 480.755L73.4644 271.043C76.3675 266.703 82.2393 265.538 86.5794 268.441C90.9038 271.334 96.7529 270.189 99.6675 265.879L138.625 208.275C160.128 176.48 203.224 167.932 235.235 189.111L398.028 296.821C430.155 318.077 473.418 309.381 494.837 277.362L600.823 118.916C622.318 86.7824 665.792 78.1578 697.926 99.6524L849.622 201.124C881.64 222.541 924.946 214.064 946.526 182.155L1048.84 30.8658C1070.35 -0.928945 1113.44 -9.47765 1145.45 11.7019L1583.69 301.652Z"
+                                        fill="#513E98"
+                                        fillOpacity="0.02"
+                                    />
+                                </g>
+                                <defs>
+                                    <filter
+                                        id="filter0_i_304_732"
+                                        x="-78.64"
+                                        y="0.0734863"
+                                        width="1693.71"
+                                        height="950.056"
+                                        filterUnits="userSpaceOnUse"
+                                        colorInterpolationFilters="sRGB"
+                                    >
+                                        <feFlood
+                                            floodOpacity="0"
+                                            result="BackgroundImageFix"
+                                        />
+                                        <feBlend
+                                            mode="normal"
+                                            in="SourceGraphic"
+                                            in2="BackgroundImageFix"
+                                            result="shape"
+                                        />
+                                        <feColorMatrix
+                                            in="SourceAlpha"
+                                            type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                            result="hardAlpha"
+                                        />
+                                        <feOffset dy="4" />
+                                        <feGaussianBlur stdDeviation="2" />
+                                        <feComposite
+                                            in2="hardAlpha"
+                                            operator="arithmetic"
+                                            k2="-1"
+                                            k3="1"
+                                        />
+                                        <feColorMatrix
+                                            type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"
+                                        />
+                                        <feBlend
+                                            mode="normal"
+                                            in2="shape"
+                                            result="effect1_innerShadow_304_732"
+                                        />
+                                    </filter>
+                                </defs>
+                            </svg>
                         </div>
                         <div
-                            className="z-0 flex relative left-[170px] top-[50px] animate-bounce-custom animate-pulse"
-                            width={40}
-                            height={40}
+                            className="mb-16 text-center max-w-3xl mx-auto px-4"
                             data-aos="fade-up"
+                            data-aos-delay="100"
                         >
-                            <IconKotakBottom />
+                            <h3 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat] uppercase mb-4">
+                                TIMELINE
+                            </h3>
+                            <p className="text-[#808080] text-center font-[Montserrat] text-sm sm:text-base font-medium tracking-[0.1em]">
+                                Catat tanggalnya dan pastikan Anda tidak
+                                melewatkan momen di BUILD-IT
+                            </p>
                         </div>
-                        <div className="flex flex-col z-10 mt-3 md:mt-10">
-                            <div className="flex flex-col gap-[130px] left-4 items-center pt-16 absolute w-1 bg-primary h-max md:left-1/2 transform md:-translate-x-1/2 z-10">
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                                <div className="w-5 h-5 md:w-9 md:h-9 bg-primary rounded-full relative z-20">
-                                    <div className="items-center w-full h-full bg-primary rounded-full animate-ping"></div>
-                                </div>
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end z-10 md:pl-20"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-0 mr-0 md:mr-20 p-4 bg-white border shadow-lg rounded-md ">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Open Registration Peserta
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        {" "}
-                                        Batch I : 14 Agustus - 19 Agustus 2024
-                                    </p>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        {" "}
-                                        Batch II : 21 Agustus - 25 Agustus 2024
-                                    </p>
-                                    <p className="text-[14px] md:text-[16px]">
-                                        Melalui website resmi BUILD IT
-                                        https://buildit.hmtiudayana.id/
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end md:justify-start z-10 pr-0 md:pr-24"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-20 p-4 bg-white border shadow-lg rounded-md">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Pembukaan dan Pelatihan Jaringan
-                                        Komputer & Komunikasi
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        Jumat, 6 September 2024
-                                    </p>
-                                    <p className="text-[14px]">
-                                        Gedung TI, Fakultas Teknik, Jimbaran
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end z-10 pl-0 md:pl-20"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-0 mr-0 md:mr-20 p-4 bg-white border shadow-lg rounded-md">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Pelatihan Algoritma & Pemrograman
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        Senin, 9 September 2024
-                                    </p>
-                                    <p className="text-[14px]">
-                                        Gedung TI, Fakultas Teknik, Jimbaran
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end md:justify-start z-10 pr-0 md:pr-24"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-20 p-4 bg-white border shadow-lg rounded-md">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Pelatihan Basis Data
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        Selasa, 10 September 2024
-                                    </p>
-                                    <p className="text-[14px]">
-                                        Gedung TI, Fakultas Teknik, Jimbaran
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                alt="gambar"
-                                className="max-w-[570px] h-[445px] absolute right-0 top-[6000px] md:top-[3200px] animate-bounce-custom"
-                                data-aos="fade-up"
-                            >
-                                <IconKotakTimeLine />
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end z-10 pl-0 md:pl-20"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-0 mr-0 md:mr-20 p-4 bg-white border shadow-lg rounded-md">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Deadline Pengumpulan Tugas
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        Selasa, 17 September 2024 23.59 WITA
-                                    </p>
-                                    <p className="text-[14px]">
-                                        Melalui website resmi BUILD IT
-                                        https://buildit.hmtiudayana.id/
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end md:justify-start z-10 pr-0 md:pr-24"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-20 p-4 bg-white border shadow-lg rounded-md">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Sosialisasi Penjurusan & Lomba-lomba
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        Minggu, 15 September 2024
-                                    </p>
-                                    <p className="text-[14px]">
-                                        Gedung TI, Fakultas Teknik, Jimbaran
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                className="font-sans my-3 md:my-5 flex w-full justify-end z-10 pl-0 md:pl-20"
-                                data-aos="fade-up"
-                            >
-                                <div className="w-full md:w-[466px] ml-5 md:ml-0 mr-0 md:mr-20 p-4 bg-white border shadow-lg rounded-md">
-                                    <h3 className="text-[16px] md:text-[20px] font-bold">
-                                        Sharing Session Hacktiv8
-                                    </h3>
-                                    <p className="text-[14px] md:text-[16px] font-medium mb-1">
-                                        Senin, 16 September 2024
-                                    </p>
-                                    {/* <p className="text-[14px]">On Webex https://webex</p> */}
-                                </div>
+                        {/* Konten timeline  */}
+                        <div className="relative z-10 w-full flex justify-center px-4 sm:px-6 md:px-8">
+                            <div className="relative flex flex-col justify-between w-full max-w-6xl py-24 space-y-20">
+                                {/* Garis Vertical */}
+                                <div className="absolute top-0 left-6 md:left-1/2 transform md:-translate-x-1/2 h-full border-l-4 border-[#513E99]/30 z-0"></div>
+                                {timelineEvents.map((event, index) => (
+                                    <div
+                                        key={index}
+                                        className={`relative w-full flex ${
+                                            event.side === "left"
+                                                ? "justify-start md:pr-12"
+                                                : "justify-end md:pl-12"
+                                        }`}
+                                        data-aos="fade-up"
+                                        data-aos-delay={index * 100}
+                                    >
+                                        <div className="absolute top-2 left-6 md:left-1/2 transform md:-translate-x-1/2 z-10">
+                                            <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-[#513E99] rounded-full border-4 border-white shadow-md transition-transform duration-300 hover:scale-110"></div>
+                                        </div>
+
+                                        {/* Card */}
+                                        <div
+                                            className="w-full sm:w-[85%] md:max-w-[340px] inline-flex flex-col justify-center items-start gap-4 
+            px-6 py-5 border border-[rgba(81,62,153,0.2)] rounded-2xl bg-white shadow-md hover:shadow-lg 
+            transition-all duration-300 ease-in-out"
+                                        >
+                                            <h4 className="w-full text-center text-black font-[Montserrat] text-base font-semibold">
+                                                {event.title}
+                                            </h4>
+
+                                            <p className="text-[#808080] text-sm font-medium font-[Montserrat]">
+                                                {event.date}
+                                            </p>
+
+                                            <div className="flex items-center gap-2 text-[#808080] font-[Montserrat] text-sm font-semibold">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="w-4 h-4"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#808080"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
+                                                    <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z" />
+                                                    <circle
+                                                        cx="12"
+                                                        cy="10"
+                                                        r="3"
+                                                    />
+                                                </svg>
+                                                {event.location}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
 
                     {/* Faq */}
-                    <div className="px-6 md:px-24 md:mt-36 mt-20" id="Faq">
-                        <div className="flex flex-col justify-center items-center mb-2">
-                            <h1
-                                className="font-sans font-bold text-primary text-[24px] md:text-[36px] tracking-widest"
-                                data-aos="fade-left"
-                            >
-                                FAQ
-                            </h1>
-                            <div className="divider h-[2px] w-1/2 md:w-[300px] bg-primary mt-2"></div>
-                            <p
-                                className="w-full md:w-[700px] text-center mt-3 md:text-[20px] leading-[28px] tracking-[0.2px] text-gray-500"
-                                data-aos="fade-right"
-                            >
-                                Pertanyaan umum yang sering ditanyakan terkait
-                                BUILD IT 2024. Jika masih ada yang ingin
-                                ditanyakan lebih lanjut, kalian bisa hubungi
-                                narahubung dibawah ini.
-                            </p>
-                        </div>
-                        <div className="flex flex-col md:flex-row justify-around md:justify-between">
+                    <div className="w-full flex justify-center">
+                        <div
+                            className="w-full max-w-[1440px] min-h-[700px] sm:min-h-[900px] md:min-h-[1100px] lg:min-h-[1300px] xl:min-h-[1503px]
+  flex-shrink-0 rounded-t-[80px] sm:rounded-t-[100px] lg:rounded-t-[120px] rounded-b-[80px] sm:rounded-b-[100px] lg:rounded-b-[120px]
+  bg-gradient-to-r from-[rgba(32,19,73,0.05)] to-[rgba(81,62,153,0.05)]
+  shadow-[0_0_40px_0_rgba(0,0,0,0.05)] flex justify-center px-4 sm:px-6"
+                        >
                             <div
-                                className="w-full flex md:justify-start justify-center animate-bounce-custom"
-                                data-aos="fade-up"
+                                className="px-6 md:px-24 md:mt-36 mt-20 w-full"
+                                id="Faq"
                             >
-                                <IconFaq />
-                            </div>
-                            <div
-                                className="w-full md:w-1/2 mt-0 flex flex-col justify-center items-center"
-                                data-aos="fade-right"
-                            >
-                                <AccordionLanding
-                                    heading="Apakah kegiatan ini berbayar?"
-                                    description="Tidak, ini merupakan kegiatan yang diselanggarakan oleh Himpunan Mahasiswa Teknologi Informasi Universitas Udayana untuk memberikan pengetahuan dasar mengenai berbagai hal yang diperlukan sebagai mahasiswa TI."
-                                    isOpen={openIndex === 0}
-                                    onClick={() => handleAccordionClick(0)}
-                                />
-                                <AccordionLanding
-                                    heading="Apakah kegiatan ini wajib dihadiri?"
-                                    description="Ya, kegiatan ini wajib dihadiri oleh mahasiswa baru teknologi informasi angkatan 2024. Untuk mahasiswa lama yang belum mengikuti pada tahun lalu wajib hadir di pembukaan dan sharing session"
-                                    isOpen={openIndex === 1}
-                                    onClick={() => handleAccordionClick(1)}
-                                />
-                                <AccordionLanding
-                                    heading="Apa yang akan dilakukan mahasiswa selama pelatihan BUILD IT 2024??"
-                                    description="Selama Pelatihan BUILD-TI 2024, mahasiswa akan dibimbing dalam memahami mata kuliah dasar di perkuliahan seperti alprog, basis data, dan jaringan komputer"
-                                    isOpen={openIndex === 2}
-                                    onClick={() => handleAccordionClick(2)}
-                                />
-                                <AccordionLanding
-                                    heading="Apa yang mahasiswa perlu persiapkan sebelum pelatihan BUILD IT 2024??"
-                                    description="Adapun beberapa hal yang perlu mahasiswa siapkan sebelum mengikuti pelatihan ini adalah memahami modul yang diberikan karena akan ada quiz dan tugas mandiri serta melakukan instalasi tools yang diperlukan yang akan digunakan dalam pelatihan."
-                                    isOpen={openIndex === 3}
-                                    onClick={() => handleAccordionClick(3)}
-                                />
-                            </div>
-                        </div>
-                    </div>
+                                <div className="flex flex-col justify-center items-center mb-2">
+                                    <h1
+                                        className="w-[918px] text-center font-montserrat text-[48px] font-bold leading-none tracking-[4.8px] uppercase bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
+                                        data-aos="fade-left"
+                                    >
+                                        FAQ
+                                    </h1>
 
-                    {/* Kontak kami */}
-                    <div className="px-6 md:px-24 md:mt-36 mt-20" id="Contact">
-                        <div className="flex flex-col justify-center items-center mb-2">
-                            <h1
-                                className="font-sans font-bold text-primary text-[24px] md:text-[36px] tracking-widest"
-                                data-aos="fade-left"
-                            >
-                                CONTACT{" "}
-                                <span className="text-secondary">PERSON</span>
-                            </h1>
-                            <div className="divider h-[2px] w-full md:w-[600px] bg-primary mt-2"></div>
-                            <p
-                                className="w-full md:w-[700px] text-center mt-3 md:text-[20px] leading-[28px] tracking-[0.2px] text-gray-500"
-                                data-aos="fade-right"
-                            >
-                                Jika Anda memiliki pertanyaan lebih lanjut,
-                                jangan ragu untuk menghubungi narahubung yang
-                                tertera di bawah ini.
-                            </p>
-                            <div className="flex md:flex-row flex-col gap-4 mt-5">
-                                <CardContact
-                                    name="Tri Darma"
-                                    wa={
-                                        <a
-                                            className="hover:underline"
-                                            href="https://wa.me/+6281333486847"
-                                            target="_blank"
-                                        >
-                                            WA : 081333486847
-                                        </a>
-                                    }
-                                    line={
-                                        <a
-                                            className="hover:underline"
-                                            href="https://line.me/ti/p/tri.dharma."
-                                            target="_blank"
-                                        >
-                                            LINE : tri.dharma.
-                                        </a>
-                                    }
-                                />
-                                <CardContact
-                                    name="Candra"
-                                    wa={
-                                        <a
-                                            className="hover:underline"
-                                            href="https://wa.me/+6282235443630"
-                                        >
-                                            WA : 082235443630
-                                        </a>
-                                    }
-                                    line={
-                                        <a
-                                            className="hover:underline"
-                                            href="https://line.me/ti/p/agungcandra21"
-                                        >
-                                            LINE : agungcandra21
-                                        </a>
-                                    }
-                                />
-                                <CardContact
-                                    name="Marsya"
-                                    wa={
-                                        <a
-                                            className="hover:underline"
-                                            href="https://wa.me/+62881037397005"
-                                        >
-                                            WA : 0881037397005
-                                        </a>
-                                    }
-                                    line={
-                                        <a
-                                            className="hover:underline"
-                                            href="https://line.me/ti/p/marishajaegar26"
-                                        >
-                                            LINE : marishajaegar26
-                                        </a>
-                                    }
-                                />
-                            </div>
+                                    <p
+                                        className="mt-8 w-full max-w-[618px] text-center text-[#808080] font-[Montserrat] text-[16px] font-medium leading-normal tracking-[1.6px]"
+                                        data-aos="fade-right"
+                                    >
+                                        Pertanyaan umum yang sering ditanyakan
+                                        terkait BUILD IT 2025
+                                    </p>
+                                </div>
+                                <div className="mt-24 flex justify-center">
+                                    <div
+                                        className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center gap-6"
+                                        data-aos="fade-right"
+                                    >
+                                        <AccordionLanding
+                                            heading="Apakah kegiatan ini berbayar?"
+                                            description="Tidak, ini merupakan kegiatan yang diselanggarakan oleh Himpunan Mahasiswa Teknologi Informasi Universitas Udayana untuk memberikan pengetahuan dasar mengenai berbagai hal yang diperlukan sebagai mahasiswa TI."
+                                            isOpen={openIndex === 0}
+                                            onClick={() =>
+                                                handleAccordionClick(0)
+                                            }
+                                        />
+                                        <AccordionLanding
+                                            heading="Apakah kegiatan ini wajib dihadiri?"
+                                            description="Ya, kegiatan ini wajib dihadiri oleh mahasiswa baru teknologi informasi angkatan 2024. Untuk mahasiswa lama yang belum mengikuti pada tahun lalu wajib hadir di pembukaan dan sharing session"
+                                            isOpen={openIndex === 1}
+                                            onClick={() =>
+                                                handleAccordionClick(1)
+                                            }
+                                        />
+                                        <AccordionLanding
+                                            heading="Apa yang akan dilakukan mahasiswa selama pelatihan BUILD IT 2025?"
+                                            description="Selama Pelatihan BUILD-TI 2025, mahasiswa akan dibimbing dalam memahami mata kuliah dasar di perkuliahan seperti alprog, basis data, dan jaringan komputer"
+                                            isOpen={openIndex === 2}
+                                            onClick={() =>
+                                                handleAccordionClick(2)
+                                            }
+                                        />
+                                        <AccordionLanding
+                                            heading="Apa yang mahasiswa perlu persiapkan sebelum pelatihan BUILD IT 2025?"
+                                            description="Adapun beberapa hal yang perlu mahasiswa siapkan sebelum mengikuti pelatihan ini adalah memahami modul yang diberikan karena akan ada quiz dan tugas mandiri serta melakukan instalasi tools yang diperlukan yang akan digunakan dalam pelatihan."
+                                            isOpen={openIndex === 3}
+                                            onClick={() =>
+                                                handleAccordionClick(3)
+                                            }
+                                        />
+                                    </div>
+                                </div>
+                                {/* Kontak kami */}
+                                <div
+                                    id="Contact"
+                                    className="mt-32 mb-16 flex flex-col items-center justify-center px-4 text-center"
+                                >
+                                    <h2
+                                        className="font-montserrat text-[48px] font-bold leading-none tracking-[4.8px] uppercase 
+               bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
+                                        data-aos="fade-up"
+                                    >
+                                        CONTACT PERSON
+                                    </h2>
 
-                            <div
-                                className="mt-5 md:mt-16 flex w-full md:w-max justify-center items-center animate-bounce-custom"
-                                data-aos="fade-up"
-                            >
-                                <IconContactBanner />
+                                    <p
+                                        className="mt-8 max-w-[640px] text-[#808080] text-[16px] font-medium leading-normal tracking-[1.6px] font-montserrat"
+                                        data-aos="fade-up"
+                                        data-aos-delay="100"
+                                    >
+                                        Jika Anda memiliki pertanyaan lebih
+                                        lanjut, <br />
+                                        jangan ragu untuk menghubungi narahubung
+                                        yang tertera di bawah ini.
+                                    </p>
+                                    <div
+                                        className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center w-full"
+                                        data-aos="fade-up"
+                                        data-aos-delay="200"
+                                    >
+                                        {/* Card 1 */}
+                                        <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
+                                            <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
+                                                Nama Narahubung 1
+                                            </h3>
+                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
+                                                WA: 0812-3456-7890
+                                            </p>
+                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
+                                                LINE: id_line1
+                                            </p>
+                                        </div>
+
+                                        {/* Card 2 */}
+                                        <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
+                                            <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
+                                                Nama Narahubung 2
+                                            </h3>
+                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
+                                                WA: 0896-1234-5678
+                                            </p>
+                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
+                                                LINE: id_line2
+                                            </p>
+                                        </div>
+
+                                        {/* Card 3 */}
+                                        <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
+                                            <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
+                                                Nama Narahubung 3
+                                            </h3>
+                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
+                                                WA: 0877-6543-2109
+                                            </p>
+                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
+                                                LINE: id_line3
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1012,61 +1014,6 @@ const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
             {isOpen && (
                 <div className="px-4 py-2 text-gray-700">{description}</div>
             )}
-        </div>
-    );
-};
-
-const CardMatkul = ({ heading, description, button, image, url }) => {
-    const [bacaSelengkapnya, setbacaSelengkapnya] = useState(false);
-
-    const toggleDescription = () => {
-        setbacaSelengkapnya(!bacaSelengkapnya);
-    };
-
-    return (
-        <div
-            className="border-primary rounded-[10px] shadow-lg transition-transform transform hover:scale-105 active:scale-110"
-            data-aos="fade-up"
-        >
-            <div className="border-2 border-primary rounded-t-[10px] w-full md:w-[348px] h-full md:h-[250px] p-10 flex justify-center items-center shadow-lg">
-                <img src={image} alt="" className="w-[213px] h-[213px]" />
-            </div>
-            <div className="bg-primary w-full md:w-[348px] md:h-[250] h-full border-2 border-primary rounded-b-[10px] p-5 shadow-lg">
-                <p className="text-[15px] leading-[24px] tracking-[0.01em] font-bold text-white md:text-start text-center">
-                    {heading}
-                </p>
-                <p
-                    className={`mt-5 text-white text-[14px] leading-[20px] tracking-[0.2px] md:text-start text-center text-wrap ${
-                        bacaSelengkapnya ? "" : "line-clamp-4"
-                    }`}
-                    style={{
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: bacaSelengkapnya ? "" : 4,
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                    }}
-                >
-                    {description}
-                </p>
-                <button
-                    onClick={toggleDescription}
-                    className="text-white font-bold text-[14px] mt-2 leading-[0.05em] hover:underline md:text-start text-center w-full"
-                >
-                    {bacaSelengkapnya
-                        ? "Tampilkan Lebih Sedikit"
-                        : "Baca Selengkapnya"}
-                </button>
-                <a
-                    href={url}
-                    className="text-primary font-bold text-[14px] font-bold leading-[24px] tracking-[0.2px]"
-                >
-                    <button className="flex justify-center items-center gap-2 mt-5 bg-white rounded-[37px] w-full md:w-[147px] h-full md:h-[44px] hover:bg-primer md:p-0 p-3">
-                        {button}
-                        <ArrowRight />
-                    </button>
-                </a>
-            </div>
         </div>
     );
 };
