@@ -12,16 +12,16 @@ import Tailwind from 'primereact/passthrough/tailwind';
 import "@fontsource/montserrat";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import DisableInspect from './Utils/disableInspect';
+// import DisableInspect from './Utils/disableInspect';
 import Loading from './Pages/Loading';
 
 const AppWrapper = ({ App, props }) => {
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const cleanup = DisableInspect();
-        return () => cleanup();
-    }, []);
+    // useEffect(() => {
+    //     const cleanup = DisableInspect();
+    //     return () => cleanup();
+    // }, []);
 
     useEffect(() => {
         const start = () => setLoading(true);
