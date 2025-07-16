@@ -626,7 +626,7 @@ export default function Welcome() {
                             </h3>
                             <p className="text-[#808080] text-center font-[Montserrat] text-sm sm:text-base font-medium tracking-[0.1em]">
                                 Catat tanggalnya dan pastikan Anda tidak
-                                melewatkan momen di BUILD-IT
+                                melewatkan momen di BUILD-IT 2025
                             </p>
                         </div>
                         {/* Konten timeline  */}
