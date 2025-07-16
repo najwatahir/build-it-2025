@@ -1,7 +1,7 @@
 import { Head, Link } from "@inertiajs/react";
 import React, { useEffect, useState } from "react";
 import { Button } from "primereact/button";
-import DisableInspect from "@/Utils/disableInspect";
+//import DisableInspect from "@/Utils/disableInspect";
 import { Dialog } from "primereact/dialog";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -33,6 +33,8 @@ export default function Welcome() {
     );
     // usestate modal pop up
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const [shirtColor, setShirtColor] = useState("black");
 
     const [visible, setVisible] = useState(false);
 
@@ -840,138 +842,96 @@ export default function Welcome() {
                             id="Merch"
                         >
                             <h1
-                                className="font-sans font-bold text-primary text-[24px] md:text-[36px] tracking-widest"
+                                className="text-center font-montserrat font-bold tracking-[2px] leading-snug
+             text-[28px] sm:text-[36px] md:text-[48px]
+             bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
                                 data-aos="fade-right"
                             >
                                 MERCHANDISE
                             </h1>
-                            <div className="divider h-[2px] w-full md:w-[450px] bg-primary mt-2"></div>
+
                             <p
-                                className="w-full md:w-[700px] text-center mt-3 text-[20px] leading-[28px] tracking-[0.2px] text-gray-500"
+                                className="mt-8 w-full text-center font-montserrat text-[16px] font-medium leading-normal tracking-[1.6px] text-black"
                                 data-aos="fade-left"
                             >
-                                Merchandise BUILD IT 2024 merupakan T-shirt yang
-                                diharapkan dapat mendukung terlaksananya
-                                kegiatan ini.
+                                Rayakan semangat inovasi dengan T-shirt edisi
+                                terbatas BUILD IT 2025
                             </p>
                         </div>
 
-                        <div className="b-none md:border border-primary rounded-[35px] shadow-lg p-3">
+                        <div className="flex justify-center items-center min-h-screen px-6 py-10 sm:px-8">
                             <div
-                                className="flex flex-col md:flex-row justify-between"
+                                className=" relative flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 p-6 sm:p-8 min-h-screen w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] rounded-[15px] border border-[#CCC] shadow-md transition-all duration-300"
                                 data-aos="fade-up"
+                                style={{
+                                    background:
+                                        "linear-gradient(270deg, #F2F2F2 0%, rgba(255, 255, 255, 0.00) 49.04%, #F2F2F2 100%)",
+                                }}
                             >
-                                <div className="flex flex-col w-full justify-center items-center">
-                                    <img
-                                        src={imageSrc}
-                                        alt=""
-                                        className="w-auto h-auto md:h-[440px] animate-bounce-merch"
+                                {/* Warna Palet */}
+                                <div className="absolute top-4 left-4 flex gap-3 sm:gap-2 flex-col sm:flex-row">
+                                    <button
+                                        onClick={() => setShirtColor("black")}
+                                        className="w-12 aspect-square rounded-[10px] border-2 hover:border-[#513E99] bg-black hover:scale-105 transition-transform"
                                     />
-                                    <div className="flex flex-row justify-center gap-5">
-                                        <div
-                                            className="flex flex-col items-center transition-transform transform hover:scale-105 active:scale-110 cursor-pointer"
-                                            onClick={() =>
-                                                setImageSrc(
-                                                    "asset/images/landing-page/merch-black.png"
-                                                )
-                                            }
-                                        >
-                                            <div className="border border-primary rounded-[15px] p-1">
-                                                <img
-                                                    src="asset/images/landing-page/merch-black.png"
-                                                    alt=""
-                                                    className="w-[80px] h-[60px]"
-                                                />
-                                            </div>
-                                            <p className="text-primary text-[17px] leading-[50px] tracking-[0.16em] font-bold">
-                                                Black
-                                            </p>
-                                        </div>
-                                        <div
-                                            className="flex flex-col items-center transition-transform transform hover:scale-105 active:scale-110 cursor-pointer"
-                                            onClick={() =>
-                                                setImageSrc(
-                                                    "asset/images/landing-page/merch-white.png"
-                                                )
-                                            }
-                                        >
-                                            <div className="border border-primary rounded-[15px] p-1">
-                                                <img
-                                                    src="asset/images/landing-page/merch-white.png"
-                                                    alt=""
-                                                    className="w-[80px] h-[60px]"
-                                                />
-                                            </div>
-                                            <p className="text-primary text-[17px] leading-[50px] tracking-[0.16em] font-bold">
-                                                White
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <button
+                                        onClick={() => setShirtColor("white")}
+                                        className="w-12 aspect-square rounded-[10px] border-2 hover:border-[#808080] bg-white hover:scale-105 transition-transform"
+                                    />
                                 </div>
 
-                                <div className="flex flex-col w-full justify-center items-center md:gap-10 gap-10">
-                                    <div className="">
-                                        <div className="flex flex-col justify-center items-center md:items-start">
-                                            <p className="text-primary text-[24px] md:text-[33px] font-medium leading-[24px] tracking-[0.03em]">
-                                                Baju Build-IT 2024
-                                            </p>
-                                            <p className="font-extrabold text-[24px] tracking-[0.03em] leading-[24px] mt-5">
-                                                Rp 100.000
-                                            </p>
-                                        </div>
-                                        <div className="hidden md:block divider h-[2px] w-full md:w-[417px] bg-primary mt-5"></div>
-                                        <p className="text-[14px] leading-[21px] w-full md:w-[387px] mt-5 text-center md:text-start">
-                                            Baju limited edition BUILD IT 2024.
-                                            Dengan bahan yang adem dan desain
-                                            yang kece, cocok digunakan kemana
-                                            saja.
-                                        </p>
-                                        <a
-                                            href="https://bit.ly/POMerchandiseBuildIT2024"
-                                            target="_blank"
-                                        >
-                                            <div className="bg-primary rounded-[10px] d-block max-w-[417px] h-[50px] p-5 text-white text-[20px] leading-[26px] tracking-[0.03em] flex justify-center items-center mt-3 hover:bg-secondary cursor-pointer shadow-lg">
-                                                Order Now
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div className="flex flex-col border border-primary rounded-[10px] w-full md:w-[417px]">
-                                        <div className="flex flex-row p-5 justify-start gap-3">
-                                            <img
-                                                src="asset/images/landing-page/pre-order.png"
-                                                alt=""
-                                                className="w-[44px] h-[45px]"
-                                            />
-                                            <div className="flex flex-col">
-                                                <p className="text-[16px] font-medium leading-[24px]">
-                                                    {batchInfo.batchName}
-                                                </p>
-                                                <p className="font-medium text-[12px] leading-[18px] underline">
-                                                    {batchInfo.batchDate}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="border-t border-primary"></div>
-                                        <div className="flex flex-row p-5 justify-start gap-3">
-                                            <img
-                                                src="asset/images/landing-page/pickup.png"
-                                                alt=""
-                                                className="w-[44px] h-[45px]"
-                                            />
-                                            <div className="flex flex-col">
-                                                <p className="text-[16px] font-medium leading-[24px]">
-                                                    Pick-up Offline
-                                                </p>
-                                                <p className="font-medium text-[12px] leading-[18px] w-[200px] md:w-[292px]">
-                                                    Gedung Teknologi Informasi,
-                                                    Universitas Udayana,
-                                                    Jimbaran, Bali
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                {/* Ikon Jam */}
+                                <div
+                                    className="absolute top-4 right-4 flex items-center gap-2 text-[#201349] 
+            font-['Montserrat'] text-sm sm:text-base font-bold uppercase tracking-wider leading-[30px]"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 sm:w-5 sm:h-5"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            fill="#201349"
+                                            d="M12 22c-2.77 0-5.117-.967-7.05-2.9C3.017 17.167 2.05 14.82 2.05 12.05S3.017 6.933 4.95 5 9.23 2.05 12 2.05s5.117.967 7.05 2.9c1.933 1.933 2.9 4.28 2.9 7.05s-.967 5.117-2.9 7.05C17.117 21.033 14.77 22 12 22Zm-.75-5.25h1.5v-5.1h-3v1.5h1.5v3.6Z"
+                                        />
+                                    </svg>
+                                    <span className="text-sm sm:text-base">
+                                        9 - 28 AUG 2024
+                                    </span>
                                 </div>
+
+                                {/* Gambar Kaos */}
+                                <img
+                                    src={
+                                        shirtColor === "black"
+                                            ? "../asset/images/landing-page/merch-black.png"
+                                            : "../asset/images/landing-page/merch-white.png"
+                                    }
+                                    alt="Gambar Kaos"
+                                    className=" w-auto max-w-full h-auto sm:max-w-[500px]  md:max-w-[600px] lg:max-w-[650px] object-contain mx-auto"
+                                />
+
+                                {/* Tombol Order */}
+                                <button
+                                    className="w-full flex items-center justify-between gap-4 px-6 py-5 sm:px-6 sm:py-5 rounded-[15px] 
+            bg-gradient-to-r from-[#201349] to-[#513E99] 
+            text-white font-bold uppercase tracking-[1.6px] text-base sm:text-lg leading-[30px]
+            font-['Montserrat'] transition-all hover:brightness-110 hover:scale-[1.02] hover:shadow-lg duration-200 ease-in-out"
+                                >
+                                    <span>Order Now</span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 sm:w-6 sm:h-6"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M7 22C6.45 22 5.97917 21.8042 5.5875 21.4125C5.19583 21.0208 5 20.55 5 20C5 19.45 5.19583 18.9792 5.5875 18.5875C5.97917 18.1958 6.45 18 7 18C7.55 18 8.02083 18.1958 8.4125 18.5875C8.80417 18.9792 9 19.45 9 20C9 20.55 8.80417 21.0208 8.4125 21.4125C8.02083 21.8042 7.55 22 7 22ZM17 22C16.45 22 15.9792 21.8042 15.5875 21.4125C15.1958 21.0208 15 20.55 15 20C15 19.45 15.1958 18.9792 15.5875 18.5875C15.9792 18.1958 16.45 18 17 18C17.55 18 18.0208 18.1958 18.4125 18.5875C18.8042 18.9792 19 19.45 19 20C19 20.55 18.8042 21.0208 18.4125 21.4125C18.0208 21.8042 17.55 22 17 22ZM6.15 6L8.55 11H15.55L18.3 6H6.15ZM5.2 4H19.95C20.3333 4 20.625 4.17083 20.825 4.5125C21.025 4.85417 21.0333 5.2 20.85 5.55L17.3 11.95C17.1167 12.2833 16.8708 12.5417 16.5625 12.725C16.2542 12.9083 15.9167 13 15.55 13H8.1L7 15H18C18.2833 15 18.5208 15.0958 18.7125 15.2875C18.9042 15.4792 19 15.7167 19 16C19 16.2833 18.9042 16.5208 18.7125 16.7125C18.5208 16.9042 18.2833 17 18 17H7C6.25 17 5.68333 16.6708 5.3 16.0125C4.91667 15.3542 4.9 14.7 5.25 14.05L6.6 11.6L3 4H2C1.71667 4 1.47917 3.90417 1.2875 3.7125C1.09583 3.52083 1 3.28333 1 3C1 2.71667 1.09583 2.47917 1.2875 2.2875C1.47917 2.09583 1.71667 2 2 2H3.625C3.80833 2 3.98333 2.05 4.15 2.15C4.31667 2.25 4.44167 2.39167 4.525 2.575L5.2 4Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1014,24 +974,6 @@ const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
             {isOpen && (
                 <div className="px-4 py-2 text-gray-700">{description}</div>
             )}
-        </div>
-    );
-};
-
-const CardContact = ({ name, wa, line }) => {
-    return (
-        <div
-            className="bg-primer/50 p-5 flex gap-5 border border-primary/20 rounded-[10px]"
-            data-aos="fade-up"
-        >
-            <IconContactCard />
-            <div className="flex flex-col">
-                <p className="text-primary text-[18px] font-extrabold">
-                    {name}
-                </p>
-                <p className="text-primary text-[14px] font-medium">{wa}</p>
-                <p className="text-primary text-[14px] font-medium">{line}</p>
-            </div>
         </div>
     );
 };

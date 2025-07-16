@@ -63,9 +63,9 @@ export default function Footer() {
                         Master the basics, <br className="mb-2" /> Unlock your
                         IT Superpower
                     </p>
-                    <div className="social-media font-montserrat mt-10 flex items-center space-x-3 relative bottom-0">
+                    <div className="social-media font-montserrat mt-10 flex flex-col md:flex-row gap-3 md:gap-6 items-start md:items-center text-[#201349]">
                         <a
-                            className="text-[#201349] flex items-center "
+                            className="flex items-center hover:underline"
                             href="https://www.instagram.com/hmtiudayana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                             target="_blank"
                             rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default function Footer() {
                             INSTAGRAM
                         </a>
                         <a
-                            className="text-[#201349] flex items-center"
+                            className="flex items-center hover:underline"
                             href="https://www.tiktok.com/@hmtiudayana?_t=8oS3HHpAO92&_r=1"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export default function Footer() {
                             TIKTOK
                         </a>
                         <a
-                            className="text-[#201349] flex items-center"
+                            className="flex items-center hover:underline"
                             href="https://www.facebook.com/HMTIUdayana/?locale=id_ID"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export default function Footer() {
                             FACEBOOK
                         </a>
                         <a
-                            className="text-[#201349] flex items-center"
+                            className="flex items-center hover:underline"
                             href="https://www.youtube.com/@hmtiuniversitasudayana2028"
                             target="_blank"
                             rel="noopener noreferrer"
