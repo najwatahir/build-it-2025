@@ -116,45 +116,39 @@ export default function Welcome() {
     const timelineEvents = [
         {
             title: "Open Registration",
-            date: "Batch I : 14 Agustus - 19 Agustus 2024 Batch II : 21 Agustus - 25 Agustus 2024",
+            date: "Batch I : 14 Agustus - 20 Agustus 2025 Batch II : 22 Agustus - 5 September 2025",
             location: "https://buildit.hmtiudayana.id/",
             side: "left",
         },
         {
             title: "Pembukaan dan Pelatihan Jaringan Komputer & Komunikasi",
-            date: "3 Agustus 2025",
+            date: "20 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
             side: "right",
         },
         {
             title: "Pelatihan Algoritma & Pemrograman",
-            date: "6 Agustus 2025",
-            location: "Lab Algoritma",
+            date: "27 September 2025",
+            location: "Gedung TI, Fakultas Teknik, Jimbaran",
             side: "left",
         },
         {
             title: "Pelatihan Basis Data",
-            date: "8 Agustus 2025",
-            location: "Gedung C",
+            date: "27 September 2025",
+            location: "Gedung TI, Fakultas Teknik, Jimbaran",
             side: "right",
         },
         {
             title: "Deadline Pengumpulan Tugas",
-            date: "10 Agustus 2025",
+            date: "11 Oktober 2025",
             location: "Online",
             side: "left",
         },
         {
             title: "Sosialisasi Penjurusan & Lomba-lomba",
-            date: "12 Agustus 2025",
-            location: "Aula Besar",
+            date: "4 Oktober 2025",
+            location: "Aula Swastika, Fakultas Teknik, Jimbaran",
             side: "right",
-        },
-        {
-            title: "Sharing Session Hacktiv8",
-            date: "15 Agustus 2025",
-            location: "Auditorium",
-            side: "left",
         },
     ];
 
@@ -794,39 +788,51 @@ export default function Welcome() {
                                         {/* Card 1 */}
                                         <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
-                                                Nama Narahubung 1
+                                                Najwa Tahir
                                             </h3>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
-                                                WA: 0812-3456-7890
+                                                <a
+                                                    href="https://wa.me/+62895386344682"
+                                                    target="_blank"
+                                                >
+                                                    WA: 0895-3863-44682
+                                                </a>
                                             </p>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
-                                                LINE: id_line1
+                                                LINE: najwatahir8
                                             </p>
                                         </div>
 
                                         {/* Card 2 */}
                                         <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
-                                                Nama Narahubung 2
+                                                Tri Darma
                                             </h3>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
-                                                WA: 0896-1234-5678
+                                                <a
+                                                    href="https://wa.me/+6281333486847"
+                                                    target="_blank"
+                                                >
+                                                    WA: 0813-3348-6847
+                                                </a>
                                             </p>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
-                                                LINE: id_line2
+                                                LINE: tri.dharma.
                                             </p>
                                         </div>
 
                                         {/* Card 3 */}
                                         <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
-                                                Nama Narahubung 3
+                                                Adel
                                             </h3>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
-                                                WA: 0877-6543-2109
+                                                <a href="https://wa.me/+6283147664176">
+                                                    WA: 0831-4766-4176
+                                                </a>
                                             </p>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
-                                                LINE: id_line3
+                                                LINE: adeliawirasantii
                                             </p>
                                         </div>
                                     </div>
