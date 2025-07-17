@@ -239,7 +239,7 @@ export default function Welcome() {
                                     lineHeight: "1.1",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="400"
+                                data-aos-delay="100"
                             >
                                 2025
                             </h2>
@@ -250,7 +250,7 @@ export default function Welcome() {
                                     fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="600"
+                                data-aos-delay="100"
                             >
                                 <p>Master the basics</p>
                                 <p>Unlock your IT Superpower</p>
@@ -287,7 +287,7 @@ export default function Welcome() {
                     <div
                         className="mt-80 sm:mt-92 lg:mt-100 text-center"
                         data-aos="fade-up"
-                        data-aos-delay="500"
+                        data-aos-delay="100"
                     >
                         <h3
                             className="font-[Montserrat] font-bold text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
@@ -310,7 +310,7 @@ export default function Welcome() {
                             <div
                                 className="w-full max-w-[403px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
                                 data-aos="fade-up"
-                                data-aos-delay="900"
+                                data-aos-delay="100"
                                 style={{
                                     backgroundImage:
                                         "url('../asset/images/sponsor.png')",
@@ -323,7 +323,7 @@ export default function Welcome() {
                     <div
                         className="mt-16 px-4 sm:px-8 max-w-7xl mx-auto relative"
                         data-aos="fade-up"
-                        data-aos-delay="500"
+                        data-aos-delay="100"
                     >
                         {/* Background Layer 1 */}
                         <div className="absolute -top-[120px] left-1/2 -translate-x-1/2 w-[1850px] h-[1700px] rounded-t-[750px] bg-[rgba(255,255,255,0.10)] shadow-[0_-30px_250px_0px_rgba(81,62,153,0.10)] z-0"></div>
@@ -381,14 +381,14 @@ export default function Welcome() {
              shadow-[0_-60px_90px_rgba(81,62,153,0.10)] 
              flex flex-col items-center gap-8"
                         data-aos="fade-up"
-                        data-aos-delay="300"
+                        data-aos-delay="100"
                     >
                         <h2
                             className="text-[32px] font-bold tracking-[0.2em] text-transparent 
                bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] 
                font-[Montserrat] text-center"
                             data-aos="fade-up"
-                            data-aos-delay="300"
+                            data-aos-delay="100"
                         >
                             TENTANG BUILD IT
                         </h2>
@@ -398,14 +398,14 @@ export default function Welcome() {
                             alt="Logo Build IT"
                             className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[269px] aspect-[269/337] object-contain"
                             data-aos="fade-up"
-                            data-aos-delay="300"
+                            data-aos-delay="100"
                         />
                         <p
                             className="max-w-[938px] text-[#4D4D4D] text-justify 
              font-[Montserrat] text-[20px] font-normal
              leading-[34px] px-6"
                             data-aos="fade-up"
-                            data-aos-delay="300"
+                            data-aos-delay="100"
                         >
                             <span className="block">
                                 <strong>
@@ -435,7 +435,7 @@ export default function Welcome() {
                             <div
                                 className="w-full px-12 sm:px-14 md:px-16"
                                 data-aos="fade-up"
-                                data-aos-delay="300"
+                                data-aos-delay="100"
                             >
                                 <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {/* Card 1 */}
@@ -506,7 +506,7 @@ export default function Welcome() {
                                     <div
                                         className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
                                         data-aos="fade-up"
-                                        data-aos-delay="300"
+                                        data-aos-delay="100"
                                     >
                                         <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
                                             Jaringan Komputer
@@ -544,7 +544,7 @@ export default function Welcome() {
                         id="timeline"
                         className="relative mt-40 w-full max-w-[1440px] mx-auto rounded-[150px] border-t border-[#513E98]/50 bg-[linear-gradient(180deg,_#FAFAFA_50%,_#FFF_100%)] flex flex-col items-center py-24 px-4 sm:px-8 md:px-16 overflow-hidden"
                         data-aos="fade-up"
-                        data-aos-delay="300"
+                        data-aos-delay="100"
                     >
                         {/* Background */}
                         <div className="absolute inset-0 z-0 rotate-[3.779deg]">
