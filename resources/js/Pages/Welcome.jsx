@@ -10,13 +10,6 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
-
-import {
-    IconFaq,
-    IconContactCard,
-    IconContactBanner,
-} from "../Components/Icons/LandingPage";
-import { KotakModulSecondary } from "@/Components/Icons/modul";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Loading from "./Loading";
