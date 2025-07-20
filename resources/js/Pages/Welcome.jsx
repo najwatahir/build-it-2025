@@ -10,9 +10,9 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
+import { KotakModulSecondary } from "@/Components/Icons/modul";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Loading from "./Loading";
 
 import UserGuest from "@/Components/Layouts/User/UserGuest";
 
@@ -114,34 +114,40 @@ export default function Welcome() {
             side: "left",
         },
         {
-            title: "Pembukaan dan Pelatihan Jaringan Komputer & Komunikasi",
+            title: "Pembukaan dan Sosialisasi Gemastik",
+            date: "20 September 2025",
+            location: "Aula Swastika, Fakultas Teknik, Jimbaran",
+            side: "right",
+        },
+        {
+            title: "Pelatihan Jaringan Komputer & Komunikasi",
             date: "20 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
-            side: "right",
+            side: "left",
         },
         {
             title: "Pelatihan Algoritma & Pemrograman",
             date: "27 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
-            side: "left",
+            side: "right",
         },
         {
             title: "Pelatihan Basis Data",
             date: "27 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
-            side: "right",
+            side: "left",
         },
         {
             title: "Deadline Pengumpulan Tugas",
             date: "11 Oktober 2025",
             location: "Online",
-            side: "left",
+            side: "right",
         },
         {
-            title: "Sosialisasi Penjurusan & Lomba-lomba",
+            title: "Sosialisasi Penjurusan & Penutupan",
             date: "4 Oktober 2025",
             location: "Aula Swastika, Fakultas Teknik, Jimbaran",
-            side: "right",
+            side: "left",
         },
     ];
 
@@ -152,7 +158,7 @@ export default function Welcome() {
             <UserGuest>
                 <div className="w-full overflow-hidden">
                     {/* Hero Section*/}
-                    <div className="mt-16 relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+                    <div className="md:mt-16 relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
                         <div className="absolute top-16 inset-x-0 -z-10">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +245,7 @@ export default function Welcome() {
                                     lineHeight: "1.1",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="100"
+                                data-aos-delay="400"
                             >
                                 2025
                             </h2>
@@ -250,7 +256,7 @@ export default function Welcome() {
                                     fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="100"
+                                data-aos-delay="600"
                             >
                                 <p>Master the basics</p>
                                 <p>Unlock your IT Superpower</p>
@@ -263,31 +269,38 @@ export default function Welcome() {
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
-                                <button
-                                    className="px-6 py-3 rounded-full bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
+                                <Link href="/register">
+                                    <button
+                                        className="px-6 py-3 rounded-full bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
                text-white font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
-               tracking-[1.6px] uppercase flex items-center gap-2 hover:brightness-110 transition-all duration-200 hover:text-secondary"
-                                >
-                                    Daftar Sekarang
-                                    <span className="text-xl">→</span>
-                                </button>
+               tracking-[1.6px] uppercase flex items-center gap-2 hover:brightness-110 transition-all duration-200 hover:text-secondary relative overflow-hidden"
+                                    >
+                                        <span className="z-10">
+                                            daftar sekarang
+                                        </span>
+                                        <span className="text-xl z-10">→</span>
+                                        <span className="absolute inset-0 bg-gradient-to-r from-[#513E99] to-[#201349] opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
+                                    </button>
+                                </Link>
 
-                                <button
-                                    className="px-6 py-3 rounded-full border-2 border-[#201349] text-[#201349]
+                                <Link href="#">
+                                    <button
+                                        className="px-6 py-3 rounded-full border-2 border-[#201349] text-[#201349]
                font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
-               tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] transition-all duration-200"
-                                >
-                                    How to Join
-                                </button>
+               tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] hover:border-secondary hover:text-secondary transition-all duration-200"
+                                    >
+                                        How to Join
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Sponsor*/}
                     <div
-                        className="mt-80 sm:mt-92 lg:mt-100 text-center"
+                        className="mt-22 sm:mt-64 text-center"
                         data-aos="fade-up"
-                        data-aos-delay="100"
+                        data-aos-delay="500"
                     >
                         <h3
                             className="font-[Montserrat] font-bold text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
@@ -308,9 +321,9 @@ export default function Welcome() {
                             <div className="absolute left-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
                             <div className="absolute right-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
                             <div
-                                className="w-full max-w-[403px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
+                                className="w-full max-w-[300px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
                                 data-aos="fade-up"
-                                data-aos-delay="100"
+                                data-aos-delay="900"
                                 style={{
                                     backgroundImage:
                                         "url('../asset/images/sponsor.png')",
@@ -323,7 +336,7 @@ export default function Welcome() {
                     <div
                         className="mt-16 px-4 sm:px-8 max-w-7xl mx-auto relative"
                         data-aos="fade-up"
-                        data-aos-delay="100"
+                        data-aos-delay="500"
                     >
                         {/* Background Layer 1 */}
                         <div className="absolute -top-[120px] left-1/2 -translate-x-1/2 w-[1850px] h-[1700px] rounded-t-[750px] bg-[rgba(255,255,255,0.10)] shadow-[0_-30px_250px_0px_rgba(81,62,153,0.10)] z-0"></div>
@@ -332,13 +345,13 @@ export default function Welcome() {
                         <div className="absolute  -top-[30px] left-1/2 -translate-x-1/2 w-[1682px] h-[1059px] rounded-t-[650px] bg-white border-[5px] border-white shadow-[0_-20px_250px_0px_rgba(81,62,153,0.10)] z-10"></div>
 
                         {/* Card Grid */}
-                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30">
+                        <div className="gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30 grid md:flex">
                             {/* Card 1 */}
                             <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
                                     3 Pelatihan tatap muka
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance">
+                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
                                     Membantu mahasiswa baru memahami mata kuliah
                                     dasar seperti Algoritma & Pemrograman, Basis
                                     Data, dan Jaringan Komputer & Komunikasi.
@@ -347,24 +360,12 @@ export default function Welcome() {
 
                             {/* Card 2 */}
                             <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
-                                    Sosialisasi Lomba & penjurusan
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                                    Sosialisasi Gemastik & Penjurusan
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance">
+                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
                                     Sosialisasi ini akan dipandu oleh dosen dan
                                     mahasiswa Teknologi Informasi.
-                                </p>
-                            </div>
-
-                            {/* Card 3 */}
-                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
-                                    Sharing Session Hacktiv8
-                                </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance">
-                                    Akan ada sharing session bersama Hacktiv8
-                                    yang merupakan pelatihan coding bootcamp
-                                    terbaik di Indonesia.
                                 </p>
                             </div>
                         </div>
@@ -381,14 +382,14 @@ export default function Welcome() {
              shadow-[0_-60px_90px_rgba(81,62,153,0.10)] 
              flex flex-col items-center gap-8"
                         data-aos="fade-up"
-                        data-aos-delay="100"
+                        data-aos-delay="300"
                     >
                         <h2
                             className="text-[32px] font-bold tracking-[0.2em] text-transparent 
                bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] 
                font-[Montserrat] text-center"
                             data-aos="fade-up"
-                            data-aos-delay="100"
+                            data-aos-delay="300"
                         >
                             TENTANG BUILD IT
                         </h2>
@@ -398,14 +399,14 @@ export default function Welcome() {
                             alt="Logo Build IT"
                             className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[269px] aspect-[269/337] object-contain"
                             data-aos="fade-up"
-                            data-aos-delay="100"
+                            data-aos-delay="300"
                         />
                         <p
                             className="max-w-[938px] text-[#4D4D4D] text-justify 
-             font-[Montserrat] text-[20px] font-normal
+             font-[Montserrat] md:text-[20px] text-[15px] font-normal
              leading-[34px] px-6"
                             data-aos="fade-up"
-                            data-aos-delay="100"
+                            data-aos-delay="300"
                         >
                             <span className="block">
                                 <strong>
@@ -435,7 +436,7 @@ export default function Welcome() {
                             <div
                                 className="w-full px-12 sm:px-14 md:px-16"
                                 data-aos="fade-up"
-                                data-aos-delay="100"
+                                data-aos-delay="300"
                             >
                                 <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {/* Card 1 */}
@@ -448,27 +449,31 @@ export default function Welcome() {
                                             Algoritma & Pemrograman
                                         </h4>
                                         <img
-                                            src="../asset/images/alprog.png"
-                                            alt="Algoritma"
-                                            className="w-40 h-40 object-contain mb-4"
+                                            src="../asset/images/logo-alprog.png"
+                                            alt="Algoritma dan Pemrograman"
+                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
                                         />
                                         <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
-                                            Pemahaman logika pemrograman dasar
-                                            dan struktur algoritma untuk
-                                            membangun solusi perangkat lunak.
+                                            Membangun pemahaman konsep
+                                            fundamental dalam pemrograman
+                                            komputer dan pemecahan masalah
+                                            menggunakan algoritma.
                                         </p>
-                                        <button
-                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+                                        <Link href="/modul/alprog">
+                                            <button
+                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
              bg-gradient-to-r from-[#201349] to-[#513E99] 
              shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
              text-white font-[Montserrat] text-[14px] font-semibold 
              leading-[30px] tracking-[0.1em] uppercase w-full hover:text-secondary transition-all duration-300"
-                                        >
-                                            Lebih Lanjut{" "}
-                                            <span className="pl-16 text-xl">
-                                                →
-                                            </span>
-                                        </button>
+                                                href="/modul/alprog"
+                                            >
+                                                Lebih Lanjut{" "}
+                                                <span className="pl-16 text-xl">
+                                                    →
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
                                     {/* Card 2 */}
                                     <div
@@ -480,59 +485,65 @@ export default function Welcome() {
                                             Basis Data
                                         </h4>
                                         <img
-                                            src="../asset/images/basisdata.png"
-                                            alt="Algoritma"
-                                            className="w-40 h-40 object-contain mb-4"
+                                            src="../asset/images/logo-basdat.png"
+                                            alt="Basis Data"
+                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
                                         />
                                         <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
-                                            Pemahaman logika pemrograman dasar
-                                            dan struktur algoritma untuk
-                                            membangun solusi perangkat lunak.
+                                            Menelaah konsep, desain,
+                                            implementasi, dan manajemen sistem
+                                            basis data untuk mengelola dan
+                                            memanipulasi data.
                                         </p>
-                                        <button
-                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+                                        <Link href="/modul/basisdata">
+                                            <button
+                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
              bg-gradient-to-r from-[#201349] to-[#513E99] 
              shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
              text-white font-[Montserrat] text-[14px] font-semibold 
              leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
-                                        >
-                                            Lebih Lanjut
-                                            <span className="pl-16 text-xl">
-                                                →
-                                            </span>
-                                        </button>
+                                            >
+                                                Lebih Lanjut
+                                                <span className="pl-16 text-xl">
+                                                    →
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
                                     {/* Card 3 */}
                                     <div
                                         className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
                                         data-aos="fade-up"
-                                        data-aos-delay="100"
+                                        data-aos-delay="300"
                                     >
                                         <h4 className="text-center text-xl font-bold text-[#201349] mb-4 font-[Montserrat]">
                                             Jaringan Komputer
                                         </h4>
                                         <img
-                                            src="../asset/images/jarkom.png"
-                                            alt="Algoritma"
-                                            className="w-40 h-40 object-contain mb-4"
+                                            src="../asset/images/logo-jarkom.png"
+                                            alt="Jaringan Komputer dan Komunikasi"
+                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
                                         />
                                         <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
-                                            Pemahaman logika pemrograman dasar
-                                            dan struktur algoritma untuk
-                                            membangun solusi perangkat lunak.
+                                            Mempelajari konsep dan arsitektur
+                                            mengenai sistem jaringan komputer
+                                            serta proses komunikasi pengiriman
+                                            data antar perangkat.
                                         </p>
-                                        <button
-                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+                                        <Link href="/modul/jarkom">
+                                            <button
+                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
              bg-gradient-to-r from-[#201349] to-[#513E99] 
              shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
              text-white font-[Montserrat] text-[14px] font-semibold 
              leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
-                                        >
-                                            Lebih Lanjut{" "}
-                                            <span className="pl-16 text-xl">
-                                                →
-                                            </span>
-                                        </button>
+                                            >
+                                                Lebih Lanjut{" "}
+                                                <span className="pl-16 text-xl">
+                                                    →
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -544,7 +555,7 @@ export default function Welcome() {
                         id="timeline"
                         className="relative mt-40 w-full max-w-[1440px] mx-auto rounded-[150px] border-t border-[#513E98]/50 bg-[linear-gradient(180deg,_#FAFAFA_50%,_#FFF_100%)] flex flex-col items-center py-24 px-4 sm:px-8 md:px-16 overflow-hidden"
                         data-aos="fade-up"
-                        data-aos-delay="100"
+                        data-aos-delay="300"
                     >
                         {/* Background */}
                         <div className="absolute inset-0 z-0 rotate-[3.779deg]">
@@ -711,7 +722,7 @@ export default function Welcome() {
                                         terkait BUILD IT 2025
                                     </p>
                                 </div>
-                                <div className="mt-24 flex justify-center">
+                                <div className="mt-24 flex justify-center font-montserrat">
                                     <div
                                         className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center gap-6"
                                         data-aos="fade-right"
@@ -734,7 +745,7 @@ export default function Welcome() {
                                         />
                                         <AccordionLanding
                                             heading="Apa yang akan dilakukan mahasiswa selama pelatihan BUILD IT 2025?"
-                                            description="Selama Pelatihan BUILD-TI 2025, mahasiswa akan dibimbing dalam memahami mata kuliah dasar di perkuliahan seperti alprog, basis data, dan jaringan komputer"
+                                            description="Selama Pelatihan BUILD-IT 2025, mahasiswa akan dibimbing dalam memahami mata kuliah dasar di perkuliahan seperti algoritma dan pemrograman, basis data, dan jaringan komputer dan kominukasi"
                                             isOpen={openIndex === 2}
                                             onClick={() =>
                                                 handleAccordionClick(2)
@@ -799,7 +810,7 @@ export default function Welcome() {
                                         {/* Card 2 */}
                                         <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
-                                                Tri Darma
+                                                Tri Dharma
                                             </h3>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
                                                 <a
@@ -835,7 +846,7 @@ export default function Welcome() {
                     </div>
 
                     {/* Merchandise */}
-                    <div className="px-6 md:px-24 md:mt-36 mt-20 mb-20">
+                    <div className="px-6 md:px-24 md:mt-36 mt-20 mb-20 relative">
                         <div
                             className="flex flex-col justify-center items-center md:mb-10 mb-5"
                             id="Merch"
@@ -858,9 +869,9 @@ export default function Welcome() {
                             </p>
                         </div>
 
-                        <div className="flex justify-center items-center min-h-screen px-6 py-10 sm:px-8">
+                        <div className="flex justify-center items-center min-h-screen py-10 sm:px-8">
                             <div
-                                className=" relative flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 p-6 sm:p-8 min-h-screen w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] rounded-[15px] border border-[#CCC] shadow-md transition-all duration-300"
+                                className="relative flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 p-6 sm:p-8 pt-32 w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] rounded-[15px] border border-[#CCC] shadow-md transition-all duration-300"
                                 data-aos="fade-up"
                                 style={{
                                     background:
@@ -949,7 +960,7 @@ const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
                 onClick={onClick}
             >
                 <div className="flex items-center justify-between">
-                    <span className="text-[15px] md:text-lg font-semibold text-gray-900">
+                    <span className="text-[15px] md:text-lg font-semibold text-[#808080]">
                         {heading}
                     </span>
                     {/* icon arrow */}
