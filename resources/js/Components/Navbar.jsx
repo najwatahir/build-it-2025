@@ -125,7 +125,7 @@ export default function Navbar() {
                         <Link
                             href="/login"
                             rel="noopener noreferrer"
-                            className="w-fit h-[52px] block md:hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:bg-secondary font-bold text-white font  transition-all duration-300 font-montserrat text-[14px] leading-none tracking-[1.4px] uppercase"
+                            className="w-fit md:h-[52px] block md:hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:bg-secondary font-bold text-white font  transition-all duration-300 font-montserrat text-[14px] leading-none tracking-[1.4px] uppercase"
                         >
                             Login
                         </Link>
