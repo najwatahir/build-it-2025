@@ -76,14 +76,12 @@ export default function Alprog() {
                                     className="mb-12"
                                 >
                                     <button
-                                        className="relative overflow-hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] hover:from-[#513E99] hover:to-[#201349] text-white font-montserrat text-[14px] font-bold leading-none tracking-[1.4px] uppercase transition-all duration-500"
+                                        className="relative overflow-hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white font-montserrat text-[14px] font-bold leading-none tracking-[1.4px] uppercase transition-all duration-500"
                                         data-aos="fade-up"
                                     >
                                         <span className="z-10 relative">
                                             Lihat Modul{" "}
-                                            <span className="text-xl">
-                                                →
-                                            </span>
+                                            <span className="text-xl">→</span>
                                         </span>
                                         <span className="absolute inset-0 bg-gradient-to-r from-[#513E99] to-[#201349] opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
                                     </button>
