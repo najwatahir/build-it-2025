@@ -10,7 +10,6 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
-import { KotakModulSecondary } from "@/Components/Icons/modul";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -138,15 +137,15 @@ export default function Welcome() {
             side: "left",
         },
         {
-            title: "Deadline Pengumpulan Tugas",
-            date: "11 Oktober 2025",
-            location: "Online",
-            side: "right",
-        },
-        {
             title: "Sosialisasi Penjurusan & Penutupan",
             date: "4 Oktober 2025",
             location: "Aula Swastika, Fakultas Teknik, Jimbaran",
+            side: "right",
+        },
+        {
+            title: "Deadline Pengumpulan Tugas",
+            date: "11 Oktober 2025",
+            location: "Online",
             side: "left",
         },
     ];
@@ -158,7 +157,7 @@ export default function Welcome() {
             <UserGuest>
                 <div className="w-full overflow-hidden">
                     {/* Hero Section*/}
-                    <div className="md:mt-16 relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+                    <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
                         <div className="absolute top-16 inset-x-0 -z-10">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -223,13 +222,13 @@ export default function Welcome() {
                             </svg>
                         </div>
 
-                        <div className="flex flex-col items-center text-center space-y-2 z-10">
+                        <div className="flex flex-col items-center text-center space-y-4 z-10">
                             <h1
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
                  [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
                                 style={{
-                                    fontSize: "clamp(3rem, 12vw, 14rem)",
-                                    lineHeight: "1.1",
+                                    fontSize: "clamp(3rem, 10vw, 14rem)",
+                                    lineHeight: "1.0",
                                 }}
                                 data-aos="fade-up"
                                 data-aos-delay="100"
@@ -239,33 +238,31 @@ export default function Welcome() {
 
                             <h2
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
-                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)] mt-1 sm:mt-2"
+                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
                                 style={{
                                     fontSize: "clamp(2.5rem, 10vw, 10rem)",
-                                    lineHeight: "1.1",
+                                    lineHeight: "0.9",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="400"
+                                data-aos-delay="100"
                             >
                                 2025
                             </h2>
 
                             <div
-                                className=" mt-8 sm:mt-12 lg:mt-16 text-[#4D4D4D] font-[Montserrat] font-semibold uppercase tracking-[2px] max-w-screen-md text-center"
+                                className="mt-6 text-[#4D4D4D] font-[Montserrat] font-semibold uppercase tracking-[2px] max-w-screen-md text-center"
                                 style={{
                                     fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="600"
+                                data-aos-delay="100"
                             >
                                 <p>Master the basics</p>
                                 <p>Unlock your IT Superpower</p>
                             </div>
 
-                            <div className="h-14 sm:h-16"></div>
-
                             <div
-                                className="flex flex-col sm:flex-row gap-4 items-center justify-center"
+                                className="flex flex-col sm:flex-row gap-4 items-center justify-center my-4"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
@@ -298,9 +295,9 @@ export default function Welcome() {
 
                     {/* Sponsor*/}
                     <div
-                        className="mt-22 sm:mt-64 text-center"
+                        className="mt-22 sm:mt-36 text-center"
                         data-aos="fade-up"
-                        data-aos-delay="500"
+                        data-aos-delay="200"
                     >
                         <h3
                             className="font-[Montserrat] font-bold text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
@@ -347,24 +344,39 @@ export default function Welcome() {
                         {/* Card Grid */}
                         <div className="gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30 grid md:flex">
                             {/* Card 1 */}
-                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                            <div className="bg-white w-full max-w-[400px] h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                                    Sosialisasi Gemastik
+                                </h4>
+                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                    Sosialisasi mengenai Pagelaran Mahasiswa
+                                    Nasional Bidang Teknologi Informasi dan
+                                    Komunikasi (GEMASTIK) yang merupakan ajang
+                                    kompetisi TIK tingkat Nasional.
+                                </p>
+                            </div>
+                            {/* Card 2 */}
+                            <div className="bg-white w-full max-w-[400px] h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
                                 <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
                                     3 Pelatihan tatap muka
                                 </h4>
                                 <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
-                                    Membantu mahasiswa baru memahami mata kuliah
-                                    dasar seperti Algoritma & Pemrograman, Basis
-                                    Data, dan Jaringan Komputer & Komunikasi.
+                                    Pelatihan yang akan membantu mahasiswa baru
+                                    dalam memahami mata kuliah dasar seperti
+                                    Algoritma & Pemrograman, Basis Data, dan
+                                    Jaringan Komputer & Komunikasi.
                                 </p>
                             </div>
 
                             {/* Card 2 */}
-                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                            <div className="bg-white w-full max-w-[400px] h-[210px] md:h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
                                 <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
-                                    Sosialisasi Gemastik & Penjurusan
+                                    Sosialisasi Penjurusan & Lomba-lomba
                                 </h4>
                                 <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
-                                    Sosialisasi ini akan dipandu oleh dosen dan
+                                    Sosialisasi mengenai lomba-lomba serta
+                                    penjurusan di Program Studi Teknologi
+                                    Informasi yang akan dipandu oleh dosen dan
                                     mahasiswa Teknologi Informasi.
                                 </p>
                             </div>
@@ -385,13 +397,13 @@ export default function Welcome() {
                         data-aos-delay="300"
                     >
                         <h2
-                            className="text-[32px] font-bold tracking-[0.2em] text-transparent 
+                            className="md:text-[32px] text-[30px] font-bold tracking-[0.2em] text-transparent 
                bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] 
                font-[Montserrat] text-center"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
-                            TENTANG BUILD IT
+                            TENTANG <br className="md:hidden" /> BUILD IT
                         </h2>
 
                         <img
@@ -425,7 +437,7 @@ export default function Welcome() {
                         <div className="mt-40 w-full flex flex-col items-center gap-12 px-4">
                             {/* Judul */}
                             <h3
-                                className="text-center text-[24px] sm:text-[28px] md:text-[32px] font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat]"
+                                className="text-center text-[30px] sm:text-[28px] md:text-[32px] font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat]"
                                 data-aos="fade-up"
                                 data-aos-delay="300"
                             >
@@ -625,7 +637,7 @@ export default function Welcome() {
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            <h3 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat] uppercase mb-4">
+                            <h3 className="text-[35px] sm:text-[40px] md:text-[48px] font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat] uppercase mb-4">
                                 TIMELINE
                             </h3>
                             <p className="text-[#808080] text-center font-[Montserrat] text-sm sm:text-base font-medium tracking-[0.1em]">
@@ -708,7 +720,7 @@ export default function Welcome() {
                             >
                                 <div className="flex flex-col justify-center items-center mb-2">
                                     <h1
-                                        className="w-[918px] text-center font-montserrat text-[48px] font-bold leading-none tracking-[4.8px] uppercase bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
+                                        className="w-[918px] text-center font-montserrat text-[35px] font-bold leading-none tracking-[4.8px] uppercase bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
                                         data-aos="fade-left"
                                     >
                                         FAQ
@@ -767,7 +779,7 @@ export default function Welcome() {
                                     className="mt-32 mb-16 flex flex-col items-center justify-center px-4 text-center"
                                 >
                                     <h2
-                                        className="font-montserrat text-[48px] font-bold leading-none tracking-[4.8px] uppercase 
+                                        className="font-montserrat text-[35px] font-bold leading-none tracking-[4.8px] uppercase 
                bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
                                         data-aos="fade-up"
                                     >
@@ -915,11 +927,11 @@ export default function Welcome() {
                                 <img
                                     src={
                                         shirtColor === "black"
-                                            ? "../asset/images/landing-page/merch-black.png"
-                                            : "../asset/images/landing-page/merch-white.png"
+                                            ? "../asset/images/merch/merch-black.png"
+                                            : "../asset/images/merch/merch-white.png"
                                     }
-                                    alt="Gambar Kaos"
-                                    className=" w-auto max-w-full h-auto sm:max-w-[500px]  md:max-w-[600px] lg:max-w-[650px] object-contain mx-auto"
+                                    alt="MERCH BUILD IT 2025"
+                                    className="w-auto max-w-full h-auto sm:max-w-[500px] md:max-w-[500px] lg:max-w-[650px] object-contain mx-auto"
                                 />
 
                                 {/* Tombol Order */}
