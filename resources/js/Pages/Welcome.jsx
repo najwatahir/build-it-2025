@@ -10,16 +10,8 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
-
-import {
-    IconFaq,
-    IconContactCard,
-    IconContactBanner,
-} from "../Components/Icons/LandingPage";
-import { KotakModulSecondary } from "@/Components/Icons/modul";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Loading from "./Loading";
 
 import UserGuest from "@/Components/Layouts/User/UserGuest";
 
@@ -121,21 +113,33 @@ export default function Welcome() {
             side: "left",
         },
         {
-            title: "Pembukaan dan Pelatihan Jaringan Komputer & Komunikasi",
+            title: "Pembukaan dan Sosialisasi Gemastik",
+            date: "20 September 2025",
+            location: "Aula Swastika, Fakultas Teknik, Jimbaran",
+            side: "right",
+        },
+        {
+            title: "Pelatihan Jaringan Komputer & Komunikasi",
             date: "20 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
-            side: "right",
+            side: "left",
         },
         {
             title: "Pelatihan Algoritma & Pemrograman",
             date: "27 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
-            side: "left",
+            side: "right",
         },
         {
             title: "Pelatihan Basis Data",
             date: "27 September 2025",
             location: "Gedung TI, Fakultas Teknik, Jimbaran",
+            side: "left",
+        },
+        {
+            title: "Sosialisasi Penjurusan & Penutupan",
+            date: "4 Oktober 2025",
+            location: "Aula Swastika, Fakultas Teknik, Jimbaran",
             side: "right",
         },
         {
@@ -143,12 +147,6 @@ export default function Welcome() {
             date: "11 Oktober 2025",
             location: "Online",
             side: "left",
-        },
-        {
-            title: "Sosialisasi Penjurusan & Lomba-lomba",
-            date: "4 Oktober 2025",
-            location: "Aula Swastika, Fakultas Teknik, Jimbaran",
-            side: "right",
         },
     ];
 
@@ -159,7 +157,7 @@ export default function Welcome() {
             <UserGuest>
                 <div className="w-full overflow-hidden">
                     {/* Hero Section*/}
-                    <div className="mt-16 relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+                    <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
                         <div className="absolute top-16 inset-x-0 -z-10">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -224,13 +222,13 @@ export default function Welcome() {
                             </svg>
                         </div>
 
-                        <div className="flex flex-col items-center text-center space-y-2 z-10">
+                        <div className="flex flex-col items-center text-center space-y-4 z-10">
                             <h1
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
                  [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
                                 style={{
-                                    fontSize: "clamp(3rem, 12vw, 14rem)",
-                                    lineHeight: "1.1",
+                                    fontSize: "clamp(3rem, 10vw, 14rem)",
+                                    lineHeight: "1.0",
                                 }}
                                 data-aos="fade-up"
                                 data-aos-delay="100"
@@ -240,61 +238,66 @@ export default function Welcome() {
 
                             <h2
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
-                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)] mt-1 sm:mt-2"
+                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
                                 style={{
                                     fontSize: "clamp(2.5rem, 10vw, 10rem)",
-                                    lineHeight: "1.1",
+                                    lineHeight: "0.9",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="400"
+                                data-aos-delay="100"
                             >
                                 2025
                             </h2>
 
                             <div
-                                className=" mt-8 sm:mt-12 lg:mt-16 text-[#4D4D4D] font-[Montserrat] font-semibold uppercase tracking-[2px] max-w-screen-md text-center"
+                                className="mt-6 text-[#4D4D4D] font-[Montserrat] font-semibold uppercase tracking-[2px] max-w-screen-md text-center"
                                 style={{
                                     fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
                                 }}
                                 data-aos="fade-up"
-                                data-aos-delay="600"
+                                data-aos-delay="100"
                             >
                                 <p>Master the basics</p>
                                 <p>Unlock your IT Superpower</p>
                             </div>
 
-                            <div className="h-14 sm:h-16"></div>
-
                             <div
-                                className="flex flex-col sm:flex-row gap-4 items-center justify-center"
+                                className="flex flex-col sm:flex-row gap-4 items-center justify-center my-4"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
-                                <button
-                                    className="px-6 py-3 rounded-full bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
+                                <Link href="/register">
+                                    <button
+                                        className="px-6 py-3 rounded-full bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
                text-white font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
-               tracking-[1.6px] uppercase flex items-center gap-2 hover:brightness-110 transition-all duration-200 hover:text-secondary"
-                                >
-                                    Daftar Sekarang
-                                    <span className="text-xl">→</span>
-                                </button>
+               tracking-[1.6px] uppercase flex items-center gap-2 hover:brightness-110 transition-all duration-200 hover:text-secondary relative overflow-hidden"
+                                    >
+                                        <span className="z-10">
+                                            daftar sekarang
+                                        </span>
+                                        <span className="text-xl z-10">→</span>
+                                        <span className="absolute inset-0 bg-gradient-to-r from-[#513E99] to-[#201349] opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
+                                    </button>
+                                </Link>
 
-                                <button
-                                    className="px-6 py-3 rounded-full border-2 border-[#201349] text-[#201349]
+                                <Link href="#">
+                                    <button
+                                        className="px-6 py-3 rounded-full border-2 border-[#201349] text-[#201349]
                font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
-               tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] transition-all duration-200"
-                                >
-                                    How to Join
-                                </button>
+               tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] hover:border-secondary hover:text-secondary transition-all duration-200"
+                                    >
+                                        How to Join
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Sponsor*/}
                     <div
-                        className="mt-80 sm:mt-92 lg:mt-100 text-center"
+                        className="mt-22 sm:mt-36 text-center"
                         data-aos="fade-up"
-                        data-aos-delay="500"
+                        data-aos-delay="200"
                     >
                         <h3
                             className="font-[Montserrat] font-bold text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
@@ -315,7 +318,7 @@ export default function Welcome() {
                             <div className="absolute left-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
                             <div className="absolute right-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
                             <div
-                                className="w-full max-w-[403px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
+                                className="w-full max-w-[300px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
                                 data-aos="fade-up"
                                 data-aos-delay="900"
                                 style={{
@@ -339,39 +342,42 @@ export default function Welcome() {
                         <div className="absolute  -top-[30px] left-1/2 -translate-x-1/2 w-[1682px] h-[1059px] rounded-t-[650px] bg-white border-[5px] border-white shadow-[0_-20px_250px_0px_rgba(81,62,153,0.10)] z-10"></div>
 
                         {/* Card Grid */}
-                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30">
+                        <div className="gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30 grid md:flex">
                             {/* Card 1 */}
-                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
+                            <div className="bg-white w-full max-w-[400px] h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                                    Sosialisasi Gemastik
+                                </h4>
+                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                    Sosialisasi mengenai Pagelaran Mahasiswa
+                                    Nasional Bidang Teknologi Informasi dan
+                                    Komunikasi (GEMASTIK) yang merupakan ajang
+                                    kompetisi TIK tingkat Nasional.
+                                </p>
+                            </div>
+                            {/* Card 2 */}
+                            <div className="bg-white w-full max-w-[400px] h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
                                     3 Pelatihan tatap muka
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance">
-                                    Membantu mahasiswa baru memahami mata kuliah
-                                    dasar seperti Algoritma & Pemrograman, Basis
-                                    Data, dan Jaringan Komputer & Komunikasi.
+                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                    Pelatihan yang akan membantu mahasiswa baru
+                                    dalam memahami mata kuliah dasar seperti
+                                    Algoritma & Pemrograman, Basis Data, dan
+                                    Jaringan Komputer & Komunikasi.
                                 </p>
                             </div>
 
                             {/* Card 2 */}
-                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
-                                    Sosialisasi Lomba & penjurusan
+                            <div className="bg-white w-full max-w-[400px] h-[210px] md:h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                                    Sosialisasi Penjurusan & Lomba-lomba
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance">
-                                    Sosialisasi ini akan dipandu oleh dosen dan
+                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                    Sosialisasi mengenai lomba-lomba serta
+                                    penjurusan di Program Studi Teknologi
+                                    Informasi yang akan dipandu oleh dosen dan
                                     mahasiswa Teknologi Informasi.
-                                </p>
-                            </div>
-
-                            {/* Card 3 */}
-                            <div className="bg-white w-full max-w-[400px] h-[208px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2">
-                                    Sharing Session Hacktiv8
-                                </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance">
-                                    Akan ada sharing session bersama Hacktiv8
-                                    yang merupakan pelatihan coding bootcamp
-                                    terbaik di Indonesia.
                                 </p>
                             </div>
                         </div>
@@ -391,13 +397,13 @@ export default function Welcome() {
                         data-aos-delay="300"
                     >
                         <h2
-                            className="text-[32px] font-bold tracking-[0.2em] text-transparent 
+                            className="md:text-[32px] text-[30px] font-bold tracking-[0.2em] text-transparent 
                bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] 
                font-[Montserrat] text-center"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
-                            TENTANG BUILD IT
+                            TENTANG <br className="md:hidden" /> BUILD IT
                         </h2>
 
                         <img
@@ -409,7 +415,7 @@ export default function Welcome() {
                         />
                         <p
                             className="max-w-[938px] text-[#4D4D4D] text-justify 
-             font-[Montserrat] text-[20px] font-normal
+             font-[Montserrat] md:text-[20px] text-[15px] font-normal
              leading-[34px] px-6"
                             data-aos="fade-up"
                             data-aos-delay="300"
@@ -431,7 +437,7 @@ export default function Welcome() {
                         <div className="mt-40 w-full flex flex-col items-center gap-12 px-4">
                             {/* Judul */}
                             <h3
-                                className="text-center text-[24px] sm:text-[28px] md:text-[32px] font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat]"
+                                className="text-center text-[30px] sm:text-[28px] md:text-[32px] font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat]"
                                 data-aos="fade-up"
                                 data-aos-delay="300"
                             >
@@ -455,27 +461,31 @@ export default function Welcome() {
                                             Algoritma & Pemrograman
                                         </h4>
                                         <img
-                                            src="../asset/images/alprog.png"
-                                            alt="Algoritma"
-                                            className="w-40 h-40 object-contain mb-4"
+                                            src="../asset/images/logo-alprog.png"
+                                            alt="Algoritma dan Pemrograman"
+                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
                                         />
                                         <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
-                                            Pemahaman logika pemrograman dasar
-                                            dan struktur algoritma untuk
-                                            membangun solusi perangkat lunak.
+                                            Membangun pemahaman konsep
+                                            fundamental dalam pemrograman
+                                            komputer dan pemecahan masalah
+                                            menggunakan algoritma.
                                         </p>
-                                        <button
-                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+                                        <Link href="/modul/alprog">
+                                            <button
+                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
              bg-gradient-to-r from-[#201349] to-[#513E99] 
              shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
              text-white font-[Montserrat] text-[14px] font-semibold 
              leading-[30px] tracking-[0.1em] uppercase w-full hover:text-secondary transition-all duration-300"
-                                        >
-                                            Lebih Lanjut{" "}
-                                            <span className="pl-16 text-xl">
-                                                →
-                                            </span>
-                                        </button>
+                                                href="/modul/alprog"
+                                            >
+                                                Lebih Lanjut{" "}
+                                                <span className="pl-16 text-xl">
+                                                    →
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
                                     {/* Card 2 */}
                                     <div
@@ -487,27 +497,30 @@ export default function Welcome() {
                                             Basis Data
                                         </h4>
                                         <img
-                                            src="../asset/images/basisdata.png"
-                                            alt="Algoritma"
-                                            className="w-40 h-40 object-contain mb-4"
+                                            src="../asset/images/logo-basdat.png"
+                                            alt="Basis Data"
+                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
                                         />
                                         <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
-                                            Pemahaman logika pemrograman dasar
-                                            dan struktur algoritma untuk
-                                            membangun solusi perangkat lunak.
+                                            Menelaah konsep, desain,
+                                            implementasi, dan manajemen sistem
+                                            basis data untuk mengelola dan
+                                            memanipulasi data.
                                         </p>
-                                        <button
-                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+                                        <Link href="/modul/basisdata">
+                                            <button
+                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
              bg-gradient-to-r from-[#201349] to-[#513E99] 
              shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
              text-white font-[Montserrat] text-[14px] font-semibold 
              leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
-                                        >
-                                            Lebih Lanjut
-                                            <span className="pl-16 text-xl">
-                                                →
-                                            </span>
-                                        </button>
+                                            >
+                                                Lebih Lanjut
+                                                <span className="pl-16 text-xl">
+                                                    →
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
                                     {/* Card 3 */}
                                     <div
@@ -519,27 +532,30 @@ export default function Welcome() {
                                             Jaringan Komputer
                                         </h4>
                                         <img
-                                            src="../asset/images/jarkom.png"
-                                            alt="Algoritma"
-                                            className="w-40 h-40 object-contain mb-4"
+                                            src="../asset/images/logo-jarkom.png"
+                                            alt="Jaringan Komputer dan Komunikasi"
+                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
                                         />
                                         <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
-                                            Pemahaman logika pemrograman dasar
-                                            dan struktur algoritma untuk
-                                            membangun solusi perangkat lunak.
+                                            Mempelajari konsep dan arsitektur
+                                            mengenai sistem jaringan komputer
+                                            serta proses komunikasi pengiriman
+                                            data antar perangkat.
                                         </p>
-                                        <button
-                                            className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
+                                        <Link href="/modul/jarkom">
+                                            <button
+                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
              bg-gradient-to-r from-[#201349] to-[#513E99] 
              shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
              text-white font-[Montserrat] text-[14px] font-semibold 
              leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
-                                        >
-                                            Lebih Lanjut{" "}
-                                            <span className="pl-16 text-xl">
-                                                →
-                                            </span>
-                                        </button>
+                                            >
+                                                Lebih Lanjut{" "}
+                                                <span className="pl-16 text-xl">
+                                                    →
+                                                </span>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -621,7 +637,7 @@ export default function Welcome() {
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            <h3 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat] uppercase mb-4">
+                            <h3 className="text-[35px] sm:text-[40px] md:text-[48px] font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat] uppercase mb-4">
                                 TIMELINE
                             </h3>
                             <p className="text-[#808080] text-center font-[Montserrat] text-sm sm:text-base font-medium tracking-[0.1em]">
@@ -704,7 +720,7 @@ export default function Welcome() {
                             >
                                 <div className="flex flex-col justify-center items-center mb-2">
                                     <h1
-                                        className="w-[918px] text-center font-montserrat text-[48px] font-bold leading-none tracking-[4.8px] uppercase bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
+                                        className="w-[918px] text-center font-montserrat text-[35px] font-bold leading-none tracking-[4.8px] uppercase bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
                                         data-aos="fade-left"
                                     >
                                         FAQ
@@ -718,7 +734,7 @@ export default function Welcome() {
                                         terkait BUILD IT 2025
                                     </p>
                                 </div>
-                                <div className="mt-24 flex justify-center">
+                                <div className="mt-24 flex justify-center font-montserrat">
                                     <div
                                         className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center gap-6"
                                         data-aos="fade-right"
@@ -741,7 +757,7 @@ export default function Welcome() {
                                         />
                                         <AccordionLanding
                                             heading="Apa yang akan dilakukan mahasiswa selama pelatihan BUILD IT 2025?"
-                                            description="Selama Pelatihan BUILD-TI 2025, mahasiswa akan dibimbing dalam memahami mata kuliah dasar di perkuliahan seperti alprog, basis data, dan jaringan komputer"
+                                            description="Selama Pelatihan BUILD-IT 2025, mahasiswa akan dibimbing dalam memahami mata kuliah dasar di perkuliahan seperti algoritma dan pemrograman, basis data, dan jaringan komputer dan kominukasi"
                                             isOpen={openIndex === 2}
                                             onClick={() =>
                                                 handleAccordionClick(2)
@@ -763,7 +779,7 @@ export default function Welcome() {
                                     className="mt-32 mb-16 flex flex-col items-center justify-center px-4 text-center"
                                 >
                                     <h2
-                                        className="font-montserrat text-[48px] font-bold leading-none tracking-[4.8px] uppercase 
+                                        className="font-montserrat text-[35px] font-bold leading-none tracking-[4.8px] uppercase 
                bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text text-transparent"
                                         data-aos="fade-up"
                                     >
@@ -806,7 +822,7 @@ export default function Welcome() {
                                         {/* Card 2 */}
                                         <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
-                                                Tri Darma
+                                                Tri Dharma
                                             </h3>
                                             <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
                                                 <a
@@ -842,7 +858,7 @@ export default function Welcome() {
                     </div>
 
                     {/* Merchandise */}
-                    <div className="px-6 md:px-24 md:mt-36 mt-20 mb-20">
+                    <div className="px-6 md:px-24 md:mt-36 mt-20 mb-20 relative">
                         <div
                             className="flex flex-col justify-center items-center md:mb-10 mb-5"
                             id="Merch"
@@ -865,9 +881,9 @@ export default function Welcome() {
                             </p>
                         </div>
 
-                        <div className="flex justify-center items-center min-h-screen px-6 py-10 sm:px-8">
+                        <div className="flex justify-center items-center min-h-screen py-10 sm:px-8">
                             <div
-                                className=" relative flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 p-6 sm:p-8 min-h-screen w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] rounded-[15px] border border-[#CCC] shadow-md transition-all duration-300"
+                                className="relative flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 p-6 sm:p-8 pt-32 w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] rounded-[15px] border border-[#CCC] shadow-md transition-all duration-300"
                                 data-aos="fade-up"
                                 style={{
                                     background:
@@ -911,11 +927,11 @@ export default function Welcome() {
                                 <img
                                     src={
                                         shirtColor === "black"
-                                            ? "../asset/images/landing-page/merch-black.png"
-                                            : "../asset/images/landing-page/merch-white.png"
+                                            ? "../asset/images/merch/merch-black.png"
+                                            : "../asset/images/merch/merch-white.png"
                                     }
-                                    alt="Gambar Kaos"
-                                    className=" w-auto max-w-full h-auto sm:max-w-[500px]  md:max-w-[600px] lg:max-w-[650px] object-contain mx-auto"
+                                    alt="MERCH BUILD IT 2025"
+                                    className="w-auto max-w-full h-auto sm:max-w-[500px] md:max-w-[500px] lg:max-w-[650px] object-contain mx-auto"
                                 />
 
                                 {/* Tombol Order */}
@@ -956,7 +972,7 @@ const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
                 onClick={onClick}
             >
                 <div className="flex items-center justify-between">
-                    <span className="text-[15px] md:text-lg font-semibold text-gray-900">
+                    <span className="text-[15px] md:text-lg font-semibold text-[#808080]">
                         {heading}
                     </span>
                     {/* icon arrow */}

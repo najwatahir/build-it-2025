@@ -51,8 +51,8 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`bg-white w-full flex justify-between items-center px-6 md:px-24 py-4 sticky z-50 top-0 ${
-                scrolled ? "shadow" : "shadow-md"
+            className={`bg-white w-full flex justify-between items-center px-6 lg:px-24 py-4 sticky z-50 top-0 ${
+                scrolled ? "shadow" : "shadow-lg"
             }`}
         >
             <span>
@@ -61,7 +61,7 @@ export default function Navbar() {
             <ul
                 className={` ${
                     !showNav ? "hidden" : "flex"
-                } flex-col justify-center md:w-max-content rounded bg-white top-20 left-12 right-12 border border-gray-300 py-6 px-4 md:px-12 space-y-3 absolute shadow text-#000 z-10 md:flex md:relative md:flex-row md:items-center md:top-0 md:space-y-0 md:space-x-6 md:left-0 md:right-0 md:py-0 md:border-none md:shadow-none`}
+                } flex-col justify-center lg:w-max-content rounded bg-white top-20 left-12 right-12 border border-gray-300 py-6 px-4 lg:px-12 space-y-3 absolute shadow text-#000 z-10 lg:flex lg:relative lg:flex-row lg:items-center lg:top-0 lg:space-y-0 lg:space-x-6 lg:left-0 lg:right-0 lg:py-0 lg:border-none lg:shadow-none`}
             >
                 <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
                     <Link href={route("Welcome")}>Home</Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                     </div>
                     <ul className="font-montserrat">
                         <li
-                            className={`md:absolute bg-white mt-3 p-2 min-w-max shadow-none md:shadow-md border-none md:border-[1px] hover:text-primary border-gray-200 rounded flex-col space-y-2 transition-all duration-300 ${
+                            className={`lg:absolute bg-white mt-3 p-2 min-w-max shadow-none lg:shadow-lg border-none lg:border-[1px] hover:text-primary border-gray-200 rounded flex-col space-y-2 transition-all duration-300 ${
                                 !show ? "hidden" : "flex"
                             }`}
                         >
@@ -125,14 +125,14 @@ export default function Navbar() {
                         <Link
                             href="/login"
                             rel="noopener noreferrer"
-                            className="w-fit h-[52px] block md:hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:bg-secondary font-bold text-white font  transition-all duration-300 font-montserrat text-[14px] leading-none tracking-[1.4px] uppercase"
+                            className="w-fit lg:h-[52px] block lg:hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:bg-secondary font-bold text-white font  transition-all duration-300 font-montserrat text-[14px] leading-none tracking-[1.4px] uppercase"
                         >
                             Login
                         </Link>
                     ) : (
                         <Link
                             href={route("dashboard")}
-                            className="flex justify-start items-center gap-3 px-2 py-2 md:hidden block"
+                            className="flex justify-start items-center gap-3 px-2 py-2 lg:hidden block"
                         >
                             <IconUser />
                         </Link>
@@ -144,16 +144,16 @@ export default function Navbar() {
                     <Link
                         href={route("login")}
                         rel="noopener noreferrer"
-                        className="hidden md:block py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:text-secondary text-white font-montserrat text-[14px] font-bold leading-none tracking-[1.4px] uppercase  transition-all duration-300"
+                        className="hidden lg:block py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:text-secondary text-white font-montserrat text-[14px] font-bold leading-none tracking-[1.4px] uppercase  transition-all duration-300"
                     >
                         Login
                     </Link>
                 ) : (
-                    <Link href={route("dashboard")} className="hidden md:block">
+                    <Link href={route("dashboard")} className="hidden lg:block">
                         <IconUser />
                     </Link>
                 )}
-                <button onClick={showNavbar} className="md:hidden">
+                <button onClick={showNavbar} className="lg:hidden">
                     {!showNav ? (
                         <i className="pi pi-align-justify"></i>
                     ) : (
