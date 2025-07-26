@@ -75,9 +75,8 @@ class TeamController extends Controller
         ]);
 
         $team = Team::where('code', $request->code)->first();
-
-        if ($team->members()->count() >= 4) {
-            return back()->with('error', 'Tim sudah penuh (maksimal 4 anggota).');
+        if ($team->members()->count() >= 3) {
+            return back()->with('error', 'Tim sudah penuh (maksimal 3 anggota).');
         }
 
         $team->members()->attach($user->id);

@@ -4,7 +4,6 @@ import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 
 export default function Team() {
     const { user, team } = usePage().props;
-
     return (
         <AdminAuthentication user={user} headerTitle="Tim">
             <Head title="Tim" />
