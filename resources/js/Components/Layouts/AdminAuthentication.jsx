@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link, useForm } from "@inertiajs/react";
-import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
-import { Divider } from 'primereact/divider';
+import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
+import { Divider } from "primereact/divider";
+import Dashboard from "@/Pages/Dashboard";
 
 export default function AdminAuthentication({ user, headerTitle, children }) {
     const { post } = useForm();
@@ -10,42 +11,58 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
     const currentRoute = route().current();
 
     const accept = () => {
-        post(route('logout'));
-    }
+        post(route("logout"));
+    };
 
     const reject = () => {};
 
     const confirmLogout = () => {
         confirmDialog({
-            message: 'Apakah kamu yakin ingin keluar dari akun ini?',
-            header: 'Konfirmasi Logout',
-            icon: 'pi pi-info-circle',
-            defaultFocus: 'reject',
-            acceptClassName: 'p-button-danger',
+            message: "Apakah kamu yakin ingin keluar dari akun ini?",
+            header: "Konfirmasi Logout",
+            icon: "pi pi-info-circle",
+            defaultFocus: "reject",
+            acceptClassName: "p-button-danger",
             // acceptClassName: 'px-2 py-2 bg-red-500 text-white',
             // rejectClassName: 'px-3 py-2 bg-blue-500 text-white mr-2',
             acceptLabel: "Ya",
             rejectLabel: "Tidak",
             accept,
-            reject
+            reject,
         });
     };
 
     return (
         <>
             <ConfirmDialog />
-            <aside className={`fixed z-10 top-0 pb-3 px-6 h-full md:h-full w-full flex flex-col justify-between border-0 md:border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] ${menuOpen ? 'ml-0' : 'ml-[-100%]'} lg:ml-0`}>
+            <aside
+                className={`fixed z-10 top-0 pb-3 px-6 h-full md:h-full w-full flex flex-col justify-between border-0 md:border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] ${
+                    menuOpen ? "ml-0" : "ml-[-100%]"
+                } lg:ml-0`}
+            >
                 <div>
                     <div className="px-6 py-4">
-                        <Link href={route('Welcome')} title="home">
-                            <img src="../asset/images/navbar-logo.png" alt="logo Build-IT 2024" className="w-36"/>
+                        <Link href={route("Welcome")} title="home">
+                            <img
+                                src="../asset/images/logo-dashboard.png"
+                                alt="logo Build-IT 2025"
+                                className="w-36"
+                            />
                         </Link>
                     </div>
 
                     <div className="w-full md:w-auto mt-8 text-center flex flex-col justify-center items-center">
-                        <img src={`https://api.dicebear.com/9.x/bottts-neutral/png?seed=${user.name}`} alt="" className="md:block w-10 h-10 m-auto rounded-full object-cover lg:w-20 lg:h-20 outline outline-offset-2 outline-4 outline-secondary" />
-                        <h5 className="mt-4 text-xl font-semibold text-gray-800 lg:block">{user.name}</h5>
-                        <span className="text-primary font-semibold lg:block pt-4 capitalize">{user.roles[0].name}</span>
+                        <img
+                            src={`https://api.dicebear.com/9.x/bottts-neutral/png?seed=${user.name}`}
+                            alt=""
+                            className="md:block w-10 h-10 m-auto rounded-full object-cover lg:w-20 lg:h-20 outline outline-offset-2 outline-4 outline-secondary"
+                        />
+                        <h5 className="mt-4 text-xl font-semibold text-gray-800 lg:block">
+                            {user.name}
+                        </h5>
+                        <span className="text-primary font-semibold lg:block pt-4 capitalize">
+                            {user.roles?.[0]?.name}
+                        </span>
                     </div>
 
                     <div className="px-12 md:px-0 hidden md:block">
@@ -53,82 +70,144 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                     </div>
 
                     {/* menu admin */}
-                    {user.roles[0].name === 'admin' && (
+                    {user.roles[0].name === "admin" && (
                         <ul className="space-y-2 h-48 2xl:h-full overflow-auto tracking-wide mt-8">
                             <li>
-                                <Link 
-                                    href={route('dashboard')} 
-                                    aria-label="dashboard" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'dashboard' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("dashboard")}
+                                    aria-label="dashboard"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute === "dashboard"
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-th-large"></i>
-                                    <span className="-mr-1 font-medium">Dashboard</span>
+                                    <span className="-mr-1 font-medium">
+                                        Dashboard
+                                    </span>
                                 </Link>
                             </li>
                             <li>
-                                <Link 
-                                    href={route('participants.index')} 
-                                    aria-label="peserta" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'participants.index' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("participants.index")}
+                                    aria-label="peserta"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute === "participants.index"
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-users"></i>
-                                    <span className="-mr-1 font-medium">Peserta</span>
+                                    <span className="-mr-1 font-medium">
+                                        Peserta
+                                    </span>
                                 </Link>
                             </li>
                             <li>
-                                <Link 
-                                    href={route('submissions.index')} 
-                                    aria-label="pengumpulan tugas" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'submissions.index' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("submissions.index")}
+                                    aria-label="pengumpulan tugas"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute === "submissions.index"
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-folder-open"></i>
-                                    <span className="-mr-1 font-medium">Pengumpulan Tugas</span>
+                                    <span className="-mr-1 font-medium">
+                                        Pengumpulan Tugas
+                                    </span>
                                 </Link>
                             </li>
                         </ul>
                     )}
 
                     {/* menu participant */}
-                    {user.roles[0].name === 'participant' && (
+                    {user.roles[0].name === "participant" && (
                         <ul className="space-y-2 h-48 2xl:h-full overflow-auto tracking-wide mt-8">
                             <li>
-                                <Link 
-                                    href={route('dashboard')} 
-                                    aria-label="dashboard" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'dashboard' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("dashboard")}
+                                    aria-label="dashboard"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute === "dashboard"
+                                            ? "text-black font-bold"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-th-large"></i>
-                                    <span className="-mr-1 font-medium">Dashboard</span>
+                                    <span className="-mr-1 font-medium">
+                                        Dashboard
+                                    </span>
                                 </Link>
                             </li>
                             <li>
-                                <Link 
-                                    href={route('participant.profile')} 
-                                    aria-label="profile" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'participant.profile' || currentRoute === 'participant.editprofile' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("participant.profile")}
+                                    aria-label="profile"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute ===
+                                            "participant.profile" 
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-cog"></i>
-                                    <span className="-mr-1 font-medium">Profile</span>
+                                    <span className="-mr-1 font-medium">
+                                        Profile
+                                    </span>
                                 </Link>
                             </li>
                             <li>
-                                <Link 
-                                    href={route('participant.submissions')} 
-                                    aria-label="pengumpulan tugas" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'participant.submissions' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("participant.team")}
+                                    aria-label="team"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute ===
+                                            "participant.team"
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
+                                >
+                                    <i className="pi pi-users"></i>
+                                    <span className="-mr-1 font-medium">
+                                        Tim
+                                    </span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href={route("participant.submissions")}
+                                    aria-label="pengumpulan tugas"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute ===
+                                        "participant.submissions"
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-folder-open"></i>
-                                    <span className="-mr-1 font-medium">Pengumpulan Tugas</span>
+                                    <span className="-mr-1 font-medium">
+                                        Pengumpulan Tugas
+                                    </span>
                                 </Link>
                             </li>
                             <li>
-                                <Link 
-                                    href={route('participant.graduation')} 
-                                    aria-label="informasi kelulusan" 
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${currentRoute === 'participant.graduation' ? 'bg-primary text-white' : 'hover:text-primary hover:bg-gradient-background-lighten'}`}
+                                <Link
+                                    href={route("participant.graduation")}
+                                    aria-label="informasi kelulusan"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute ===
+                                        "participant.graduation"
+                                            ? "bg-primary text-white"
+                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                    }`}
                                 >
                                     <i className="pi pi-flag"></i>
-                                    <span className="-mr-1 font-medium">Informasi Kelulusan</span>
+                                    <span className="-mr-1 font-medium">
+                                        Informasi Kelulusan
+                                    </span>
                                 </Link>
                             </li>
                         </ul>
@@ -137,11 +216,11 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
 
                 <div className="px-6 pt-4 flex justify-between items-center border-t">
                     <div className="card flex flex-wrap gap-2 justify-content-center">
-                        <button 
+                        <button
                             onClick={confirmLogout}
-                            className='relative flex items-center space-x-4 rounded-xl text-gray-800 hover:text-primary transition-all duration-300'
+                            className="relative flex items-center space-x-4 rounded-xl text-gray-800 hover:text-primary transition-all duration-300"
                         >
-                            <i className='pi pi-sign-out mr-4'></i>
+                            <i className="pi pi-sign-out mr-4"></i>
                             Logout
                         </button>
                     </div>
@@ -149,30 +228,42 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
             </aside>
 
             <div className="ml-auto lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-                <div className="sticky z-10 top-0 border-b bg-white lg:py-2.5">
-                    <div className="px-6 py-2 flex items-center justify-between space-x-4 2xl:container">
-                        <h5 className="text-2xl text-gray-800 font-medium md:block hidden capitalize">{headerTitle}</h5>
-                        <Link href={route('Welcome')} title="home" className="lg:hidden">
-                            <img src="../asset/images/navbar-logo.png" alt="logo Build-IT 2024" className="md:w-12 nd:h-12 w-auto h-auto"/>
+                <div className="">
+                    <div className="flex items-center justify-between space-x-4 2xl:container">
+                        {/* <h5 className="text-2xl text-gray-800 font-medium md:block hidden capitalize">
+                            {headerTitle}
+                        </h5> */}
+                        <Link
+                            href={route("Welcome")}
+                            title="home"
+                            className="lg:hidden"
+                        >
+                            <img
+                                src="../asset/images/navbar-logo.png"
+                                alt="logo Build-IT 2024"
+                                className="md:w-12 nd:h-12 w-auto h-auto"
+                            />
                         </Link>
-                        <button 
+                        <button
                             className="w-12 h-16 -mr-2 lg:hidden"
                             onClick={() => setMenuOpen(!menuOpen)}
                         >
-                            { !menuOpen ?
-                              <i className='pi pi-bars'></i>
-                              :
-                              <i className='pi pi-times'></i>
-                            }
+                            {!menuOpen ? (
+                                <i className="pi pi-bars"></i>
+                            ) : (
+                                <i className="pi pi-times"></i>
+                            )}
                         </button>
                     </div>
                 </div>
-                
+
                 <div className="px-6 pt-6 2xl:container bg-slate-50 min-h-screen">
                     {children}
                 </div>
-                <footer className='py-4 px-6 text-primary 2xl:container text-center bg-white border-t'>Build IT 2024</footer>
+                <footer className="py-4 px-6 text-primary 2xl:container text-center bg-white border-t">
+                    Build IT 2025
+                </footer>
             </div>
         </>
-    )
+    );
 }

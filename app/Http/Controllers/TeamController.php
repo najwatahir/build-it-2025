@@ -6,9 +6,21 @@ use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Inertia\Inertia;
 
 class TeamController extends Controller
 {
+    public function index()
+{
+    $user = auth()->user();
+    $team = $user->team()->with('members')->first();
+
+    return Inertia::render('Participant/Team', [ 
+        'team' => $team,
+        'user' => $user
+    ]);
+}
+
     public function create(Request $request)
     {
         $user = Auth::user();
@@ -72,4 +84,5 @@ class TeamController extends Controller
             return redirect()->back()->with('success', 'Berhasil keluar dari tim.');
         }
     }
+
 }
