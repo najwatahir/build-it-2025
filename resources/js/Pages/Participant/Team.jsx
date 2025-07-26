@@ -22,9 +22,11 @@ export default function Team() {
                                         BANGUN TIM +
                                     </button>
                                 </Link>
-                                <button className="px-4 py-2 bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md">
-                                    GABUNG
-                                </button>
+                                <Link href={route("participant.team.joinView")} >
+                                    <button className="px-4 py-2 bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md">
+                                        GABUNG
+                                    </button>
+                                </Link>
                             </div>
                         )}
                     </div>
@@ -36,7 +38,7 @@ export default function Team() {
                                     Nama Tim: {team.name}
                                 </p>
                                 <button
-                                    onClick={handleCopyToken}
+                                    onClick={team.code}
                                     className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                                 >
                                     Salin Token

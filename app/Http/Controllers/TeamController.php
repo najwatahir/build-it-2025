@@ -11,7 +11,7 @@ use Inertia\Inertia;
 class TeamController extends Controller
 {
     public function index()
-{
+    {
     $user = auth()->user();
     $team = $user->team()->with('members')->first();
 
@@ -19,13 +19,22 @@ class TeamController extends Controller
         'team' => $team,
         'user' => $user
     ]);
-}
+    }
 
     public function create()
     {
         $user = auth()->user();
 
         return Inertia::render('Participant/CreateTeam', [ 
+            'user' => $user
+        ]);
+    }
+    
+    public function joinView()
+    {
+        $user = auth()->user();
+
+        return Inertia::render('Participant/JoinTeam', [ 
             'user' => $user
         ]);
     }
