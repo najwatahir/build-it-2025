@@ -1,5 +1,5 @@
 import React from "react";
-import { Head, usePage, Link } from "@inertiajs/react";
+import { Head, usePage, Link, router } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 
 export default function Team() {
@@ -15,7 +15,20 @@ export default function Team() {
                             TIM
                         </h1>
 
-                        {!team && (
+                        {team ? (
+                            <div className="flex gap-2">
+                                <button 
+                                    className="px-4 py-2 bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md"
+                                    onClick={() => {
+                                            if (confirm('Yakin ingin keluar dari tim?')) {
+                                                router.post(route("participant.team.leave"));
+                                            }
+                                        }}
+                                >
+                                    KELUAR
+                                </button>
+                            </div>
+                        ) : (
                             <div className="flex gap-2">
                                 <Link href={route("participant.team.create")} >
                                     <button className="px-4 py-2 border rounded-[10px] border-primaryDark text-sm font-semibold text-primaryDark hover:text-[#FCB215] hover:border-[#FCB215]">

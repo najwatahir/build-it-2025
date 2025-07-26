@@ -1,5 +1,5 @@
 import React from "react";
-import { Head, useForm } from "@inertiajs/react";
+import { Head, useForm, router } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 
 export default function CreateTeam({ user }) {
@@ -7,7 +7,11 @@ export default function CreateTeam({ user }) {
 
     const submit = (e) => {
         e.preventDefault();
-        post(route("participant.team.store"));
+        post(route("participant.team.store"), {
+            onSuccess: () => {
+                router.visit(route("participant.team"));
+            }
+        });
     };
 
     return (

@@ -51,11 +51,16 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit-profile', [ParticipantProfileController::class, 'edit'])->middleware(['auth'])->name('participant.editprofile');
         Route::put('/edit-profile', [ParticipantProfileController::class, 'update'])->middleware(['auth'])->name('participant.updateprofile');
         Route::get('/participant-submissions', [ParticipantSubmissionController::class, 'index'])->middleware(['auth'])->name('participant.submissions');
+
+        // Team
         Route::get('/participant-team', [TeamController::class, 'index'])->middleware(['auth'])->name('participant.team');
         Route::get('/participant-team/create', [TeamController::class, 'create'])->middleware(['auth'])->name('participant.team.create');
         Route::post('/participant-team/post', [TeamController::class, 'store'])->middleware(['auth'])->name('participant.team.store');
         Route::get('/participant-team/join', [TeamController::class, 'joinView'])->middleware(['auth'])->name('participant.team.joinView');
         Route::post('/participant-team/join', [TeamController::class, 'join'])->middleware(['auth'])->name('participant.team.join');
+        Route::post('/participant-team/leave', [TeamController::class, 'leave'])->middleware(['auth'])->name('participant.team.leave');
+
+
         Route::get('/participant-graduation', [ParticipantGraduationController::class, 'index'])->middleware(['auth'])->name('participant.graduation');
         Route::put('/participant-submitalprog', [ParticipantSubmissionController::class, 'submitAlprog'])->middleware(['auth'])->name('participant.submitalprog');
         Route::put('/participant-submitbasis', [ParticipantSubmissionController::class, 'submitBasis'])->middleware(['auth'])->name('participant.submitbasis');

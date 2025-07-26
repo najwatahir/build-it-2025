@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm } from "@inertiajs/react";
+import { useForm, router } from "@inertiajs/react";
 
 export default function JoinTeam() {
     const { data, setData, post, processing, errors } = useForm({
@@ -8,7 +8,11 @@ export default function JoinTeam() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        post(route("participant.team.join"));
+        post(route("participant.team.join"), {
+            onSuccess: () => {
+                router.visit(route("participant.team"));
+            }
+        });
     };
 
     return (
