@@ -52,7 +52,6 @@ Route::middleware('auth')->group(function () {
         Route::put('/edit-profile', [ParticipantProfileController::class, 'update'])->middleware(['auth'])->name('participant.updateprofile');
         Route::get('/participant-submissions', [ParticipantSubmissionController::class, 'index'])->middleware(['auth'])->name('participant.submissions');
         Route::get('/participant-team', [TeamController::class, 'index'])->middleware(['auth'])->name('participant.team');
-        Route::get('/participant-team/create', [TeamController::class, 'createPage'])->middleware(['auth'])->name('participant.team.create');
         Route::get('/participant-graduation', [ParticipantGraduationController::class, 'index'])->middleware(['auth'])->name('participant.graduation');
         Route::put('/participant-submitalprog', [ParticipantSubmissionController::class, 'submitAlprog'])->middleware(['auth'])->name('participant.submitalprog');
         Route::put('/participant-submitbasis', [ParticipantSubmissionController::class, 'submitBasis'])->middleware(['auth'])->name('participant.submitbasis');

@@ -1,7 +1,6 @@
 import React from "react";
 import { Head, usePage } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
-import Link from "@inertiajs/react";
 
 export default function Team() {
     const { user, team } = usePage().props;
@@ -18,11 +17,9 @@ export default function Team() {
 
                         {!team && (
                             <div className="flex gap-2">
-                                <Link href={route("participant.team.create")}>
                                     <button className="px-4 py-2 border rounded-[10px] border-primaryDark text-sm font-semibold text-primaryDark hover:text-[#FCB215] hover:border-[#FCB215]">
                                         BANGUN TIM +
                                     </button>
-                                </Link>
                                 <button className="px-4 py-2 bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md">
                                     GABUNG
                                 </button>
@@ -32,8 +29,8 @@ export default function Team() {
 
                     <div className="flex justify-center items-center h-64 text-sm tracking-widest text-gray-600 uppercase bg-[#FAFAFA] rounded-xl">
                         {team ? (
-                            <>
-                                <p className="text-lg font-semibold mb-4">
+                            <div className="flex flex-col items-center justify-center gap-4">
+                                <p className="text-lg font-semibold">
                                     Nama Tim: {team.name}
                                 </p>
                                 <button
@@ -42,9 +39,9 @@ export default function Team() {
                                 >
                                     Salin Token
                                 </button>
-                            </>
+                            </div>
                         ) : (
-                            <p className="text-center items-center">
+                            <p className="text-center">
                                 BELUM TERGABUNG DALAM TIM
                             </p>
                         )}
