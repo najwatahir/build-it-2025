@@ -1,11 +1,5 @@
 import { Head, useForm, Link } from "@inertiajs/react";
 import React, { useState, useEffect, useRef } from "react";
-import {
-    KotakModulPrimary,
-    KotakModulPx102,
-    KotakModulSecondary,
-    KotakModulPx41,
-} from "../../Components/Icons/modul";
 import { ViewPassword, HidePassword } from "@/Components/Icons/login";
 import UserGuest from "@/Components/Layouts/User/UserGuest";
 import { Toast } from "primereact/toast";
@@ -269,19 +263,6 @@ export default function Daftar() {
                                         </p>
                                     </div>
                                 </div>
-
-                                <div className="absolute top-[400px] left-[80px] animate-bounce-custom">
-                                    <KotakModulPx102 />
-                                </div>
-                                <div className="absolute top-[700px] left-[80px] md:left-[400px] animate-bounce-custom">
-                                    <KotakModulPx41 />
-                                </div>
-                            </div>
-                            <div className="absolute right-0 animate-bounce-custom">
-                                <KotakModulPrimary />
-                            </div>
-                            <div className="absolute right-[200px] top-[280px] animate-bounce-custom">
-                                <KotakModulSecondary />
                             </div>
                         </div>
                     </div>
