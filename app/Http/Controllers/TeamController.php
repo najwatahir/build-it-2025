@@ -21,7 +21,16 @@ class TeamController extends Controller
     ]);
 }
 
-    public function create(Request $request)
+    public function create()
+    {
+        $user = auth()->user();
+
+        return Inertia::render('Participant/CreateTeam', [ 
+            'user' => $user
+        ]);
+    }
+
+    public function store(Request $request)
     {
         $user = Auth::user();
         if ($user->team()->exists()) {

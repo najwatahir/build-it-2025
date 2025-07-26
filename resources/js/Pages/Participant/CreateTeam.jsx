@@ -36,6 +36,7 @@ export default function CreateTeam({ user }) {
                             value={data.name}
                             onChange={(e) => setData("name", e.target.value)}
                             className="w-full border rounded-lg p-2 mb-4"
+                            name="name"
                         />
                         <button
                             type="submit"

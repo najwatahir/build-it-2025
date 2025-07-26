@@ -1,5 +1,5 @@
 import React from "react";
-import { Head, usePage } from "@inertiajs/react";
+import { Head, usePage, Link } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 
 export default function Team() {
@@ -17,9 +17,11 @@ export default function Team() {
 
                         {!team && (
                             <div className="flex gap-2">
+                                <Link href={route("participant.team.create")} >
                                     <button className="px-4 py-2 border rounded-[10px] border-primaryDark text-sm font-semibold text-primaryDark hover:text-[#FCB215] hover:border-[#FCB215]">
                                         BANGUN TIM +
                                     </button>
+                                </Link>
                                 <button className="px-4 py-2 bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md">
                                     GABUNG
                                 </button>
