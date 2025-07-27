@@ -1,6 +1,7 @@
 import React from "react";
 import { Head, useForm, router } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
+import { Toast } from "primereact/toast";
 
 export default function CreateTeam({ user }) {
     const { data, setData, post, processing } = useForm({ name: "" });
@@ -21,7 +22,7 @@ export default function CreateTeam({ user }) {
                 <div className="bg-white shadow rounded-xl p-6 md:p-10">
                     <a
                         href={route("participant.team")}
-                        className="text-sm text-purple-800 font-semibold mb-4 block"
+                        className="text-sm text-primaryDark font-semibold mb-4 block"
                     >
                         ← KEMBALI
                     </a>
@@ -45,7 +46,7 @@ export default function CreateTeam({ user }) {
                         <button
                             type="submit"
                             disabled={processing}
-                            className="w-full bg-gradient-to-r from-purple-900 to-purple-600 text-white py-2 rounded-xl text-sm font-semibold"
+                            className="w-full bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white font-montserrat py-2 rounded-[10px] text-sm font-semibold"
                         >
                             SELESAI
                         </button>

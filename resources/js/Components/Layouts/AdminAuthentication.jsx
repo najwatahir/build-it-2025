@@ -41,7 +41,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                 } lg:ml-0`}
             >
                 <div>
-                    <div className="px-6 py-4">
+                    <div className="px-6 py-4 ml-2">
                         <Link href={route("Welcome")} title="home">
                             <img
                                 src="../asset/images/logo-dashboard.png"
@@ -71,7 +71,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
 
                     {/* menu admin */}
                     {user.roles[0].name === "admin" && (
-                        <ul className="space-y-2 h-48 2xl:h-full overflow-auto tracking-wide mt-8">
+                        <ul className="space-y-2 h-48 2xl:h-full tracking-wide mt-8">
                             <li>
                                 <Link
                                     href={route("dashboard")}
@@ -79,7 +79,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "dashboard"
                                             ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                            : "hover:text-primary hover:border border-secondary"
                                     }`}
                                 >
                                     <i className="pi pi-th-large"></i>
@@ -110,8 +110,8 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     aria-label="pengumpulan tugas"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "submissions.index"
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-folder-open"></i>
@@ -125,15 +125,15 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
 
                     {/* menu participant */}
                     {user.roles[0].name === "participant" && (
-                        <ul className="space-y-2 h-48 2xl:h-full overflow-auto tracking-wide mt-8">
+                        <ul className="space-y-2 h-48 2xl:h-full tracking-wide mt-8">
                             <li>
                                 <Link
                                     href={route("dashboard")}
                                     aria-label="dashboard"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "dashboard"
-                                            ? "text-black font-bold"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-th-large"></i>
@@ -147,10 +147,9 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     href={route("participant.profile")}
                                     aria-label="profile"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
-                                        currentRoute ===
-                                            "participant.profile" 
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                        currentRoute === "participant.profile"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-cog"></i>
@@ -164,10 +163,9 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     href={route("participant.team")}
                                     aria-label="team"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
-                                        currentRoute ===
-                                            "participant.team"
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                        currentRoute === "participant.team"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-users"></i>
@@ -183,8 +181,8 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute ===
                                         "participant.submissions"
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-folder-open"></i>
@@ -200,8 +198,8 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute ===
                                         "participant.graduation"
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-flag"></i>
@@ -240,8 +238,8 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                         >
                             <img
                                 src="../asset/images/navbar-logo.png"
-                                alt="logo Build-IT 2024"
-                                className="md:w-12 nd:h-12 w-auto h-auto"
+                                alt="logo Build-IT 2025"
+                                className="md:w-12 nd:h-12 w-auto h-auto ml-4"
                             />
                         </Link>
                         <button

@@ -231,7 +231,7 @@ export default function Register() {
                                         <div className="flex justify-center w-full">
                                             <img
                                                 src="asset/images/Logo.png"
-                                                alt="Logo BUILD IT 2024"
+                                                alt="Logo BUILD IT 2025"
                                                 className="flex justify-center"
                                                 width={158}
                                                 height={166}
