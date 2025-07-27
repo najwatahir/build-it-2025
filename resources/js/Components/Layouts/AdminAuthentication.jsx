@@ -40,7 +40,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                     menuOpen ? "ml-0" : "ml-[-100%]"
                 } lg:ml-0`}
             >
-                <div>
+                <div className="font-montserrat">
                     <div className="px-6 py-4 ml-2">
                         <Link href={route("Welcome")} title="home">
                             <img
@@ -55,12 +55,12 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                         <img
                             src={`https://api.dicebear.com/9.x/bottts-neutral/png?seed=${user.name}`}
                             alt=""
-                            className="md:block w-10 h-10 m-auto rounded-full object-cover lg:w-20 lg:h-20 outline outline-offset-2 outline-4 outline-secondary"
+                            className="md:block w-10 h-10 m-auto rounded-xl object-cover lg:w-20 lg:h-20 outline outline-offset-2 outline-4 outline-primary"
                         />
                         <h5 className="mt-4 text-xl font-semibold text-gray-800 lg:block">
                             {user.name}
                         </h5>
-                        <span className="text-primary font-semibold lg:block pt-4 capitalize">
+                        <span className="text-[#B3B3B3] font-semibold lg:block pt-2 capitalize">
                             {user.roles?.[0]?.name}
                         </span>
                     </div>
@@ -258,9 +258,6 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                 <div className="px-6 pt-6 2xl:container bg-slate-50 min-h-screen">
                     {children}
                 </div>
-                <footer className="py-4 px-6 text-primary 2xl:container text-center bg-white border-t">
-                    Build IT 2025
-                </footer>
             </div>
         </>
     );

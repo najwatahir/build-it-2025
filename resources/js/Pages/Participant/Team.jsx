@@ -8,8 +8,8 @@ export default function Team() {
     return (
         <AdminAuthentication user={user} headerTitle="Tim">
             <Head title="Tim" />
-            <div className="p-4 md:p-10">
-                <div className="bg-white shadow rounded-xl p-4 md:p-10">
+            <div className="md:p-6">
+                <div className="bg-white shadow rounded-xl p-8">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
                         {team ? (
                             <div className="text-center md:text-left">

@@ -42,8 +42,10 @@
 }
 */
 
+
 @media (max-width: 1282px) {
     .custom-messages .p-message .p-message-wrapper {
+        font-family: 'Montserrat';
         display: grid;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto auto;

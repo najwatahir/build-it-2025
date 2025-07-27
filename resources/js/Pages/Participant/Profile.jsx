@@ -1,129 +1,201 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Head,Link,usePage } from "@inertiajs/react";
+import { Head, Link, usePage } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
-import { Inertia } from "@inertiajs/inertia";
-import { Toast } from 'primereact/toast';
+import { Toast } from "primereact/toast";
 
 export default function Profile() {
-   const {user, flash} = usePage().props;
-   const [data] = useState(
-      {
-         nim: user.nim,
-         name: user.name,
-         email: user.email,
-         line: user.line_id,
-         whatsapp: user.whatsapp_id,
-         angkatan: '20' + user.nim.substring(0,2),
-         kelompok: user.kelompok,
-      }
-   );
-   
-   const toast = useRef(null);
-   useEffect(()=>{
-      if (flash) {
-         toast.current.show({ severity: 'success', summary: 'Berhasil', detail: flash });
-      }
-   }, [flash]);
+    const { user, flash } = usePage().props;
+    const [data] = useState({
+        nim: user.nim,
+        name: user.name,
+        email: user.email,
+        line: user.line_id,
+        whatsapp: user.whatsapp_id,
+        angkatan: "20" + user.nim.substring(0, 2),
+        kelompok: user.kelompok,
+    });
 
+    const toast = useRef(null);
+    useEffect(() => {
+        if (flash) {
+            toast.current.show({
+                severity: "success",
+                summary: "Berhasil",
+                detail: flash,
+            });
+        }
+    }, [flash]);
 
-   return(
-      <AdminAuthentication user={user} headerTitle="Profile Peserta">
-         <Head title="Participant Profile"/>
-         <Toast ref={toast} />
-         <div className="space-y-8">
-            <div>
-               <h3 className="text-primary font-bold text-xl">Profile Lengkap</h3>
-               <p className="text-primary/80 mt-2 mb-4">* Pastikan identitas sudah terisi dengan benar</p>
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="space-y-2 col-span-2">
-                     <span className="font-semibold text-primary capitalize">nama</span>
-                     <p className="p-2 bg-secondary/30 text-primary rounded-lg">{data.name}</p>
-                  </div>
-                  <div className="flex w-full space-x-4">
-                     <div className="space-y-2 w-1/2">
-                        <span className="font-semibold text-primary capitalize">nim</span>
-                        <p className="p-2 bg-secondary/30 text-primary rounded-lg">{data.nim}</p>
-                     </div>
-                     <div className="space-y-2">
-                        <span className="font-semibold text-primary capitalize">angkatan</span>
-                        <p className="p-2 bg-secondary/30 text-primary rounded-lg text-center">{data.angkatan}</p>
-                     </div>
-                     <div className="space-y-2">
-                        <span className="font-semibold text-primary capitalize">kelompok</span>
-                        {data.kelompok == null? (
+    return (
+        <AdminAuthentication user={user}>
+            <Head title="Profil Peserta" />
+            <Toast ref={toast} />
+            <div className="md:p-6 max-w-6xl mx-auto space-y-10 font-montserrat mb-6 md:mb-0">
+                <div className="bg-white p-6 md:p-10 rounded-xl shadow border border-gray-200 space-y-6">
+                    <div>
+                        <h2 className="text-xl font-semibold text-gray-800">
+                            PROFIL PESERTA
+                        </h2>
+                        <p className="text-sm text-gray-500">
+                            Lihat dan sunting data dirimu yang terdaftar sebagai
+                            peserta.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-4">
+                        <div className="space-y-2">
+                            <label className="text-sm font-medium text-gray-700">
+                                Nama Lengkap
+                            </label>
+                            <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                {data.name}
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    NIM
+                                </label>
+                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                    {data.nim}
+                                </p>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    Angkatan
+                                </label>
+                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                    {data.angkatan}
+                                </p>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    Kelompok
+                                </label>
+                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                    {data.kelompok ?? "-"}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="space-y-4">
+                        <h3 className="text-md font-semibold text-gray-800">
+                            KONTAK
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    Email
+                                </label>
+                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                    {data.email}
+                                </p>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    Whatsapp
+                                </label>
+                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                    {data.whatsapp}
+                                </p>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    ID Line
+                                </label>
+                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                    {data.line}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <Link
+                            href={route("participant.editprofile")}
+                            className="inline-block px-6 py-3 uppercase bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md transition-all duration-300"
+                        >
+                            Edit Profil
+                        </Link>
+                    </div>
+                </div>
 
-                           <p className="p-2 bg-secondary/30 text-primary rounded-lg text-center">-</p>
-                        ) : (
+                {/* GRUP LINE */}
+                <div className="bg-white p-6 md:p-10 rounded-xl shadow border border-gray-200 space-y-6">
+                    <div>
+                        <h2 className="text-xl font-semibold text-gray-800">
+                            GRUP LINE
+                        </h2>
+                        <p className="text-sm text-gray-500">
+                            Gabung ke grup besar untuk info umum dan grup
+                            kelompok untuk diskusi tugas bersama kelompokmu.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {/* Grup Besar */}
+                        <div className="space-y-2">
+                            <label className="text-sm font-medium text-gray-700">
+                                Grup Besar
+                            </label>
+                            {data.kelompok >= 1 && data.kelompok <= 4 ? (
+                                <a
+                                    href="https://line.me/R/ti/g/3z1tavzQyU"
+                                    target="_blank"
+                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                >
+                                    🔗 https://line.me/R/ti/g/3z1tavzQyU
+                                </a>
+                            ) : (
+                                <p className="px-4 py-3 bg-gray-100 text-gray-500 rounded-lg">
+                                    Anda belum terverifikasi
+                                </p>
+                            )}
+                        </div>
 
-                           <p className="p-2 bg-secondary/30 text-primary rounded-lg text-center">{data.kelompok}</p>
-                        )}
-                     </div>
-                  </div>
-               </div>
+                        {/* Grup Kelompok */}
+                        <div className="space-y-2">
+                            <label className="text-sm font-medium text-gray-700">
+                                Grup Kelompok
+                            </label>
+                            {Number(data.kelompok) === 1 ? (
+                                <a
+                                    href="https://line.me/R/ti/g/X-uupccmfW"
+                                    target="_blank"
+                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                >
+                                    🔗 https://line.me/R/ti/g/X-uupccmfW
+                                </a>
+                            ) : Number(data.kelompok) === 2 ? (
+                                <a
+                                    href="https://line.me/R/ti/g/StqqnC-lJB"
+                                    target="_blank"
+                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                >
+                                    🔗 https://line.me/R/ti/g/StqqnC-lJB
+                                </a>
+                            ) : Number(data.kelompok) === 3 ? (
+                                <a
+                                    href="https://line.me/R/ti/g/GV6cb3Zter"
+                                    target="_blank"
+                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                >
+                                    🔗 https://line.me/R/ti/g/GV6cb3Zter
+                                </a>
+                            ) : Number(data.kelompok) === 4 ? (
+                                <a
+                                    href="https://line.me/R/ti/g/toFKURNWzX"
+                                    target="_blank"
+                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                >
+                                    🔗 https://line.me/R/ti/g/toFKURNWzX
+                                </a>
+                            ) : (
+                                <p className="px-4 py-3 bg-gray-100 text-gray-500 rounded-lg">
+                                    Anda belum tergabung dalam grup
+                                </p>
+                            )}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-               <h3 className="text-primary font-bold text-xl">Kontak</h3>
-               <p className="text-primary/80 mt-2 mb-4">* Mohon mengisi dengan kontak yang masih aktif dan dapat dihubungi</p>
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="space-y-2">
-                     <span className="font-semibold text-primary capitalize">email</span>
-                     <p className="p-2 bg-secondary/30 text-primary rounded-lg">{data.email}</p>
-                  </div>
-                  <div className="space-y-2">
-                     <span className="font-semibold text-primary capitalize">Nomor Whatsapp</span>
-                     <p className="p-2 bg-secondary/30 text-primary rounded-lg">{data.whatsapp}</p>
-                  </div>
-                  <div className="space-y-2">
-                     <span className="font-semibold text-primary capitalize">ID line</span>
-                     <p className="p-2 bg-secondary/30 text-primary rounded-lg">{data.line}</p>
-                  </div>
-               </div>
-            </div>
-
-            <div>
-               <Link href={route('participant.editprofile')} className="py-3 px-6 bg-primary hover:bg-secondary font-bold text-white rounded-lg transition-all duration-300 text-center">
-                  Edit Profile
-               </Link>
-            </div>
-
-            <div className="w-full bg-primary h-[1px] rounded-full"></div>
-
-            <div>
-               <h3 className="text-primary font-bold text-xl">Grup Line BUILD IT 2024</h3>
-               <p className="text-primary/80 mt-2 mb-4">Silahkan bergabung dengan grup dibawah ini untuk informasi lebih lanjut</p>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2 flex flex-col">
-                     <span className="font-semibold text-primary capitalize">grup besar</span>
-                     {data.kelompok == null || data.kelompok < 1 || data.kelompok > 4? (
-                        <p className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">Anda belum terverifikasi</p>
-
-                     ) : (
-                        <a href="https://line.me/R/ti/g/3z1tavzQyU" target="_blank" className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">https://line.me/R/ti/g/3z1tavzQyU</a>
-                        
-                     )}
-                  </div>
-                  <div className="space-y-2 flex flex-col">
-                     <span className="font-semibold text-primary capitalize">grup kelompok</span>
-                     {data.kelompok == 1? (
-                        <a href="https://line.me/R/ti/g/X-uupccmfW" target="_blank" className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">https://line.me/R/ti/g/X-uupccmfW</a>
-                        
-                     ) : data.kelompok == 2? (
-                        <a href="https://line.me/R/ti/g/StqqnC-lJB" target="_blank" className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">https://line.me/R/ti/g/StqqnC-lJB</a>
-                        
-                     ) : data.kelompok == 3? (
-                        <a href="https://line.me/R/ti/g/GV6cb3Zter" target="_blank" className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">https://line.me/R/ti/g/GV6cb3Zter</a>
-                        
-                     ) : data.kelompok == 4? (
-                        <a href="https://line.me/R/ti/g/toFKURNWzX" target="_blank" className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">https://line.me/R/ti/g/toFKURNWzX</a>
-                        
-                     ) : (
-                        <p className="p-2 bg-secondary/30 text-cyan-700 rounded-lg">Anda belum tergabung dalam grup</p>
-                        
-                     )}
-                  </div>
-               </div>
-            </div>
-         </div>
-      </AdminAuthentication>
-   )
+        </AdminAuthentication>
+    );
 }

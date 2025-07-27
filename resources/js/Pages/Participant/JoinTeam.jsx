@@ -1,5 +1,5 @@
 import React from "react";
-import { Head, useForm, router } from "@inertiajs/react";
+import { Head, useForm, router, Link } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 
 export default function JoinTeam({ user }) {
@@ -18,14 +18,15 @@ export default function JoinTeam({ user }) {
 
     return (
         <AdminAuthentication user={user} headerTitle="Join Team">
-            <div className="p-6 md:p-10">
-                <div className="bg-white shadow rounded-xl p-6 md:p-10">
-                    <a
+            <div className="p-6">
+                <div className="bg-white shadow rounded-xl p-8">
+                    <Link
                         href={route("participant.team")}
-                        className="text-sm text-primaryDark font-semibold mb-4 block"
+                        className="text-primary text-sm font-semibold flex items-center gap-2 mb-6"
                     >
-                        ← KEMBALI
-                    </a>
+                        <p className="pi pi-arrow-left text-primary p-2 rounded-full"></p>
+                        KEMBALI
+                    </Link>
                     <h2 className="text-2xl font-bold mb-2">BANGUN TIM</h2>
                     <p className="text-gray-600 mb-6">
                         Buat tim baru untuk mengerjakan tugas kelompok bersama
