@@ -240,8 +240,8 @@ export default function Welcome() {
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
                  [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
                                 style={{
-                                    fontSize: "clamp(2.5rem, 10vw, 10rem)",
-                                    lineHeight: "0.9",
+                                    fontSize: "clamp(2.5rem, 9vw, 10rem)",
+                                    lineHeight: "0.8",
                                 }}
                                 data-aos="fade-up"
                                 data-aos-delay="100"
