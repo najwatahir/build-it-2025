@@ -65,6 +65,7 @@ Route::middleware('auth')->group(function () {
         Route::put('/participant-submitalprog', [ParticipantSubmissionController::class, 'submitAlprog'])->middleware(['auth'])->name('participant.submitalprog');
         Route::put('/participant-submitbasis', [ParticipantSubmissionController::class, 'submitBasis'])->middleware(['auth'])->name('participant.submitbasis');
         Route::put('/participant-submitjarkom', [ParticipantSubmissionController::class, 'submitJarkom'])->middleware(['auth'])->name('participant.submitjarkom');
+        Route::put('/participant-submitproposal', [ParticipantSubmissionController::class, 'submitProposal'])->middleware(['auth'])->name('participant.submitproposal');
     });
 
     Route::middleware('admin')->group(function () {

@@ -3,14 +3,16 @@ import { Head,usePage, useForm } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 import { Toast } from 'primereact/toast';
 
-export default function Submission() {
+export default function Submission({ team }) {
    const {user} = usePage().props;
-   
+   const isLeader = user?.id && team?.leader_id && user.id === team.leader_id;
+
    const {data, setData, processing, put, errors, transform} = useForm(
       {
          alprog: user.tugas_alprog,
          jarkom: user.tugas_jarkom,
          basis: user.tugas_basis,
+         submission_link: team?.submission_link ?? ''
       }
    );
 
@@ -51,6 +53,19 @@ export default function Submission() {
          }, 
          onError: (error) => {
             toast.current.show({ severity: 'error', summary: 'Gagal', detail: 'Gagal mengirimkan penugasan Jaringan Komputer dan Komunikasi', life: 3000 })
+         }  
+      })
+   }
+
+   function submitProposal(e){
+      e.preventDefault();
+
+      put(route('participant.submitproposal'), {
+         onSuccess: () => {
+            toast.current.show({ severity: 'success', summary: 'Berhasil', detail: 'Berhasil mengirimkan Proposal', life: 3000 })
+         }, 
+         onError: (error) => {
+            toast.current.show({ severity: 'error', summary: 'Gagal', detail: 'Gagal mengirimkan Proposal', life: 3000 })
          }  
       })
    }
@@ -167,6 +182,30 @@ export default function Submission() {
                            {errors.jarkom}
                         </small>
                      </form> 
+                     {isLeader && (
+                     <form onSubmit={submitProposal} className="flex flex-col gap-2 w-full">
+                        <h3 className="text-xl text-primary font-bold">Link Pengumpulan Proposal</h3>
+                        <label htmlFor='submission_link' className="text-primary/80 text-base">Link Google Drive</label>
+                        <div className="space-y-4 md:space-x-4">
+                           <input 
+                              type="text" 
+                              name="submission_link"
+                              id="submission_link" 
+                              value={data.submission_link}
+                              onChange={(e) => setData('submission_link', e.target.value)}
+                              className={`bg-secondary/20 w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${errors.submission_link ? "border-red-500 focus:ring-red-500" : "border-primary focus:ring-primary"}`}
+                           />
+                           <button 
+                           disabled={checkInput('submission_link')}
+                           type="submit" className="py-3 px-6 bg-primary hover:bg-secondary font-bold text-white rounded-lg transition-all duration-300 text-center disabled:bg-primary/80">
+                              Submit
+                           </button>
+                        </div>
+                        <small className="text-red-500">
+                           {errors.submission_link}
+                        </small>
+                     </form> 
+                     )}
                </div>
             )}
             </>

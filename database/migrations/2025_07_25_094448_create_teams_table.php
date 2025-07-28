@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->uuid('leader_id');
             $table->foreign('leader_id')->references('id')->on('users')->onDelete('cascade');
+            $table->text('submission_link')->nullable();
             $table->timestamps();
         });
     }
