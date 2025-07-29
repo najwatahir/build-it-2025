@@ -30,7 +30,7 @@ export default function CreateTeam({ user }) {
                     <h2 className="text-2xl font-bold mb-2">BANGUN TIM</h2>
                     <p className="text-gray-600 mb-6">
                         Buat tim baru untuk mengerjakan tugas kelompok bersama
-                        temanmu.
+                        temanmu. Jika kamu pembuat tim, maka otomatis kamu menjadi ketua tim!
                     </p>
 
                     <form onSubmit={submit}>

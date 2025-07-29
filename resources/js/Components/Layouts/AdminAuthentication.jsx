@@ -40,7 +40,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                     menuOpen ? "ml-0" : "ml-[-100%]"
                 } lg:ml-0`}
             >
-                <div className="font-montserrat">
+                <div className="font-montserrat overflow-auto">
                     <div className="px-6 py-4 ml-2">
                         <Link href={route("Welcome")} title="home">
                             <img

@@ -62,7 +62,7 @@ export default function Daftar() {
         <>
             <Head title="Login" />
             <UserGuest>
-                <Toast ref={toast} />
+                <Toast ref={toast} className="font-montserrat" />
                 <div className="w-full overflow-hidden  bg-cover bg-fixed bg-center bg-no-repeat">
                     <div className="absolute inset-0 z-0 rotate-[3.779deg]">
                         <svg
