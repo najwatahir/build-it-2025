@@ -5,7 +5,7 @@ import { useMountEffect } from 'primereact/hooks';
 import { Messages } from 'primereact/messages';
 
 export default function Dashboard() {
-   const {user, akt21, akt22, akt23, akt24, akt25, kelompok1, kelompok2, kelompok3, kelompok4} = usePage().props;
+   const {user, akt21, akt22, akt23, akt24, akt25, kelompok1, kelompok2, kelompok3, kelompok4, teams} = usePage().props;
    const title = 'Dashboard ' + (user.roles[0].name === 'admin' ? 'Admin' :  'Peserta');
 
    const msgsVerif = useRef(null);
@@ -107,7 +107,7 @@ export default function Dashboard() {
                        </p>
                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                            {/* card */}
-                           <div className="bg-white shadow-md border border-gray-200 rounded-lg p-6">
+                           <div className="bg-white shadow-md border-[#CCCCCC] rounded-lg p-6">
                                <div className="flex gap-6 h-full">
                                    <div class="row-span-2 bg-primer text-center h-full w-1/2 flex items-center justify-center rounded-md">
                                        <i className="pi pi-users text-9xl text-primary"></i>
@@ -255,6 +255,37 @@ export default function Dashboard() {
                                    </div>
                                </div>
                            </div>
+                       </div>
+                       <p className="text-3xl text-primary font-bold pt-6 mb-4">
+                           Tim Peserta
+                       </p>
+                       <div className="overflow-x-auto bg-white shadow-md border border-gray-200 rounded-lg p-6">
+                           <table className="min-w-full text-left text-sm text-gray-600">
+                               <thead className="text-xs text-gray-700 uppercase bg-gray-100">
+                                   <tr>
+                                       <th className="px-6 py-3">Nama Tim</th>
+                                       <th className="px-6 py-3">Ketua</th>
+                                       <th className="px-6 py-3">
+                                           ID Line
+                                       </th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   {teams.map((team) => (
+                                       <tr key={team.id} className="border-b">
+                                           <td className="px-6 py-4">
+                                               {team.name}
+                                           </td>
+                                           <td className="px-6 py-4">
+                                               {team.leader?.name ?? "-"}
+                                           </td>
+                                           <td className="px-6 py-4">
+                                               {team.leader?.id_line ?? "-"}
+                                           </td>
+                                       </tr>
+                                   ))}
+                               </tbody>
+                           </table>
                        </div>
                    </>
                )}

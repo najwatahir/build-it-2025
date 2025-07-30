@@ -18,7 +18,7 @@ export default function CreateTeam({ user }) {
     return (
         <AdminAuthentication user={user} headerTitle="Create Team">
             <Head title="Create Team" />
-            <div className="p-6">
+            <div className="p-6 font-montserrat">
                 <div className="bg-white shadow rounded-xl p-8">
                     <Link
                         href={route("participant.team")}
@@ -28,7 +28,7 @@ export default function CreateTeam({ user }) {
                         KEMBALI
                     </Link>
                     <h2 className="text-2xl font-bold mb-2">BANGUN TIM</h2>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-4 font-montserrat">
                         Buat tim baru untuk mengerjakan tugas kelompok bersama
                         temanmu. Jika kamu pembuat tim, maka otomatis kamu menjadi ketua tim!
                     </p>
