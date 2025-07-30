@@ -78,8 +78,8 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     aria-label="dashboard"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "dashboard"
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:border border-secondary"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-th-large"></i>
@@ -94,13 +94,29 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                     aria-label="peserta"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "participants.index"
-                                            ? "bg-primary text-white"
-                                            : "hover:text-primary hover:bg-gradient-background-lighten"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
+                                    }`}
+                                >
+                                    <i className="pi pi-user"></i>
+                                    <span className="-mr-1 font-medium">
+                                        Peserta
+                                    </span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href={route("teams.index")}
+                                    aria-label="Tim"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute === "teams.index"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
                                     }`}
                                 >
                                     <i className="pi pi-users"></i>
                                     <span className="-mr-1 font-medium">
-                                        Peserta
+                                        Tim
                                     </span>
                                 </Link>
                             </li>

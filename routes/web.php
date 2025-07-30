@@ -13,6 +13,7 @@ use App\Http\Controllers\ParticipantProfileController;
 use App\Http\Controllers\ParticipantGraduationController;
 use App\Http\Controllers\ParticipantSubmissionController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\AdminTeamsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,6 @@ Route::middleware('auth')->group(function () {
         Route::post('/participant-team/join', [TeamController::class, 'join'])->middleware(['auth'])->name('participant.team.join');
         Route::post('/participant-team/leave', [TeamController::class, 'leave'])->middleware(['auth'])->name('participant.team.leave');
 
-
         Route::get('/participant-graduation', [ParticipantGraduationController::class, 'index'])->middleware(['auth'])->name('participant.graduation');
         Route::put('/participant-submitalprog', [ParticipantSubmissionController::class, 'submitAlprog'])->middleware(['auth'])->name('participant.submitalprog');
         Route::put('/participant-submitbasis', [ParticipantSubmissionController::class, 'submitBasis'])->middleware(['auth'])->name('participant.submitbasis');
@@ -72,6 +72,11 @@ Route::middleware('auth')->group(function () {
         Route::resource('participants', AdminParticipantsController::class)->middleware(['auth']);
         Route::resource('submissions', AdminSubmissionsController::class)->middleware(['auth']);
         Route::middleware(['auth', 'admin'])->put('/reset-password', [AdminParticipantsController::class, 'resetPassword'])->name('participants.resetPassword');
+
+        Route::get('/teams', [AdminTeamsController::class, 'index'])->name('teams.index');
+        Route::put('/teams/{id}', [AdminTeamsController::class, 'update'])->name('teams.update');
+        Route::delete('/teams/{id}', [AdminTeamsController::class, 'destroy'])->name('teams.destroy');
+        Route::post('/teams/reset-password', [AdminTeamsController::class, 'resetPassword'])->name('teams.reset-password');
     });
 });
 

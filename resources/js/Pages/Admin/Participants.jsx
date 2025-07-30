@@ -299,42 +299,118 @@ export default function Participants() {
    );
 
    return (
-      <AdminAuthentication user={user} headerTitle='Peserta Build IT 2024'>
-         <Head title='participants' />
-         <Toast ref={toast} />
-         <div className="card p-6 bg-white shadow border border-gray-200 rounded-lg">
-            
-            <DataTable
-               ref={dt}
-               header={header}
-               value={dataParticipants}
-               selectionMode="single"
-               dataKey="id"
-               filters={filters}
-               paginator
-               showGridlines
-               rows={10}
-               rowsPerPageOptions={[10, 25, 50, 100, 200]}
-               emptyMessage="No participants found."
-               editMode="row"
-               onRowEditComplete={onRowEditComplete}
-               tableStyle={{ minWidth: '50rem' }}>
+       <AdminAuthentication user={user} headerTitle="Peserta Build IT 2024">
+           <Head title="participants" />
+           <Toast ref={toast} />
+           <div className="card p-6 bg-white shadow border border-gray-200 rounded-lg">
+               <div className="flex justify-between items-center mb-4">
+                   <h2 className="text-xl font-semibold">Daftar Peserta</h2>
+                   <span className="text-sm text-gray-500">
+                       {participants.data.length} peserta
+                   </span>
+               </div>
 
-               <Column header="#" body={rowNumberTemplate} style={{ width: '50px' }} />
-               <Column field="nim" header="Nim" sortable editor={(options) => textEditor(options)} style={{ minWidth: '12rem' }} />
-               <Column field="name" header="Nama" editor={(options) => textEditor(options)} sortable style={{ minWidth: '14rem' }} />
-               <Column field="email" header="Email" editor={(options) => textEditor(options)} style={{ minWidth: '12rem' }} />
-               <Column field="whatsapp_id" header="Whatsapp" editor={(options) => textEditor(options)} style={{ minWidth: '12rem' }} />
-               <Column field="line_id" header="Line" editor={(options) => textEditor(options)} style={{ minWidth: '12rem' }} />
-               <Column field="status" header="Status" body={statusBodyTemplate} editor={(options) => statusEditor(options)} sortable style={{ minWidth: '12rem' }} />
-               <Column field="kelompok" header="Kelompok" editor={(options) => textEditor(options)} sortable style={{ minWidth: '12rem' }} />
-               <Column field="kelulusan" header="Kelulusan" body={kelulusanBodyTemplate} editor={(options) => kelulusanEditor(options)} sortable style={{ minWidth: '12rem' }} />
-               <Column header="Edit" rowEditor={allowEdit} headerStyle={{ width: '10%', minWidth: '8rem'}} bodyStyle={{ textAlign: 'center' }} headerClassName="text-center"></Column>
-               <Column header="Reset Password" body={resetPasswordTemplate} style={{ width: '50%', minWidth: '10rem', textAlign: 'center'}} />
-               <Column header="Hapus" body={deleteBodyTemplate} style={{ width: '10%', minWidth: '8rem'}} />
-            </DataTable>
-         </div>
-      </AdminAuthentication>
+               <DataTable
+                   ref={dt}
+                   header={header}
+                   value={dataParticipants}
+                   selectionMode="single"
+                   dataKey="id"
+                   filters={filters}
+                   paginator
+                   showGridlines
+                   rows={10}
+                   rowsPerPageOptions={[10, 25, 50, 100, 200]}
+                   emptyMessage="No participants found."
+                   editMode="row"
+                   onRowEditComplete={onRowEditComplete}
+                   tableStyle={{ minWidth: "50rem" }}
+                   className='font-montserrat'
+               >
+                   <Column
+                       header="#"
+                       body={rowNumberTemplate}
+                       style={{ width: "50px" }}
+                   />
+                   <Column
+                       field="nim"
+                       header="Nim"
+                       sortable
+                       editor={(options) => textEditor(options)}
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="name"
+                       header="Nama"
+                       editor={(options) => textEditor(options)}
+                       sortable
+                       style={{ minWidth: "14rem" }}
+                   />
+                   <Column
+                       field="email"
+                       header="Email"
+                       editor={(options) => textEditor(options)}
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="whatsapp_id"
+                       header="Whatsapp"
+                       editor={(options) => textEditor(options)}
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="line_id"
+                       header="Line"
+                       editor={(options) => textEditor(options)}
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="status"
+                       header="Status"
+                       body={statusBodyTemplate}
+                       editor={(options) => statusEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="kelompok"
+                       header="Kelompok"
+                       editor={(options) => textEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="kelulusan"
+                       header="Kelulusan"
+                       body={kelulusanBodyTemplate}
+                       editor={(options) => kelulusanEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       header="Edit"
+                       rowEditor={allowEdit}
+                       headerStyle={{ width: "10%", minWidth: "8rem" }}
+                       bodyStyle={{ textAlign: "center" }}
+                       headerClassName="text-center"
+                   ></Column>
+                   <Column
+                       header="Reset Password"
+                       body={resetPasswordTemplate}
+                       style={{
+                           width: "50%",
+                           minWidth: "10rem",
+                           textAlign: "center",
+                       }}
+                   />
+                   <Column
+                       header="Hapus"
+                       body={deleteBodyTemplate}
+                       style={{ width: "10%", minWidth: "8rem" }}
+                   />
+               </DataTable>
+           </div>
+       </AdminAuthentication>
    );
 }
 
