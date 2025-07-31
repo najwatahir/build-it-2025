@@ -36,6 +36,7 @@ class AdminParticipantsController extends Controller
             'status' => 'required|string|in:Terverifikasi,Belum Terverifikasi,Ditolak',
             'kelompok' => 'nullable|string|max:255',
             'kelulusan' => 'required|string|in:Lulus,Belum Lulus,Tidak Lulus',
+            'alasan_tidak_lulus' => 'required|string',
         ]);
 
         $participant = User::findOrFail($id);

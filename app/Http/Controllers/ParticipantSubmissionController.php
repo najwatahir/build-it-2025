@@ -93,4 +93,19 @@ class ParticipantSubmissionController extends Controller
 
         return back()->with('success', 'Link tugas berhasil diperbarui.');
     }
+
+    public function submitTwibbon(Request $request)
+    {
+        $user = User::findOrFail(auth()->user()->id);
+
+        $request->validate([
+            'twibbon' => 'string|max:255|url',
+        ]);
+
+        $user->update([
+            'twibbon' => $request->twibbon,
+        ]);
+
+        return to_route('participant.submissions');
+    }
 }
