@@ -1,12 +1,17 @@
 import { Head } from "@inertiajs/react";
 import React, { useState, useEffect } from "react";
-import { Button } from 'primereact/button';
+import { Button } from "primereact/button";
 import Modal from "@/Libs/ModalsDialog";
-import { Menubar } from 'primereact/menubar';
+import { Menubar } from "primereact/menubar";
 
-import { KotakModulPrimary, KotakModulPx102, KotakModulSecondary, KotakModulPx41 } from "../../Components/Icons/modul";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import {
+    KotakModulPrimary,
+    KotakModulPx102,
+    KotakModulSecondary,
+    KotakModulPx41,
+} from "../../Components/Icons/modul";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import UserGuest from "@/Components/Layouts/User/UserGuest";
 
@@ -23,18 +28,28 @@ export default function JaringanKomputer() {
 
     useEffect(() => {
         AOS.init({
-            duration: 1000, 
-            });
-        }, []);
+            duration: 1000,
+        });
+    }, []);
 
-        useEffect(() => {
-            document.documentElement.classList.add('smooth-scroll');
-        }, []);
+    useEffect(() => {
+        document.documentElement.classList.add("smooth-scroll");
+    }, []);
 
     const footerContent = (
         <div className="flex justify-end gap-4">
-            <Button label="No" icon="pi pi-times" onClick={hideModal} className="p-button-text" />
-            <Button label="Yes" icon="pi pi-check" onClick={hideModal} autoFocus />
+            <Button
+                label="No"
+                icon="pi pi-times"
+                onClick={hideModal}
+                className="p-button-text"
+            />
+            <Button
+                label="Yes"
+                icon="pi pi-check"
+                onClick={hideModal}
+                autoFocus
+            />
         </div>
     );
 
@@ -53,7 +68,13 @@ export default function JaringanKomputer() {
                                     JARINGAN KOMPUTER DAN KOMUNIKASI
                                 </p>
                                 <p
-                                    className="text-black font-montserrat my-10 mx-4 md:mx-0 text-[16px] md:text-[20px] md:w-[817px] w-5/6 text-balance leading-10 tracking-widest text-justify justify-start"
+                                    className="text-black font-montserrat text-justify
+    mx-4 md:mx-0 my-6 md:my-10
+    text-[14px] sm:text-[15px] md:text-[20px]
+    w-11/12 md:w-[817px]
+    leading-[24px] sm:leading-[28px] md:leading-10
+    tracking-normal sm:tracking-wide md:tracking-widest
+    text-balance"
                                     data-aos="fade-up"
                                 >
                                     Mata kuliah Jaringan Komputer dan Komunikasi
@@ -230,10 +251,7 @@ export default function JaringanKomputer() {
 
 function CardPembicara({ imageSrc, name, batch, quotation, userInstagram }) {
     return (
-        <div
-            data-aos="fade-up"
-            className="flex flex-col items-start space-y-3"
-        >
+        <div data-aos="fade-up" className="flex flex-col items-start space-y-3">
             <div className="relative w-[285px] h-[403px] cursor-pointer group overflow-hidden bg-gradient-to-t from-purpleEnd to-white">
                 <div className="absolute w-full h-full">
                     <img
@@ -261,7 +279,9 @@ function CardPembicara({ imageSrc, name, batch, quotation, userInstagram }) {
                 <p className="text-[24px] font-montserrat font-medium leading-[24px] text-black">
                     {name}
                 </p>
-                <p className="text-[20px] font-montserrat font-thin text-gray-700">{batch}</p>
+                <p className="text-[20px] font-montserrat font-thin text-gray-700">
+                    {batch}
+                </p>
             </div>
         </div>
     );

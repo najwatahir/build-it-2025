@@ -342,25 +342,26 @@ export default function Welcome() {
                         <div className="absolute  -top-[30px] left-1/2 -translate-x-1/2 w-[1682px] h-[1059px] rounded-t-[650px] bg-white border-[5px] border-white shadow-[0_-20px_250px_0px_rgba(81,62,153,0.10)] z-10"></div>
 
                         {/* Card Grid */}
-                        <div className="gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30 grid md:flex">
+                        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 relative z-30 px-4">
                             {/* Card 1 */}
-                            <div className="bg-white w-full max-w-[400px] h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                            <div className="bg-white w-full h-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
                                     Sosialisasi Gemastik
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                <p className="text-sm text-gray-600 text-balance font-montserrat">
                                     Sosialisasi mengenai Pagelaran Mahasiswa
                                     Nasional Bidang Teknologi Informasi dan
                                     Komunikasi (GEMASTIK) yang merupakan ajang
                                     kompetisi TIK tingkat Nasional.
                                 </p>
                             </div>
+
                             {/* Card 2 */}
-                            <div className="bg-white w-full max-w-[400px] h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
-                                    3 Pelatihan tatap muka
+                            <div className="bg-white w-full h-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                                    3 Pelatihan Tatap Muka
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                <p className="text-sm text-gray-600 text-balance font-montserrat">
                                     Pelatihan yang akan membantu mahasiswa baru
                                     dalam memahami mata kuliah dasar seperti
                                     Algoritma & Pemrograman, Basis Data, dan
@@ -368,12 +369,12 @@ export default function Welcome() {
                                 </p>
                             </div>
 
-                            {/* Card 2 */}
-                            <div className="bg-white w-full max-w-[400px] h-[210px] md:h-[240px] mx-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
-                                <h4 className="pl-8 font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
+                            {/* Card 3 */}
+                            <div className="bg-white w-full h-auto border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl p-6 flex flex-col justify-center">
+                                <h4 className="font-bold text-lg text-[#201349] mb-2 font-montserrat uppercase">
                                     Sosialisasi Penjurusan & Lomba-lomba
                                 </h4>
-                                <p className="pl-8 text-sm text-gray-600 text-balance font-montserrat">
+                                <p className="text-sm text-gray-600 text-balance font-montserrat">
                                     Sosialisasi mengenai lomba-lomba serta
                                     penjurusan di Program Studi Teknologi
                                     Informasi yang akan dipandu oleh dosen dan
@@ -414,9 +415,10 @@ export default function Welcome() {
                             data-aos-delay="300"
                         />
                         <p
-                            className="max-w-[938px] text-[#4D4D4D] text-justify 
-             font-[Montserrat] md:text-[20px] text-[15px] font-normal
-             leading-[34px] px-6"
+                            className="max-w-[938px] text-[#4D4D4D] text-justify font-[Montserrat] 
+    text-[15px] md:text-[20px] font-normal 
+    leading-[26px] sm:leading-[30px] md:leading-[34px] 
+    px-4 sm:px-6"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
@@ -434,6 +436,7 @@ export default function Welcome() {
                                 Sosialisasi Lomba & Penjurusan.
                             </span>
                         </p>
+
                         <div className="mt-40 w-full flex flex-col items-center gap-12 px-4">
                             {/* Judul */}
                             <h3
@@ -814,9 +817,14 @@ export default function Welcome() {
                                                     WA: 0895-3863-44682
                                                 </a>
                                             </p>
-                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
+                                            <a
+                                                href="https://line.me/ti/p/3cQjHYB5-h"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-[#808080] font-montserrat text-[14px] font-normal mt-1 inline-block"
+                                            >
                                                 LINE: najwatahir8
-                                            </p>
+                                            </a>
                                         </div>
 
                                         {/* Card 2 */}
@@ -832,9 +840,14 @@ export default function Welcome() {
                                                     WA: 0813-3348-6847
                                                 </a>
                                             </p>
-                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
+                                            <a
+                                                href="https://line.me/ti/p/ub_KYB7MKh"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-[#808080] font-montserrat text-[14px] font-normal mt-1 inline-block"
+                                            >
                                                 LINE: tri.dharma.
-                                            </p>
+                                            </a>
                                         </div>
 
                                         {/* Card 3 */}
@@ -847,9 +860,14 @@ export default function Welcome() {
                                                     WA: 0831-4766-4176
                                                 </a>
                                             </p>
-                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-1">
+                                            <a
+                                                href="https://line.me/ti/p/7PbxuJQ9hp"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-[#808080] font-montserrat text-[14px] font-normal mt-1 inline-block"
+                                            >
                                                 LINE: adeliawirasantii
-                                            </p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -941,7 +959,14 @@ export default function Welcome() {
             text-white font-bold uppercase tracking-[1.6px] text-base sm:text-lg leading-[30px]
             font-['Montserrat'] transition-all hover:brightness-110 hover:scale-[1.02] hover:shadow-lg duration-200 ease-in-out hover:text-secondary"
                                 >
-                                    <span>Order Now</span>
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSetpvbbp8uZ_j3ldweE0fOmqgNyAN2bB-bcly7gqWT-YArAxA/viewform"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <span>Order Now</span>
+                                    </a>
+
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="w-6 h-6 sm:w-6 sm:h-6"
@@ -971,27 +996,28 @@ const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
                 className="w-full px-4 py-2 text-left focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
                 onClick={onClick}
             >
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-start gap-2">
                     <span className="text-[15px] md:text-lg font-semibold text-[#808080]">
                         {heading}
                     </span>
-                    {/* icon arrow */}
-                    <svg
-                        className={`w-6 h-6 transition-transform transform ${
-                            isOpen ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                        />
-                    </svg>
+                    <div className="flex items-center justify-center h-full">
+                        <svg
+                            className={`w-6 h-6 transition-transform transform ${
+                                isOpen ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </div>
                 </div>
             </button>
             {isOpen && (

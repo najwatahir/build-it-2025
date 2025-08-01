@@ -118,8 +118,8 @@ export const KotakModulPx41 = () => {
                     y2="42.4296"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#257F80" />
-                    <stop offset="1" stopColor="#75C9BF" />
+                    <stop stopColor="#0000" />
+                    <stop offset="1" stopColor="#0000" />
                 </linearGradient>
             </defs>
         </svg>
