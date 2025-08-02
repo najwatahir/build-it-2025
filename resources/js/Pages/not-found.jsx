@@ -1,5 +1,4 @@
 import React from "react";
-import { Logo404, LogoBuild } from "../Components/Icons/404";
 
 export default function Custom404() {
     return (

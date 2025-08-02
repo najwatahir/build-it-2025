@@ -1,9 +1,6 @@
 import { Head, Link } from "@inertiajs/react";
 import React, { useEffect, useState } from "react";
-import { Button } from "primereact/button";
 //import DisableInspect from "@/Utils/disableInspect";
-import { Dialog } from "primereact/dialog";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "primereact/resources/themes/saga-blue/theme.css";
@@ -12,6 +9,7 @@ import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SponsorSlider from "@/Components/SponsorSlider";
 
 import UserGuest from "@/Components/Layouts/User/UserGuest";
 
@@ -19,14 +17,15 @@ export default function Welcome() {
     const [modalVisible, setModalVisible] = useState(false);
     // accordion faq
     const [openIndex, setOpenIndex] = useState(null);
-    // usestate change merch
-    const [imageSrc, setImageSrc] = useState(
-        "asset/images/landing-page/merch-black.png"
-    );
-    // usestate modal pop up
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+    // usestate dan useffect modal pop up
     const [shirtColor, setShirtColor] = useState("black");
+    const [showPopup, setShowPopup] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setShowPopup(false), 10000);
+        return () => clearTimeout(timer);
+    }, []);
 
     const [visible, setVisible] = useState(false);
 
@@ -77,15 +76,6 @@ export default function Welcome() {
         AOS.init({
             duration: 800,
         });
-    }, []);
-
-    // modal pop up merch
-    useEffect(() => {
-        setIsPopupOpen(true);
-
-        const timer = setTimeout(() => {
-            setIsPopupOpen(false);
-        }, 10000);
     }, []);
 
     // useEffect(() => {
@@ -307,27 +297,7 @@ export default function Welcome() {
                             OUR SPONSOR
                         </h3>
                     </div>
-                    <div className="relative w-full px-0 mt-4 overflow-hidden">
-                        <div
-                            className="relative w-full max-w-7xl mx-auto h-[180px] sm:h-[200px] flex items-center justify-center rounded-2xl shadow-md"
-                            style={{
-                                background:
-                                    "linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 25%, #ffffff 75%, rgba(255,255,255,0) 100%)",
-                            }}
-                        >
-                            <div className="absolute left-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
-                            <div className="absolute right-0 top-0 h-full w-20 blur-xl bg-white/50 pointer-events-none" />
-                            <div
-                                className="w-full max-w-[300px] aspect-[403/86] bg-cover bg-center bg-no-repeat bg-blend-multiply flex-shrink-0"
-                                data-aos="fade-up"
-                                data-aos-delay="900"
-                                style={{
-                                    backgroundImage:
-                                        "url('../asset/images/sponsor.png')",
-                                }}
-                            ></div>
-                        </div>
-                    </div>
+                    <SponsorSlider />
 
                     {/* 3 Card event  */}
                     <div
@@ -937,7 +907,7 @@ export default function Welcome() {
                                         />
                                     </svg>
                                     <span className="text-sm sm:text-base">
-                                        9 - 28 AUG 2024
+                                        26 Jul – 14 AUG 2025
                                     </span>
                                 </div>
 
@@ -953,20 +923,16 @@ export default function Welcome() {
                                 />
 
                                 {/* Tombol Order */}
-                                <button
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSetpvbbp8uZ_j3ldweE0fOmqgNyAN2bB-bcly7gqWT-YArAxA/viewform"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="w-full flex items-center justify-between gap-4 px-6 py-5 sm:px-6 sm:py-5 rounded-[15px] 
-            bg-gradient-to-r from-[#201349] to-[#513E99] 
-            text-white font-bold uppercase tracking-[1.6px] text-base sm:text-lg leading-[30px]
-            font-['Montserrat'] transition-all hover:brightness-110 hover:scale-[1.02] hover:shadow-lg duration-200 ease-in-out hover:text-secondary"
+    bg-gradient-to-r from-[#201349] to-[#513E99] 
+    text-white font-bold uppercase tracking-[1.6px] text-base sm:text-lg leading-[30px]
+    font-['Montserrat'] transition-all hover:brightness-110 hover:scale-[1.02] hover:shadow-lg duration-200 ease-in-out hover:text-secondary"
                                 >
-                                    <a
-                                        href="https://docs.google.com/forms/d/e/1FAIpQLSetpvbbp8uZ_j3ldweE0fOmqgNyAN2bB-bcly7gqWT-YArAxA/viewform"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <span>Order Now</span>
-                                    </a>
-
+                                    <span>Order Now</span>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="w-6 h-6 sm:w-6 sm:h-6"
@@ -976,14 +942,68 @@ export default function Welcome() {
                                         <path
                                             d="M7 22C6.45 22 5.97917 21.8042 5.5875 21.4125C5.19583 21.0208 5 20.55 5 20C5 19.45 5.19583 18.9792 5.5875 18.5875C5.97917 18.1958 6.45 18 7 18C7.55 18 8.02083 18.1958 8.4125 18.5875C8.80417 18.9792 9 19.45 9 20C9 20.55 8.80417 21.0208 8.4125 21.4125C8.02083 21.8042 7.55 22 7 22ZM17 22C16.45 22 15.9792 21.8042 15.5875 21.4125C15.1958 21.0208 15 20.55 15 20C15 19.45 15.1958 18.9792 15.5875 18.5875C15.9792 18.1958 16.45 18 17 18C17.55 18 18.0208 18.1958 18.4125 18.5875C18.8042 18.9792 19 19.45 19 20C19 20.55 18.8042 21.0208 18.4125 21.4125C18.0208 21.8042 17.55 22 17 22ZM6.15 6L8.55 11H15.55L18.3 6H6.15ZM5.2 4H19.95C20.3333 4 20.625 4.17083 20.825 4.5125C21.025 4.85417 21.0333 5.2 20.85 5.55L17.3 11.95C17.1167 12.2833 16.8708 12.5417 16.5625 12.725C16.2542 12.9083 15.9167 13 15.55 13H8.1L7 15H18C18.2833 15 18.5208 15.0958 18.7125 15.2875C18.9042 15.4792 19 15.7167 19 16C19 16.2833 18.9042 16.5208 18.7125 16.7125C18.5208 16.9042 18.2833 17 18 17H7C6.25 17 5.68333 16.6708 5.3 16.0125C4.91667 15.3542 4.9 14.7 5.25 14.05L6.6 11.6L3 4H2C1.71667 4 1.47917 3.90417 1.2875 3.7125C1.09583 3.52083 1 3.28333 1 3C1 2.71667 1.09583 2.47917 1.2875 2.2875C1.47917 2.09583 1.71667 2 2 2H3.625C3.80833 2 3.98333 2.05 4.15 2.15C4.31667 2.25 4.44167 2.39167 4.525 2.575L5.2 4Z"
                                             fill="white"
-                                            className="hover:fill-secondary"
+                                            className="group-hover:fill-secondary"
                                         />
                                     </svg>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Popup Merchandise */}
+                {showPopup && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 px-4">
+                        <div
+                            className="relative w-full max-w-md sm:max-w-lg bg-gradient-to-r from-[#F2F2F2] via-white to-[#F2F2F2] rounded-2xl border border-[#CCC] shadow-xl p-6 sm:p-8 transition-all duration-300"
+                            data-aos="fade-up"
+                        >
+                            {/* Tombol Close */}
+                            <button
+                                onClick={() => setShowPopup(false)}
+                                aria-label="Close Modal"
+                                className="absolute top-0 right-3 text-4xl text-gray-500 hover:text-red-700 transition duration-200 font-bold"
+                            >
+                                &times;
+                            </button>
+
+                            {/* Warna Palet */}
+                            <div className="absolute top-4 left-4 flex gap-2">
+                                <button
+                                    onClick={() => setShirtColor("black")}
+                                    className="w-8 h-8 rounded-md border-2 hover:border-[#513E99] bg-black hover:scale-105 transition-transform"
+                                />
+                                <button
+                                    onClick={() => setShirtColor("white")}
+                                    className="w-8 h-8 rounded-md border-2 hover:border-[#808080] bg-white hover:scale-105 transition-transform"
+                                />
+                            </div>
+
+                            {/* Gambar Kaos */}
+                            <div className="w-full flex justify-center my-4">
+                                <img
+                                    src={
+                                        shirtColor === "black"
+                                            ? "../asset/images/merch/merch-black.png"
+                                            : "../asset/images/merch/merch-white.png"
+                                    }
+                                    alt="MERCH BUILD IT 2025"
+                                    className="w-full max-w-[280px] sm:max-w-[350px] object-contain"
+                                />
+                            </div>
+
+                            {/* Tombol Order */}
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSetpvbbp8uZ_j3ldweE0fOmqgNyAN2bB-bcly7gqWT-YArAxA/viewform"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-[#201349] to-[#513E99] text-white text-sm sm:text-base font-bold uppercase tracking-wide font-['Montserrat'] transition hover:brightness-110 hover:scale-[1.02] hover:shadow-lg"
+                            >
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+                )}
             </UserGuest>
         </>
     );
@@ -1023,98 +1043,6 @@ const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
             {isOpen && (
                 <div className="px-4 py-2 text-gray-700">{description}</div>
             )}
-        </div>
-    );
-};
-
-const NextArrow = ({ onClick }) => {
-    return (
-        <div
-            className="absolute top-1/2 right-0 font-bold transform -translate-y-1/2 z-10 cursor-pointer bg-secondary text-white p-2 rounded-full"
-            onClick={onClick}
-        >
-            &gt;
-        </div>
-    );
-};
-
-const PrevArrow = ({ onClick }) => {
-    return (
-        <div
-            className="absolute top-1/2 left-0 font-bold transform -translate-y-1/2 z-10 cursor-pointer bg-secondary text-white p-2 rounded-full"
-            onClick={onClick}
-        >
-            &lt;
-        </div>
-    );
-};
-
-const MerchPopup = ({ isOpen, onClose }) => {
-    const images = [
-        "asset/images/landing-page/merch-black.png",
-        "asset/images/landing-page/merch-white.png",
-    ];
-
-    if (!isOpen) return null;
-
-    const settings = {
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: true,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-    };
-
-    return (
-        <div className="fixed inset-0 bg-none md:bg-gray-800 bg-opacity-20 md:bg-opacity-75 flex justify-center items-center z-50">
-            <div className="bg-gray-300 md:bg-white rounded-[10px] p-8 h-max w-11/12 md:w-2/5">
-                <div className="flex justify-between">
-                    <h2 className="text-md md:text-xl font-bold mb-4">
-                        Merchandise BUILD IT 2024
-                    </h2>
-                    <button
-                        className="text-gray-500 rounded hover:text-gray-900"
-                        onClick={onClose}
-                    >
-                        <i
-                            className="pi pi-times"
-                            style={{ fontSize: "1.5rem" }}
-                        ></i>
-                    </button>
-                </div>
-                <div className="relative">
-                    <Slider {...settings}>
-                        {images.map((image, index) => (
-                            <div key={index}>
-                                <img
-                                    src={image}
-                                    alt={`Merchandise ${index + 1}`}
-                                    className="w-full h-auto md:h-[350px] mb-4 animate-bounce-merch"
-                                />
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-                <p className="text-gray-700 mb-4 text-center">
-                    T-shirt BUILD IT 2024. Dapatkan baju limited edition ini
-                    dengan bahan yang adem dan desain yang kece.
-                </p>
-                <div className="flex justify-between">
-                    <p className="text-lg font-bold mb-4">Rp 100.000</p>
-                    <a
-                        href="https://bit.ly/POMerchandiseBuildIT2024"
-                        target="_blank"
-                    >
-                        <div className="bg-primary text-white px-4 py-2 rounded hover:bg-secondary cursor-pointer">
-                            Order Now
-                        </div>
-                    </a>
-                </div>
-            </div>
         </div>
     );
 };
