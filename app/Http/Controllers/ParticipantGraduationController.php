@@ -18,7 +18,8 @@ class ParticipantGraduationController extends Controller
 
         return Inertia::render('Participant/Graduation', [
             'user' => $user,
-            'role' => $role
+            'role' => $role,
+            'alasan_tidak_lulus' => $user->alasan_tidak_lulus
         ]);
     }
 

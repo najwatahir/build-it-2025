@@ -85,6 +85,10 @@ export default function Submission({ team }) {
       return (currentDate > closingDate) ?  true :  false;
    }
 
+   const [showModal, setShowModal] = useState(false);
+   const [currentLink, setCurrentLink] = useState("");
+   const [currentMatkul, setCurrentMatkul] = useState("");
+
    return (
        <AdminAuthentication user={user} headerTitle="Pengumpulan Tugas Peserta">
            <Head title="Participant Submission" />
@@ -125,7 +129,7 @@ export default function Submission({ team }) {
 
                    {user.status === "Terverifikasi" && (
                        <div className="md:p-6 pb-6 font-montserrat">
-                           <div className="bg-white shadow rounded-xl p-8 border border-[#CCCCCC]">
+                           <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
                                <p className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-2">
                                    Pengumpulan Tugas
                                </p>
@@ -163,9 +167,15 @@ export default function Submission({ team }) {
                                            }`}
                                        />
                                        <button
-                                           type="submit"
-                                           disabled={checkInput("alprog")}
-                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center disabled:bg-red-500/80"
+                                           type="button"
+                                           onClick={() => {
+                                               setShowModal(true);
+                                               setCurrentLink(data.alprog);
+                                               setCurrentMatkul(
+                                                   "Algoritma dan Pemrograman"
+                                               );
+                                           }}
+                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
                                        >
                                            <img
                                                src="/asset/images/edit_square.png"
@@ -207,9 +217,13 @@ export default function Submission({ team }) {
                                            }`}
                                        />
                                        <button
-                                           disabled={checkInput("basis")}
-                                           type="submit"
-                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center disabled:bg-red-500/80"
+                                           type="button"
+                                           onClick={() => {
+                                               setShowModal(true);
+                                               setCurrentLink(data.basis);
+                                               setCurrentMatkul("Basis Data");
+                                           }}
+                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
                                        >
                                            <img
                                                src="/asset/images/edit_square.png"
@@ -251,9 +265,15 @@ export default function Submission({ team }) {
                                            }`}
                                        />
                                        <button
-                                           disabled={checkInput("jarkom")}
-                                           type="submit"
-                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center disabled:bg-red-500/80"
+                                           type="button"
+                                           onClick={() => {
+                                               setShowModal(true);
+                                               setCurrentLink(data.jarkom);
+                                               setCurrentMatkul(
+                                                   "Jaringan Komputer dan Komunikasi"
+                                               );
+                                           }}
+                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
                                        >
                                            <img
                                                src="/asset/images/edit_square.png"
@@ -301,11 +321,15 @@ export default function Submission({ team }) {
                                                }`}
                                            />
                                            <button
-                                               disabled={checkInput(
-                                                   "submission_link"
-                                               )}
-                                               type="submit"
-                                               className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center disabled:bg-red-500/80"
+                                               type="button"
+                                               onClick={() => {
+                                                   setShowModal(true);
+                                                   setCurrentLink(data.submission_link);
+                                                   setCurrentMatkul(
+                                                       "Proposal Gemastik"
+                                                   );
+                                               }}
+                                               className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
                                            >
                                                <img
                                                    src="/asset/images/edit_square.png"
@@ -324,6 +348,85 @@ export default function Submission({ team }) {
                    )}
                </>
            )}
+           <EditModal
+               visible={showModal}
+               onClose={() => setShowModal(false)}
+               value={currentLink}
+               setValue={setCurrentLink}
+               matkul={currentMatkul}
+               onSubmit={(e) => {
+                   e.preventDefault();
+                   if (currentMatkul === "Algoritma dan Pemrograman")
+                       setData("alprog", currentLink);
+                   else if (currentMatkul === "Basis Data")
+                       setData("basis", currentLink);
+                   else if (currentMatkul === "Jaringan Komputer dan Komunikasi")
+                    setData("jarkom", currentLink);
+                else if (currentMatkul === "Proposal Gemastik")
+                    setData("submission_link", currentLink)
+                   setShowModal(false);
+
+                   if (currentMatkul === "Algoritma dan Pemrograman")
+                       submitAlprog(e);
+                   if (currentMatkul === "Basis Data") submitBasis(e);
+                   if (currentMatkul === "Jaringan Komputer dan Komunikasi")
+                       submitJarkom(e);
+                    if (currentMatkul === "Proposal Gemastik")
+                        submitProposal(e);
+               }}
+           />
        </AdminAuthentication>
    );
+}
+
+function EditModal({ visible, onClose, onSubmit, value, setValue, matkul }) {
+    if (!visible) return null;
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+            <div className="bg-white rounded-xl w-5/6 max-w-lg p-6 shadow-lg relative">
+                <button
+                    onClick={onClose}
+                    className="absolute top-3 right-4 text-gray-500 hover:text-black text-2xl"
+                >
+                    ×
+                </button>
+                <h2 className="text-lg font-bold mb-4 uppercase">{matkul}</h2>
+                <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-3 rounded mb-4">
+                    {matkul === "Algoritma dan Pemrograman" ? (
+                        <p>
+                            Upload tugasmu ke Github, lalu paste linknya di
+                            sini.{" "}
+                            <b>
+                                Jangan lupa aktifkan akses publik di linknya ya!
+                            </b>
+                        </p>
+                    ) : (
+                        <p>
+                            Upload tugasmu ke Google Drive, lalu paste linknya
+                            di sini.{" "}
+                            <b>
+                                Jangan lupa aktifkan akses publik di linknya ya!
+                            </b>
+                        </p>
+                    )}
+                </div>
+                <form onSubmit={onSubmit}>
+                    <input
+                        type="text"
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)}
+                        className="w-full border rounded px-4 py-2 mb-4"
+                        placeholder="Paste link Google Drive di sini"
+                    />
+                    <button
+                        type="submit"
+                        className="w-full py-3 bg-gradient-to-r from-[#201349] to-[#513E99] hover:opacity-90 text-white font-bold rounded-xl"
+                    >
+                        SIMPAN
+                    </button>
+                </form>
+            </div>
+        </div>
+    );
 }

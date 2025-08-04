@@ -11,6 +11,7 @@ export default function Graduation() {
         name: user.name,
         nim: user.nim,
         kelulusan: user.kelulusan,
+        alasan_tidak_lulus: user.alasan_tidak_lulus
     });
 
     const toast = useRef(null);
@@ -21,11 +22,11 @@ export default function Graduation() {
             <Toast ref={toast} />
             {data.kelulusan === "Belum Lulus" && (
                 <div className="md:p-6 pb-6 font-montserrat">
-                    <div className="bg-white shadow rounded-xl p-8 border border-[#CCCCCC]">
+                    <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
                         <p className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-2">
                             Informasi Kelulusan
                         </p>
-                        <div className="flex flex-col justify-center items-center space-y-10 min-h-screen">
+                        <div className="flex flex-col justify-center items-center md:space-y-10 md:min-h-screen mb-4">
                             <h1 className="font-bold text-orange-500 text-4xl">
                                 Belum Terdapat Informasi Kelulusan
                             </h1>
@@ -76,15 +77,20 @@ export default function Graduation() {
                             Informasi Kelulusan
                         </p>
                         <div className="flex flex-col justify-center items-center space-y-10 min-h-screen">
-                            <h1 className="font-bold text-red-500 text-4xl">
+                            <h1 className="font-bold text-red-500 md:text-4xl text-xl">
                                 Maaf Anda Tidak Lulus BUILD IT 2025
                             </h1>
                             <span>
-                                <i className="pi pi-times-circle text-[14rem] text-red-500"></i>
+                                <i className="pi pi-times-circle md:text-[14rem] text-[7rem] text-red-500"></i>
                             </span>
-                            <div className="flex flex-col justify-center items-center text-red-500 font-semibold">
+                            <div className="font-bold text-red-500 md:text-4xl text-xl flex">
+                                {data.alasan_tidak_lulus}
+                            </div>
+                            <div className="flex flex-col justify-center items-center text-red-500 font-semibold text-center">
                                 <h2>Semangat mengikuti BUILD IT 2026</h2>
-                                <h2>Sampai Jumpa Tahun Depan. Teruslah belajar!</h2>
+                                <h2>
+                                    Sampai Jumpa Tahun Depan. Teruslah belajar!
+                                </h2>
                             </div>
                         </div>
                     </div>

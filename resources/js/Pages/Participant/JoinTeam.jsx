@@ -19,7 +19,7 @@ export default function JoinTeam({ user }) {
     return (
         <AdminAuthentication user={user} headerTitle="Join Team">
             <div className="p-6">
-                <div className="bg-white shadow rounded-xl p-8">
+                <div className="bg-white shadow rounded-[30px] p-8">
                     <Link
                         href={route("participant.team")}
                         className="text-primary text-sm font-semibold flex items-center gap-2 mb-6"

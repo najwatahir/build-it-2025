@@ -24,6 +24,7 @@ class UserSubmissionsResource extends JsonResource
             'whatsapp_id' => $this->whatsapp_id,
             'kelompok' => $this->kelompok,
             'kelulusan' => $this->kelulusan,
+            'alasan_tidak_lulus' => $this->alasan_tidak_lulus,
             'tugas_alprog' => $this->tugas_alprog,
             'tugas_basis' => $this->tugas_basis,
             'tugas_jarkom' => $this->tugas_jarkom

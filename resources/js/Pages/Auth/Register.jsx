@@ -513,19 +513,19 @@ export default function Register() {
                                     </div>
                                 </div>
 
-                                <div className="absolute top-[400px] left-[80px] animate-bounce-custom">
+                                {/* <div className="absolute top-[400px] left-[80px] animate-bounce-custom">
                                     <KotakModulPx102 />
                                 </div>
                                 <div className="absolute top-[700px] left-[80px] md:left-[400px] animate-bounce-custom">
                                     <KotakModulPx41 />
-                                </div>
+                                </div> */}
                             </div>
-                            <div className="absolute right-0 animate-bounce-custom">
+                            {/* <div className="absolute right-0 animate-bounce-custom">
                                 <KotakModulPrimary />
                             </div>
                             <div className="absolute right-[200px] top-[280px] animate-bounce-custom">
                                 <KotakModulSecondary />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

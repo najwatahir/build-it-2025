@@ -25,6 +25,7 @@ class UserResourceShared extends JsonResource
             'status' => $this->status,
             'kelompok' => $this->kelompok,
             'kelulusan' => $this->kelulusan,
+            'alasan_tidak_lulus' => $this->alasan_tidak_lulus,
         ];
     }
 }

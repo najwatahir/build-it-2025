@@ -31,7 +31,7 @@ export default function Profile() {
             <Head title="Profil Peserta" />
             <Toast ref={toast} />
             <div className="md:p-6 max-w-6xl mx-auto space-y-10 font-montserrat mb-6 md:mb-0">
-                <div className="bg-white p-6 md:p-10 rounded-xl shadow border-[#CCCCCC] space-y-6">
+                <div className="bg-white p-6 md:p-10 rounded-[30px] shadow border-[#CCCCCC] space-y-6">
                     <div>
                         <h2 className="text-xl font-semibold text-gray-800">
                             PROFIL PESERTA

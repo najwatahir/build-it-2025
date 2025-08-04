@@ -34,7 +34,7 @@ export default function EditProfile() {
             <div className="md:p-6 max-w-6xl mx-auto space-y-10 font-montserrat mb-6 md:mb-0">
                 <form
                     onSubmit={handleUpdate}
-                    className="max-w-6xl mx-auto bg-white shadow-md rounded-2xl p-6 space-y-10 border border-gray-200 font-montserrat"
+                    className="max-w-6xl mx-auto bg-white shadow-md rounded-[30px] p-6 space-y-10 border border-gray-200 font-montserrat"
                 >
                     <div className="flex items-center gap-3">
                         <Link

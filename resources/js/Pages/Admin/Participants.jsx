@@ -29,6 +29,7 @@ export default function Participants() {
       status: '',
       kelompok: '',
       kelulusan: '',
+      alasan_tidak_lulus: '',
    });
 
    const [statuses] = useState(['Terverifikasi', 'Belum Terverifikasi', 'Ditolak']);
@@ -65,7 +66,7 @@ export default function Participants() {
 
    useEffect(() => {
       if (editedRow !== null) {
-         const { id, nim, name, email, whatsapp_id, line_id, status, kelompok, kelulusan } = editedRow;
+         const { id, nim, name, email, whatsapp_id, line_id, status, kelompok, kelulusan, alasan_tidak_lulus } = editedRow;
 
          if(status === "Terverifikasi" && kelompok == null){
             setTimeout(() => {
@@ -85,6 +86,7 @@ export default function Participants() {
                status,
                kelompok,
                kelulusan,
+               alasan_tidak_lulus,
             },
             onSuccess: () => {
                reset();
@@ -325,7 +327,7 @@ export default function Participants() {
                    editMode="row"
                    onRowEditComplete={onRowEditComplete}
                    tableStyle={{ minWidth: "50rem" }}
-                   className='font-montserrat'
+                   className="font-montserrat"
                >
                    <Column
                        header="#"
@@ -384,6 +386,13 @@ export default function Participants() {
                        header="Kelulusan"
                        body={kelulusanBodyTemplate}
                        editor={(options) => kelulusanEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="alasan_tidak_lulus"
+                       header="Alasan Tidak Lulus"
+                       editor={(options) => textEditor(options)}
                        sortable
                        style={{ minWidth: "12rem" }}
                    />

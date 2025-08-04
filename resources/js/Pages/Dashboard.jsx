@@ -65,7 +65,7 @@ export default function Dashboard() {
             msgDetail:
                 (user.tugas_basis
                     ? messagesTemplates.success
-                    : messagesTemplates.warn) + "Konsep Basis Data",
+                    : messagesTemplates.warn) + "Basis Data",
         },
         jarkom: {
             msgSeverity: user.tugas_jarkom ? "success" : "error",
@@ -136,7 +136,7 @@ export default function Dashboard() {
         <AdminAuthentication user={user} headerTitle={title}>
             <Head title="Dashboard" />
             <div className="md:p-6 pb-6 font-montserrat">
-                <div className="bg-white shadow rounded-xl p-8 border border-[#CCCCCC]">
+                <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
                     {/* ADMIN */}
                     {user.roles[0].name === "admin" && (
                         <>
@@ -212,7 +212,7 @@ export default function Dashboard() {
                                                             "-"}
                                                     </td>
                                                     <td className="px-6 py-4">
-                                                        {team.leader?.id_line ??
+                                                        {team.leader?.line_id ??
                                                             "-"}
                                                     </td>
                                                 </tr>
@@ -227,7 +227,7 @@ export default function Dashboard() {
                     {/* PARTICIPANT */}
                     {user.roles[0].name === "participant" && (
                         <div className="w-full flex justify-center items-center font-montserrat">
-                            <div className="bg-white w-full p-6 md:p-10 rounded-xl shadow border border-gray-200">
+                            <div className="">
                                 <div className="mb-8">
                                     <h2 className="text-2xl font-bold text-gray-800 mb-1">
                                         Haii, {user.name}!!

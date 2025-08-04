@@ -50,6 +50,7 @@ class AdminParticipantsController extends Controller
             'status' => $request->status,
             'kelompok' => $request->kelompok,
             'kelulusan' => $request->kelulusan,
+            'alasan_tidak_lulus' => $request->alasan_tidak_lulus,
         ]);
 
         return to_route('participants.index');
