@@ -15,6 +15,7 @@ use App\Http\Controllers\ParticipantSubmissionController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AdminTeamsController;
 use App\Http\Controllers\ParticipantTwibbonController;
+use App\Http\Controllers\AdminTwibbonsController;
 
 
 /*
@@ -83,6 +84,8 @@ Route::middleware('auth')->group(function () {
         Route::put('/teams/{id}', [AdminTeamsController::class, 'update'])->name('teams.update');
         Route::delete('/teams/{id}', [AdminTeamsController::class, 'destroy'])->name('teams.destroy');
         Route::post('/teams/reset-password', [AdminTeamsController::class, 'resetPassword'])->name('teams.reset-password');
+
+        Route::get('/twibbons', [AdminTwibbonsController::class, 'index'])->name('twibbons.index');
     });
 });
 

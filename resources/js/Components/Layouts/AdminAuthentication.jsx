@@ -106,6 +106,22 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                             </li>
                             <li>
                                 <Link
+                                    href={route("twibbons.index")}
+                                    aria-label="verifikasi"
+                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                        currentRoute === "twibbons.index"
+                                            ? "bg-primary text-white border-transparent"
+                                            : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
+                                    }`}
+                                >
+                                    <i className="pi pi-verified"></i>
+                                    <span className="-mr-1 font-medium">
+                                        Verifikasi
+                                    </span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href={route("teams.index")}
                                     aria-label="Tim"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
