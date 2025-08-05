@@ -105,13 +105,13 @@ export default function Twibbon({ user }) {
                                 />
                                 <button
                                     type="submit"
-                                    className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
+                                    className="py-4 pr-[14px] pl-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
                                     disabled={processing}
                                 >
                                     <img
-                                        src="/asset/images/edit_square.png"
+                                        src="/asset/images/check.svg"
                                         alt=""
-                                        className="w-[15px] mx-auto"
+                                        className="w-[24px]"
                                     />
                                 </button>
                             </form>
