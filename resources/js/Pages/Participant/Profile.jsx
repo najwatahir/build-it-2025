@@ -137,11 +137,11 @@ export default function Profile() {
                             </label>
                             {data.kelompok >= 1 && data.kelompok <= 4 ? (
                                 <a
-                                    href="https://line.me/R/ti/g/3z1tavzQyU"
+                                    href="https://line.me/R/ti/g/ukT9xDEADS"
                                     target="_blank"
                                     className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
-                                    🔗 https://line.me/R/ti/g/3z1tavzQyU
+                                    🔗 https://line.me/R/ti/g/ukT9xDEADS
                                 </a>
                             ) : (
                                 <p className="px-4 py-3 bg-gray-100 text-gray-500 rounded-lg">
@@ -157,35 +157,35 @@ export default function Profile() {
                             </label>
                             {Number(data.kelompok) === 1 ? (
                                 <a
-                                    href="https://line.me/R/ti/g/X-uupccmfW"
+                                    href="https://line.me/R/ti/g/jLZWqpV4yX"
                                     target="_blank"
                                     className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
-                                    🔗 https://line.me/R/ti/g/X-uupccmfW
+                                    🔗 https://line.me/R/ti/g/jLZWqpV4yX
                                 </a>
                             ) : Number(data.kelompok) === 2 ? (
                                 <a
-                                    href="https://line.me/R/ti/g/StqqnC-lJB"
+                                    href="https://line.me/R/ti/g/3w2qM8pQ8k"
                                     target="_blank"
                                     className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
-                                    🔗 https://line.me/R/ti/g/StqqnC-lJB
+                                    🔗 https://line.me/R/ti/g/3w2qM8pQ8k
                                 </a>
                             ) : Number(data.kelompok) === 3 ? (
                                 <a
-                                    href="https://line.me/R/ti/g/GV6cb3Zter"
+                                    href="https://line.me/R/ti/g/-Dxb3zkbnd"
                                     target="_blank"
                                     className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
-                                    🔗 https://line.me/R/ti/g/GV6cb3Zter
+                                    🔗 https://line.me/R/ti/g/-Dxb3zkbnd
                                 </a>
                             ) : Number(data.kelompok) === 4 ? (
                                 <a
-                                    href="https://line.me/R/ti/g/toFKURNWzX"
+                                    href="https://line.me/R/ti/g/UbrAHF6gpt"
                                     target="_blank"
                                     className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
-                                    🔗 https://line.me/R/ti/g/toFKURNWzX
+                                    🔗 https://line.me/R/ti/g/UbrAHF6gpt
                                 </a>
                             ) : (
                                 <p className="px-4 py-3 bg-gray-100 text-gray-500 rounded-lg">
