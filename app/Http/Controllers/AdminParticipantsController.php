@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\UserResourceShared;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use App\Http\Resources\UserResourceShared;
 
 class AdminParticipantsController extends Controller
 {
@@ -36,7 +37,7 @@ class AdminParticipantsController extends Controller
             'status' => 'required|string|in:Terverifikasi,Belum Terverifikasi,Ditolak',
             'kelompok' => 'nullable|string|max:255',
             'kelulusan' => 'required|string|in:Lulus,Belum Lulus,Tidak Lulus',
-            'alasan_tidak_lulus' => 'required|string',
+            'alasan_tidak_lulus' => Rule::requiredIf($request->kelulusan === 'Tidak Lulus'),
         ]);
 
         $participant = User::findOrFail($id);
