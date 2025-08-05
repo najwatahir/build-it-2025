@@ -90,7 +90,7 @@ export default function JaringanKomputer() {
                                     jaringan.
                                 </p>
                                 <a
-                                    href="https://drive.google.com/file/d/1Q0znJTORWeN5jkFE_ZIeC_v6nI5HF0R1/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1g673vjj-9H9FdCbrPQ_yOEJKYbanJWXL/view?usp=sharing"
                                     target="_blank"
                                     className="mb-12"
                                 >
@@ -214,31 +214,31 @@ export default function JaringanKomputer() {
                         </div>
                         <div className="flex flex-col md:flex-row justify-center gap-28 md:gap-x-4 items-center mt-36">
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/teja.png"
-                                quotation="mata kuliah jaringan computer semester 1 menarik. untuk melewati mata kuliahnya kita harus dapat mengerti konsep konsep dasarnya. Jadi santai saja mengikuti mata kuliah ini dan dibawa enjoy aja"
+                                imageSrc="../../../asset/images/modul/Dea.png"
+                                quotation="Learn before you earn."
                                 userInstagram="https://instagram.com/baskarateja"
-                                name="Lorem Ipsum"
+                                name="Dea"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/bayu_lobi.png"
-                                quotation="gaada kata terlambat buat belajar kalau kita punya kemauan"
-                                userInstagram="https://instagram.com/komang.bayu.399"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Devasya.png"
+                                quotation="ITCC 2025, YES WE CAN."
+                                userInstagram="https://www.instagram.com/devasyaditya_/"
+                                name="Devasya"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/andri.png"
-                                quotation="Di jarkom, teori & praktek sama pentingnya. Praktek penting supaya mahir, teori penting supaya tau apa yang dipraktekin"
-                                userInstagram="https://instagram.com/andriiwhy"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Mars.png"
+                                quotation="Jaringan itu soal arah dan tujuan. Jadi, mau gimanapun bentuknya, yang penting jangan sampai salah alamat. Kalau kamu kan salah pasangan."
+                                userInstagram="https://www.instagram.com/marsinyourdae/"
+                                name="Mars"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/dudek.png"
-                                quotation="Sudah banyak ada platform penunjang kita dalam belajar jaringan. Akan ada baiknya gunakan semua platform itu secara maksimal. Jangan takut untuk mencoba dan gagal, lakukan terus, trial and error, sampai bisa."
-                                userInstagram="https://instagram.com/dudek.dudekk"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Wira.png"
+                                quotation="Dalam pembelajaran jarkom, teori dan praktik memiliki peran yang sama penting. Praktik diperlukan untuk meningkatkan keterampilan, sedangkan teori berguna agar memahami apa yang sedang dipraktikkan."
+                                userInstagram="https://www.instagram.com/wiraguna.__/"
+                                name="Wira"
                                 batch="TI'23"
                             />
                         </div>

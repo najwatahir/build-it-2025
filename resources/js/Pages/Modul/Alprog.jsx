@@ -82,7 +82,7 @@ export default function Alprog() {
                                     masalah.
                                 </p>
                                 <a
-                                    href="https://drive.google.com/file/d/1koyXnZuK-QEU5kq1wtSVB6iMye6qJgi_/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1_KNPU1kA40tlwIhmDBCe4n4vEoOT_9hy/view?usp=sharing"
                                     target="_blank"
                                     className="mb-12"
                                 >
@@ -206,31 +206,31 @@ export default function Alprog() {
                         </div>
                         <div className="flex flex-col md:flex-row justify-center gap-28 md:gap-x-4 items-center mt-36">
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/devta.png"
-                                quotation="Kuasi konsep dasar dengan baik, tetap konsisten berlatih, dan jangan ragu untuk mencoba hal baru. Ingat, pemrograman seperti matematika—praktik dan pemahaman mendalam akan memperkuat kemampuan analitis dan logika kalian, semangat"
-                                userInstagram="https://instagram.com/devtadanarsa"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Arya.png"
+                                quotation="Jangan takut gagal, bahkan semesta aja dimulai dari big bang, bukan big plan."
+                                userInstagram="https://www.instagram.com/aryaekananda/"
+                                name="Arya"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/liangga.png"
-                                quotation="Mulai bekerja dengan AI karena akan sangat membantu. Contohnya motivasi yang diberikan kakak kakak disamping ini dibuat dengan AI"
-                                userInstagram="https://instagram.com/lianggaa_"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Nyoman.png"
+                                quotation="Hidup adalah permainan, layaknya sebuah permainan, ada cara bermain yang optimal."
+                                userInstagram="https://www.instagram.com/nyomantayo/"
+                                name="Nyoman"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/wahtu.png"
-                                quotation="Buat program/solusi dengan maksimal, jangan cepat puas. Kalau masih ada waktu coba tambahkan fitur tambahan atau coba improvisasi kode agar performanya lebih cepat dan effisien"
-                                userInstagram="https://instagram.com/wahtu.astrawan"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/RamaDita.png"
+                                quotation="Pacaran itu rumit mending ngoding Typescript aja kalo error kan bisa di fix."
+                                userInstagram="https://www.instagram.com/ramaaaaadit/"
+                                name="Rama Dita"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/gekna.png"
-                                quotation="Algoritma dan pemrograman itu menantang, khususnya di semester 1. Kuasai konsep awal dengan matang, jangan terburu-buru dan jangan risau kalau menghadapi masalah. Tetap ingat kalau gagal itu adalah bagian dari proses belajar, keep up the spirit!"
-                                userInstagram="https://instagram.com/yukrisnadewi"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Yoga.png"
+                                quotation="If nothing goes right, go left."
+                                userInstagram="https://www.instagram.com/dewayogamer/"
+                                name="Yoga"
                                 batch="TI'23"
                             />
                         </div>

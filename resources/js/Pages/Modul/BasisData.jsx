@@ -80,7 +80,7 @@ export default function BasisData() {
                                 </p>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1plQLBL-_QcytYDpSP36EGcSBG2EXhWEU/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/10FUcc47TXCOyEKqVsqUgGrdhYU3vHhIv/view?usp=sharing"
                                     target="_blank"
                                     className="mb-12"
                                 >
@@ -203,31 +203,31 @@ export default function BasisData() {
                         </div>
                         <div className="flex flex-col md:flex-row justify-center gap-28 md:gap-x-4 items-center mt-36">
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/bayu_riz.png"
-                                quotation="Bumi akan tetap berputar mau itu user_id atau userId"
-                                userInstagram="https://instagram.com/bayurkp"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Dwiki.png"
+                                quotation="Kalian ingin konsul tugas-tugas kuliah dan ketemu kakak-kakak jagoan IT? Silahkan bergabung ke @technologyartisan"
+                                userInstagram="https://www.instagram.com/kadek.dwiki_/"
+                                name="Dwiki"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/dwita.png"
-                                quotation="Harus punya logika dasarnya, kalau enggak terlalu bagus masih bisa dilatih. Perbanyak cari tahu, latihan studi kasus juga, dan kalau untuk mata kuliah perbanyak aktif di kelas dan maksimalkan tiap ujian atau tugas"
-                                userInstagram="https://instagram.com/subawhu"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/GungHen.png"
+                                quotation="Aku bluetooth? Tch tidak akan."
+                                userInstagram="https://www.instagram.com/krishnayana._/"
+                                name="Gung Hen"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/nanta.png"
-                                quotation="Basis ya? Intinya kamu ngerti dlu sama relasi, relasi tu penting buat flow suatu data nantinya. Salah satu relasi aja, bisa ganti semua"
-                                userInstagram="https://instagram.com/raprianantapande"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/Pyari.png"
+                                quotation="Query yang rumit lahir dari pemahaman yang sederhana. Mulailah dari dasar, dan bangun logika satu per satu. Kamu bukan bodoh, kamu hanya belum terbiasa."
+                                userInstagram="https://www.instagram.com/pyaripujita/"
+                                name="Pyari"
                                 batch="TI'23"
                             />
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/ekaputra.png"
-                                quotation="Mungkin bisa dari penentuan entitas sama atribut dulu, terus lanjut kasi contoh yang udah normalisasi. karena kebanyakan yang baru belajar kbd itu bingung nya di normalisasi, udah khatam disana aman dah selanjutnya. relasi sama foreign key juga banyakin contohnya biar engga salah naruh foreign key, yang simple-simple aja tapi masuk konsepnya"
-                                userInstagram="https://instagram.com/ptekaptra"
-                                name="Lorem Ipsum"
+                                imageSrc="../../../asset/images/modul/SatriaYudha.png"
+                                quotation="Yang penting relasi, baik di database maupun kehidupan."
+                                userInstagram="https://www.instagram.com/satriayudha03/"
+                                name="Satria Yudha"
                                 batch="TI'23"
                             />
                         </div>
