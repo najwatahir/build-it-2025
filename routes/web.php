@@ -14,6 +14,8 @@ use App\Http\Controllers\ParticipantGraduationController;
 use App\Http\Controllers\ParticipantSubmissionController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AdminTeamsController;
+use App\Http\Controllers\ParticipantTwibbonController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +62,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/participant-team/join', [TeamController::class, 'joinView'])->middleware(['auth'])->name('participant.team.joinView');
         Route::post('/participant-team/join', [TeamController::class, 'join'])->middleware(['auth'])->name('participant.team.join');
         Route::post('/participant-team/leave', [TeamController::class, 'leave'])->middleware(['auth'])->name('participant.team.leave');
+
+        // verification
+        Route::get('/participant-twibbon', [ParticipantTwibbonController::class, 'index'])->middleware(['auth'])->name('participant.twibbon');
+        Route::put('/participant-submittwibbon', [ParticipantTwibbonController::class, 'store'])->middleware(['auth'])->name('participant.submittwibbon');
 
         Route::get('/participant-graduation', [ParticipantGraduationController::class, 'index'])->middleware(['auth'])->name('participant.graduation');
         Route::put('/participant-submitalprog', [ParticipantSubmissionController::class, 'submitAlprog'])->middleware(['auth'])->name('participant.submitalprog');

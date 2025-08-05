@@ -34,7 +34,8 @@ class User extends Authenticatable
         'status',
         'kelompok',
         'kelulusan',
-        'alasan_tidak_lulus'
+        'alasan_tidak_lulus',
+        'twibbon',
     ];
 
     /**

@@ -27,7 +27,8 @@ class UserSubmissionsResource extends JsonResource
             'alasan_tidak_lulus' => $this->alasan_tidak_lulus,
             'tugas_alprog' => $this->tugas_alprog,
             'tugas_basis' => $this->tugas_basis,
-            'tugas_jarkom' => $this->tugas_jarkom
+            'tugas_jarkom' => $this->tugas_jarkom,
+            'twibbon' => $this->twibbon,
         ];
     }
 }
