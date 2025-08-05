@@ -17,16 +17,40 @@ class DatabaseSeeder extends Seeder
     {
         $uuid = Uuid::uuid4();
 
-        // create roles
-        Role::create(['name' => 'admin']);
-        Role::create(['name' => 'participant']);
+        $user = User::create([
+            'id' =>  $uuid->toString(),
+            'nim' => 'kesekre001',
+            'name' => 'Kesekre Build IT',
+            'email' => 'kesekre@gmail.com',
+            'line_id' => '-',
+            'whatsapp_id' => '-',
+            'password' => "kesekreBuild2025"
+        ]);
+        $user->assignRole('admin');
 
-        // $this->call([
-        //     UserSeeder::class
+        $user = User::create([
+            'id' =>  $uuid->toString(),
+            'nim' => 'ilmiah001',
+            'name' => 'Ilimiah Build IT',
+            'email' => 'ilmiah@gmail.com',
+            'line_id' => '-',
+            'whatsapp_id' => '-',
+            'password' => "ilmiahBuild2025"
+        ]);
+        $user->assignRole('admin');
+
+        // $user = User::create([
+        //     'id' =>  $uuid->toString(),
+        //     'nim' => '2305551001',
+        //     'name' => 'Dwiki Nusanjaya',
+        //     'email' => 'peserta@gmail.com',
+        //     'line_id' => '-',
+        //     'whatsapp_id' => '-',
+        //     'password' => "akunpesertabuild2024",
+        //     'kelompok' => '4',
+        //     'status' => 'Terverifikasi'
         // ]);
 
-        User::factory(150)->create()->each(function ($users) {
-            $users->assignRole('participant');
-        });
+        // $user->assignRole('participant');
     }
 }
