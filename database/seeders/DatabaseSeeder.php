@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // create roles
+        Role::create(['name' => 'admin']);
+        Role::create(['name' => 'participant']);
         $uuid = Uuid::uuid4();
 
         $user = User::create([
