@@ -107,7 +107,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                             <li>
                                 <Link
                                     href={route("twibbons.index")}
-                                    aria-label="verifikasi"
+                                    aria-label="twibbon"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "twibbons.index"
                                             ? "bg-primary text-white border-transparent"
@@ -116,7 +116,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 >
                                     <i className="pi pi-verified"></i>
                                     <span className="-mr-1 font-medium">
-                                        Verifikasi
+                                        Twibbon
                                     </span>
                                 </Link>
                             </li>
@@ -193,7 +193,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                             <li>
                                 <Link
                                     href={route("participant.twibbon")}
-                                    aria-label="verifikasi"
+                                    aria-label="twibbon"
                                     className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "participant.twibbon"
                                             ? "bg-primary text-white border-transparent"
@@ -202,7 +202,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 >
                                     <i className="pi pi-verified"></i>
                                     <span className="-mr-1 font-medium">
-                                        Verifikasi
+                                        Twibbon
                                     </span>
                                 </Link>
                             </li>

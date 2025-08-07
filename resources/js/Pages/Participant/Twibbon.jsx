@@ -40,7 +40,7 @@ export default function Twibbon({ user }) {
                 <div className="md:p-6 pb-6 font-montserrat">
                     <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
                         <h2 className="text-2xl font-bold text-gray-800 mb-2 uppercase">
-                            Verifikasi
+                            Twibbon
                         </h2>
                         <p className="text-[#999999] mb-6">
                             Terima kasih telah ikut meramaikan acara ini! Yuk,
@@ -58,7 +58,7 @@ export default function Twibbon({ user }) {
                             </p>
                             <div className="flex gap-4">
                                 <a
-                                    href="#"
+                                    href="https://drive.google.com/drive/folders/114NM4n85MF7Lpkg0cWLlL7q55VNnfGOR"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

@@ -33,6 +33,8 @@ export default function Dashboard() {
         warnVerif: "Kamu belum terverifikasi sebagai anggota Build IT 2025",
         rejectedVerif:
             "Pendaftaran kamu sebagai peserta Build IT 2025 DITOLAK. Jangan khawatir, kamu akan dihubungi lebih lanjut oleh pihak panitia",
+        successTwibbon: "Kamu telah mengumpulkan bukti upload twibbon",
+        warnTwibbon: "Kamu belum mengumpulkan bukti upload twibbon"
     };
 
     const messages = {
@@ -75,6 +77,14 @@ export default function Dashboard() {
                     ? messagesTemplates.success
                     : messagesTemplates.warn) + "Jaringan Komputer",
         },
+        twibbon: {
+            msgSeverity: user.twibbon ? "success" : "error",
+            msgSummary: "Twibbon",
+            msgDetail:
+                (user.twibbon
+                    ? messagesTemplates.successTwibbon
+                    : messagesTemplates.warnTwibbon)
+        },
     };
 
     useMountEffect(() => {
@@ -112,6 +122,13 @@ export default function Dashboard() {
                     severity: messages.jarkom.msgSeverity,
                     summary: messages.jarkom.msgSummary,
                     detail: messages.jarkom.msgDetail,
+                    closable: false,
+                },
+                {
+                    sticky: true,
+                    severity: messages.twibbon.msgSeverity,
+                    summary: messages.twibbon.msgSummary,
+                    detail: messages.twibbon.msgDetail,
                     closable: false,
                 },
             ]);
