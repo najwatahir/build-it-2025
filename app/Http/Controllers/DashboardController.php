@@ -12,7 +12,10 @@ class DashboardController extends Controller
     public function index()
     {
         $user = auth()->user();
+        $user_team = $user->team()->first();
         $role = auth()->user()->getRoleNames();
+
+        $teams = Team::with('leader')->get();
 
         $akt21 = User::where('nim', 'like', '21%')->where('status', 'Terverifikasi')->count();
         $akt22 = User::where('nim', 'like', '22%')->where('status', 'Terverifikasi')->count();
@@ -27,6 +30,6 @@ class DashboardController extends Controller
 
         $teams = Team::with('leader')->get();
 
-        return Inertia::render('Dashboard', compact('user', 'role', 'akt21', 'akt22', 'akt23', 'akt24', 'akt25', 'kelompok1', 'kelompok2', 'kelompok3', 'kelompok4', 'teams'));
+        return Inertia::render('Dashboard', compact('user', 'role', 'akt21', 'akt22', 'akt23', 'akt24', 'akt25', 'kelompok1', 'kelompok2', 'kelompok3', 'kelompok4', 'teams', 'user_team'));
     }
 }

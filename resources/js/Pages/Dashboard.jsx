@@ -17,6 +17,7 @@ export default function Dashboard() {
         kelompok3,
         kelompok4,
         teams,
+        user_team
     } = usePage().props;
 
     const title = `Dashboard ${
@@ -34,7 +35,10 @@ export default function Dashboard() {
         rejectedVerif:
             "Pendaftaran kamu sebagai peserta Build IT 2025 DITOLAK. Jangan khawatir, kamu akan dihubungi lebih lanjut oleh pihak panitia",
         successTwibbon: "Kamu telah mengumpulkan bukti upload twibbon",
-        warnTwibbon: "Kamu belum mengumpulkan bukti upload twibbon"
+        warnTwibbon: "Kamu belum mengumpulkan bukti upload twibbon",
+        successTeam: "Kamu telah tergabung dalam tim",
+        warnTeam:
+            "Kamu belum tergabung dalam tim. Segera buat tim atau bergabung dengan tim untuk penugasan GEMASTIK",
     };
 
     const messages = {
@@ -80,10 +84,16 @@ export default function Dashboard() {
         twibbon: {
             msgSeverity: user.twibbon ? "success" : "error",
             msgSummary: "Twibbon",
-            msgDetail:
-                (user.twibbon
-                    ? messagesTemplates.successTwibbon
-                    : messagesTemplates.warnTwibbon)
+            msgDetail: user.twibbon
+                ? messagesTemplates.successTwibbon
+                : messagesTemplates.warnTwibbon,
+        },
+        team: {
+            msgSeverity: user_team ? "success" : "error",
+            msgSummary: "Tim",
+            msgDetail: user_team
+                ? `Kamu telah tergabung dalam tim "${user_team.name}"`
+                : messagesTemplates.warnTeam,
         },
     };
 
@@ -129,6 +139,13 @@ export default function Dashboard() {
                     severity: messages.twibbon.msgSeverity,
                     summary: messages.twibbon.msgSummary,
                     detail: messages.twibbon.msgDetail,
+                    closable: false,
+                },
+                {
+                    sticky: true,
+                    severity: messages.team.msgSeverity,
+                    summary: messages.team.msgSummary,
+                    detail: messages.team.msgDetail,
                     closable: false,
                 },
             ]);

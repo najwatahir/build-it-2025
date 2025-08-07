@@ -89,6 +89,12 @@ class User extends Authenticatable
 
     public function team()
     {
-        return $this->belongsToMany(Team::class)->withTimestamps();
+    return $this->belongsToMany(Team::class)->withTimestamps();
     }
+
+
+public function leadingTeam()
+{
+    return $this->hasOne(Team::class, 'leader_id');
+}
 }
