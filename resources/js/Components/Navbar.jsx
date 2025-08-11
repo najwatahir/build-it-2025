@@ -144,7 +144,7 @@ export default function Navbar() {
                     <Link
                         href={route("login")}
                         rel="noopener noreferrer"
-                        className="hidden lg:block py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:text-secondary text-white font-montserrat font-semibold text-[14px] font-bold leading-none tracking-[1.4px] uppercase  transition-all duration-300"
+                        className="hidden lg:block py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:text-secondary text-white font-montserrat font-semibold text-[14px] leading-none tracking-[1.4px] uppercase  transition-all duration-300"
                     >
                         Login
                     </Link>

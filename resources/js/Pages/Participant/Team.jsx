@@ -145,7 +145,7 @@ export default function Team() {
 
                     {/* DETAIL TIM */}
                     {team && (
-                        <div className="mt-6 mx-6 bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC] font-montserrat">
+                        <div className="mt-6 md:mx-6 bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC] font-montserrat">
                             <h2 className="text-lg md:text-xl font-bold tracking-widest uppercase mb-4">
                                 Detail Tim
                             </h2>
