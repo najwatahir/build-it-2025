@@ -211,14 +211,10 @@ export default function Welcome() {
                             </svg>
                         </div>
 
-                        <div className="flex flex-col items-center text-center space-y-4 z-10">
+                        <div className="flex flex-col items-center text-center z-10">
                             <h1
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
-                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
-                                style={{
-                                    fontSize: "clamp(3rem, 10vw, 14rem)",
-                                    lineHeight: "1.0",
-                                }}
+                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)] md:text-[clamp(2rem,10vw,12rem)] leading-[1] text-8xl"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
@@ -227,11 +223,7 @@ export default function Welcome() {
 
                             <h2
                                 className="uppercase font-[Montserrat] font-extrabold text-balance text-transparent bg-gradient-to-r from-[#201349] to-[#513E99] bg-clip-text
-                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)]"
-                                style={{
-                                    fontSize: "clamp(2.5rem, 9vw, 10rem)",
-                                    lineHeight: "0.8",
-                                }}
+                 [text-shadow:0_0_40px_rgba(0,0,0,0.1)] md:text-[clamp(3rem,10vw,14rem)] leading-[1] text-8xl mb-[-2px]"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
@@ -239,19 +231,16 @@ export default function Welcome() {
                             </h2>
 
                             <div
-                                className="mt-6 text-[#4D4D4D] font-[Montserrat] font-semibold uppercase tracking-[2px] max-w-screen-md text-center"
-                                style={{
-                                    fontSize: "clamp(0.875rem, 1.5vw, 1.25rem)",
-                                }}
+                                className="mt-6 text-[#4D4D4D] font-[Montserrat] font-semibold uppercase tracking-[2px] max-w-screen-md text-center md:text-[clamp(0.875rem, 1.5vw, 1.25rem)] leading-[2] text-lg"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
                                 <p>Master the basics</p>
-                                <p>Unlock your IT Superpower</p>
+                                <p className="mb-2">Unlock your IT Superpower</p>
                             </div>
 
                             <div
-                                className="flex flex-col sm:flex-row gap-4 items-center justify-center my-4"
+                                className="flex flex-col mt-4 md:mt-0 sm:flex-row gap-4 items-center justify-center my-4"
                                 data-aos="fade-up"
                                 data-aos-delay="100"
                             >
@@ -273,7 +262,7 @@ export default function Welcome() {
 
                                 <Link href="#">
                                     <button
-                                        className="px-6 py-3 rounded-xl border-2 border-[#201349] text-[#201349]
+                                        className="px-[62px] md:px-6 py-3 rounded-xl border-2 border-[#201349] text-[#201349]
                font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
                tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] hover:border-secondary hover:text-secondary transition-all duration-200"
                                     >
