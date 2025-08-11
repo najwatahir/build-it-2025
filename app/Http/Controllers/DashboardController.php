@@ -17,7 +17,7 @@ class DashboardController extends Controller
 
         $teams = Team::with('leader')->get();
 
-        $akt21 = User::where('nim', 'like', '21%')->where('status', 'Terverifikasi')->count();
+        $akt21 = User::where('nim', 'like', '23%')->where('status', 'Terverifikasi')->count();
         $akt22 = User::where('nim', 'like', '22%')->where('status', 'Terverifikasi')->count();
         $akt23 = User::where('nim', 'like', '23%')->where('status', 'Terverifikasi')->count();
         $akt24 = User::where('nim', 'like', '24%')->where('status', 'Terverifikasi')->count();
