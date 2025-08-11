@@ -34,8 +34,11 @@ jobs:
 
       # 5. Install Dependencies Frontend
       - name: Install NPM Dependencies
-        run: npm install
+        run: npm ci
 
+      - name: Install Prime React
+        run: npm install primereact
+        
       # 6. Build Frontend (Vite)
       - name: Build Vite Assets
         run: npm run build
