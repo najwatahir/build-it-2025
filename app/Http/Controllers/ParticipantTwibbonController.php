@@ -30,6 +30,6 @@ class ParticipantTwibbonController extends Controller
             'twibbon' => $request->twibbon,
         ]);
 
-        return back()->with('success', 'Link twibbon berhasil diperbarui.');
+        return back()->with('success', 'Link twibbon berhasil diperbarui awokawok.');
     }
 }
