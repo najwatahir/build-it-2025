@@ -60,7 +60,7 @@ export default function BasisData() {
                                 </p>
                                 <p
                                     className="text-black font-montserrat text-justify
-    mx-4 md:mx-0 my-6 md:my-10
+    mx-10 md:mx-0 my-6 md:my-10
     text-[14px] sm:text-[15px] md:text-[20px]
     w-11/12 md:w-[817px]
     leading-[24px] sm:leading-[28px] md:leading-10
@@ -191,9 +191,9 @@ export default function BasisData() {
                             >
                                 PENGISI MATERI
                             </h1>
-                            <div className="divider h-[2px] w-5/6 md:w-[706px] bg-primary mt-6 mb-6"></div>
+
                             <p
-                                className="md:w-full w-5/6 md:text-center text-justify mt-3 md:text-xl text-base  leading-loose tracking-widest font-montserrat"
+                                className="md:w-[980px] w-5/6 md:text-center text-justify mt-3 md:text-xl text-base  leading-loose tracking-widest font-montserrat"
                                 data-aos="fade-left"
                             >
                                 Pengisi materi untuk matakuliah Basis Data pada

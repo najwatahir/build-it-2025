@@ -61,29 +61,29 @@ export default function Navbar() {
             <ul
                 className={` ${
                     !showNav ? "hidden" : "flex"
-                } flex-col justify-center lg:w-max-content rounded bg-white top-20 left-12 right-12 border border-gray-300 py-6 px-4 lg:px-12 space-y-3 absolute shadow text-#000 z-10 lg:flex lg:relative lg:flex-row lg:items-center lg:top-0 lg:space-y-0 lg:space-x-6 lg:left-0 lg:right-0 lg:py-0 lg:border-none lg:shadow-none`}
+                } flex-col justify-center lg:w-full md:w-max-content rounded bg-white top-20 left-12 right-12 border border-gray-300 py-6 px-4 lg:px-12 space-y-3 absolute shadow text-#000 z-10 lg:flex lg:relative lg:flex-row lg:items-center lg:top-0 lg:space-y-0 lg:space-x-6 lg:left-0 lg:right-0 lg:py-0 lg:border-none lg:shadow-none`}
             >
-                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat font-semibold hover:bg-gray-200 rounded-[10px] w-full md:w-max p-2">
                     <Link href={route("Welcome")}>Home</Link>
                 </li>
-                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat font-semibold hover:bg-gray-200 rounded-[10px] w-full md:w-max p-2">
                     <a href="/#About">About</a>
                 </li>
                 <li className="space-x-1 relative" ref={dropdownRef}>
                     <div
-                        className="flex font-montserrat flex-row gap-1 cursor-pointer transition-all duration-300 hover:text-primary hover:bg-gray-200 rounded-[10px] w-max p-3"
+                        className="flex font-montserrat font-semibold flex-row gap-1 cursor-pointer transition-all duration-300 hover:text-primary hover:bg-gray-200 rounded-[10px] w-full md:w-max p-3"
                         onClick={showDropDown}
                     >
-                        <a href="#">Modul</a>
+                        <p>Modul</p>
                         <i
                             className={`pi ${
                                 !show ? "pi-angle-down" : "pi-angle-up"
                             } mt-1`}
                         ></i>
                     </div>
-                    <ul className="font-montserrat">
+                    <ul className="font-montserrat font-semibold">
                         <li
-                            className={`lg:absolute bg-white mt-3 p-2 min-w-max shadow-none lg:shadow-lg border-none lg:border-[1px] hover:text-primary border-gray-200 rounded flex-col space-y-2 transition-all duration-300 ${
+                            className={`lg:absolute bg-white mt-3 p-2 min-w-full md:w-max shadow-none lg:shadow-lg border-none lg:border-[1px] hover:text-primary border-gray-200 rounded flex-col space-y-2 transition-all duration-300 ${
                                 !show ? "hidden" : "flex"
                             }`}
                         >
@@ -111,13 +111,13 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </li>
-                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat font-semibold hover:bg-gray-200 rounded-[10px] w-full md:w-max p-2">
                     <a href="/#Faq">FAQ</a>
                 </li>
-                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat font-semibold hover:bg-gray-200 rounded-[10px] w-full md:w-max p-2">
                     <a href="/#Contact">Contact</a>
                 </li>
-                <li className="hover:text-primary font-montserrat hover:bg-gray-200 rounded-[10px] w-max p-2">
+                <li className="hover:text-primary font-montserrat font-semibold hover:bg-gray-200 rounded-[10px] w-full md:w-max p-2">
                     <a href="/#Merch">Merchandise</a>
                 </li>
                 <li>
@@ -125,7 +125,7 @@ export default function Navbar() {
                         <Link
                             href="/login"
                             rel="noopener noreferrer"
-                            className="w-fit lg:h-[52px] block lg:hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:bg-secondary font-bold text-white font  transition-all duration-300 font-montserrat text-[14px] leading-none tracking-[1.4px] uppercase"
+                            className="w-fit lg:h-[52px] block lg:hidden py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:bg-secondary font-bold text-white font  transition-all duration-300 font-montserrat font-semibold text-[14px] leading-none tracking-[1.4px] uppercase"
                         >
                             Login
                         </Link>
@@ -144,7 +144,7 @@ export default function Navbar() {
                     <Link
                         href={route("login")}
                         rel="noopener noreferrer"
-                        className="hidden lg:block py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:text-secondary text-white font-montserrat text-[14px] font-bold leading-none tracking-[1.4px] uppercase  transition-all duration-300"
+                        className="hidden lg:block py-3 px-6 rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] hover:text-secondary text-white font-montserrat font-semibold text-[14px] font-bold leading-none tracking-[1.4px] uppercase  transition-all duration-300"
                     >
                         Login
                     </Link>

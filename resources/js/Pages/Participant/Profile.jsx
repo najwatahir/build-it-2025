@@ -46,7 +46,7 @@ export default function Profile() {
                             <label className="text-sm font-medium text-gray-700">
                                 Nama Lengkap
                             </label>
-                            <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                            <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                 {data.name}
                             </p>
                         </div>
@@ -55,7 +55,7 @@ export default function Profile() {
                                 <label className="text-sm font-medium text-gray-700">
                                     NIM
                                 </label>
-                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                     {data.nim}
                                 </p>
                             </div>
@@ -63,7 +63,7 @@ export default function Profile() {
                                 <label className="text-sm font-medium text-gray-700">
                                     Angkatan
                                 </label>
-                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                     {data.angkatan}
                                 </p>
                             </div>
@@ -71,7 +71,7 @@ export default function Profile() {
                                 <label className="text-sm font-medium text-gray-700">
                                     Kelompok
                                 </label>
-                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                     {data.kelompok ?? "-"}
                                 </p>
                             </div>
@@ -86,7 +86,7 @@ export default function Profile() {
                                 <label className="text-sm font-medium text-gray-700">
                                     Email
                                 </label>
-                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                     {data.email}
                                 </p>
                             </div>
@@ -94,7 +94,7 @@ export default function Profile() {
                                 <label className="text-sm font-medium text-gray-700">
                                     Whatsapp
                                 </label>
-                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                     {data.whatsapp}
                                 </p>
                             </div>
@@ -102,7 +102,7 @@ export default function Profile() {
                                 <label className="text-sm font-medium text-gray-700">
                                     ID Line
                                 </label>
-                                <p className="p-3 bg-gray-100 rounded-lg text-gray-800">
+                                <p className="p-3 text-[12px] bg-gray-100 rounded-lg text-gray-800">
                                     {data.line}
                                 </p>
                             </div>
@@ -139,7 +139,7 @@ export default function Profile() {
                                 <a
                                     href="https://line.me/R/ti/g/ukT9xDEADS"
                                     target="_blank"
-                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                    className="flex items-center text-[12px] gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
                                     🔗 https://line.me/R/ti/g/ukT9xDEADS
                                 </a>
@@ -159,7 +159,7 @@ export default function Profile() {
                                 <a
                                     href="https://line.me/R/ti/g/jLZWqpV4yX"
                                     target="_blank"
-                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                    className="flex items-center gap-2 text-[12px] px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
                                     🔗 https://line.me/R/ti/g/jLZWqpV4yX
                                 </a>

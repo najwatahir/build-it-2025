@@ -56,7 +56,7 @@ export default function EditProfile() {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="name"
-                                    className="text-sm font-semibold text-gray-800 uppercase"
+                                    className="text-sm font-semibold text-gray-800 text-[13px] uppercase"
                                 >
                                     Nama Lengkap
                                 </label>
@@ -69,7 +69,7 @@ export default function EditProfile() {
                                     onChange={(e) =>
                                         setData("name", e.target.value)
                                     }
-                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 bg-gray-50 ${
+                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 text-[13px] bg-gray-50 ${
                                         errors.name
                                             ? "border-red-500 focus:ring-red-500"
                                             : "border-gray-300 focus:ring-primary"
@@ -86,12 +86,12 @@ export default function EditProfile() {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="nim"
-                                    className="text-sm font-semibold text-gray-800"
+                                    className="text-sm font-semibold text-gray-800 text-[13px]"
                                 >
                                     NIM
                                 </label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="nim"
                                     name="nim"
                                     maxLength={10}
@@ -99,7 +99,7 @@ export default function EditProfile() {
                                     onChange={(e) =>
                                         setData("nim", e.target.value)
                                     }
-                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 bg-gray-50 ${
+                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 text-[13px] bg-gray-50 ${
                                         errors.nim
                                             ? "border-red-500 focus:ring-red-500"
                                             : "border-gray-300 focus:ring-primary"
@@ -124,7 +124,7 @@ export default function EditProfile() {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="email"
-                                    className="text-sm font-semibold text-gray-800 uppercase"
+                                    className="text-sm font-semibold text-gray-800 text-[13px] uppercase"
                                 >
                                     Email
                                 </label>
@@ -136,7 +136,7 @@ export default function EditProfile() {
                                     onChange={(e) =>
                                         setData("email", e.target.value)
                                     }
-                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 bg-gray-50 ${
+                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 text-[13px] bg-gray-50 ${
                                         errors.email
                                             ? "border-red-500 focus:ring-red-500"
                                             : "border-gray-300 focus:ring-primary"
@@ -153,19 +153,19 @@ export default function EditProfile() {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="whatsapp"
-                                    className="text-sm font-semibold text-gray-800 uppercase"
+                                    className="text-sm font-semibold text-gray-800 text-[13px] uppercase"
                                 >
                                     Whatsapp
                                 </label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="whatsapp"
                                     name="whatsapp"
                                     value={data.whatsapp}
                                     onChange={(e) =>
                                         setData("whatsapp", e.target.value)
                                     }
-                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 bg-gray-50 ${
+                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 text-[13px] bg-gray-50 ${
                                         errors.whatsapp
                                             ? "border-red-500 focus:ring-red-500"
                                             : "border-gray-300 focus:ring-primary"
@@ -182,7 +182,7 @@ export default function EditProfile() {
                             <div className="space-y-2">
                                 <label
                                     htmlFor="line"
-                                    className="text-sm font-semibold text-gray-800 uppercase"
+                                    className="text-sm font-semibold text-gray-800 text-[13px] uppercase"
                                 >
                                     ID Line
                                 </label>
@@ -194,7 +194,7 @@ export default function EditProfile() {
                                     onChange={(e) =>
                                         setData("line", e.target.value)
                                     }
-                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 bg-gray-50 ${
+                                    className={`w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-1 text-gray-800 text-[13px] bg-gray-50 ${
                                         errors.line
                                             ? "border-red-500 focus:ring-red-500"
                                             : "border-gray-300 focus:ring-primary"

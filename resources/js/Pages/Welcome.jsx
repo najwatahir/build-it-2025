@@ -51,19 +51,18 @@ export default function Welcome() {
 
     const [batchInfo, setBatchInfo] = useState({
         batchName: "Pre-Order",
-        batchDate: "14 Agustus 2024 - 28 Agustus 2024",
+        batchDate: "15 Agustus 2025 - 4 September 2025",
     });
 
     useEffect(() => {
         const currentDate = new Date();
-        const batch1End = new Date("2024-08-28");
-        const batch2Start = new Date("2024-09-01");
-        const batch2End = new Date("2024-09-15");
+        const batch2Start = new Date("2025-08-15");
+        const batch2End = new Date("2025-09-04");
 
         if (currentDate >= batch2Start && currentDate <= batch2End) {
             setBatchInfo({
                 batchName: "Extended Pre-Order",
-                batchDate: "1 September 2024 - 15 September 2024",
+                batchDate: "5 September 2025 - 5 Oktober 2025",
             });
         }
     }, []);
@@ -258,21 +257,23 @@ export default function Welcome() {
                             >
                                 <Link href="/register">
                                     <button
-                                        className="px-6 py-3 rounded-full bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
+                                        className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#201349] to-[#513E99] shadow-md
                text-white font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
                tracking-[1.6px] uppercase flex items-center gap-2 hover:brightness-110 transition-all duration-200 hover:text-secondary relative overflow-hidden"
                                     >
                                         <span className="z-10">
                                             daftar sekarang
                                         </span>
-                                        <span className="text-xl z-10">→</span>
+                                        <span className="text-xl mt-[-4px] md:mt-0">
+                                            →
+                                        </span>
                                         <span className="absolute inset-0 bg-gradient-to-r from-[#513E99] to-[#201349] opacity-0 hover:opacity-100 transition-opacity duration-500"></span>
                                     </button>
                                 </Link>
 
                                 <Link href="#">
                                     <button
-                                        className="px-6 py-3 rounded-full border-2 border-[#201349] text-[#201349]
+                                        className="px-6 py-3 rounded-xl border-2 border-[#201349] text-[#201349]
                font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
                tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] hover:border-secondary hover:text-secondary transition-all duration-200"
                                     >
@@ -388,7 +389,7 @@ export default function Welcome() {
                             className="max-w-[938px] text-[#4D4D4D] text-justify font-[Montserrat] 
     text-[15px] md:text-[20px] font-normal 
     leading-[26px] sm:leading-[30px] md:leading-[34px] 
-    px-4 sm:px-6"
+    px-4 sm:px-6 mx-6 md:mx-0"
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
@@ -419,14 +420,14 @@ export default function Welcome() {
 
                             {/* Grid Card */}
                             <div
-                                className="w-full px-12 sm:px-14 md:px-16"
+                                className="w-full px-8 sm:px-14 md:px-16"
                                 data-aos="fade-up"
                                 data-aos-delay="300"
                             >
                                 <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {/* Card 1 */}
                                     <div
-                                        className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
+                                        className="w-full max-w-[400px] h-[505px] px-8 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
                                         data-aos="fade-up"
                                         data-aos-delay="100"
                                     >
@@ -436,33 +437,27 @@ export default function Welcome() {
                                         <img
                                             src="../asset/images/logo-alprog.png"
                                             alt="Algoritma dan Pemrograman"
-                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
+                                            className="w-48 h-48 md:w-56 md:h-56 object-contain mb-4"
                                         />
-                                        <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
+                                        <p className="text-justify text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
                                             Membangun pemahaman konsep
                                             fundamental dalam pemrograman
                                             komputer dan pemecahan masalah
                                             menggunakan algoritma.
                                         </p>
-                                        <Link href="/modul/alprog">
-                                            <button
-                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
-             bg-gradient-to-r from-[#201349] to-[#513E99] 
-             shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
-             text-white font-[Montserrat] text-[14px] font-semibold 
-             leading-[30px] tracking-[0.1em] uppercase w-full hover:text-secondary transition-all duration-300"
-                                                href="/modul/alprog"
-                                            >
-                                                Lebih Lanjut{" "}
-                                                <span className="pl-16 text-xl">
-                                                    →
-                                                </span>
-                                            </button>
+                                        <Link
+                                            href="/modul/alprog"
+                                            className="w-full flex items-center justify-center px-[15px] py-[5px] md:px-[30px] md:py-[10px] rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0_4px_4px_rgba(0,0,0,0.15)] text-white font-[Montserrat] text-[10px] md:text-[14px] font-semibold leading-[30px] tracking-[0.1em] uppercase hover:text-secondary transition-all duration-300"
+                                        >
+                                            Lebih Lanjut{" "}
+                                            <span className="pl-8 md:pl-8 text-xl">
+                                                →
+                                            </span>
                                         </Link>
                                     </div>
                                     {/* Card 2 */}
                                     <div
-                                        className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
+                                        className="w-full max-w-[400px] h-[505px] px-8 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
                                         data-aos="fade-up"
                                         data-aos-delay="100"
                                     >
@@ -472,32 +467,27 @@ export default function Welcome() {
                                         <img
                                             src="../asset/images/logo-basdat.png"
                                             alt="Basis Data"
-                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
+                                            className="w-48 h-48 md:w-56 md:h-56 object-contain mb-4"
                                         />
-                                        <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
+                                        <p className="text-justify text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
                                             Menelaah konsep, desain,
                                             implementasi, dan manajemen sistem
                                             basis data untuk mengelola dan
                                             memanipulasi data.
                                         </p>
-                                        <Link href="/modul/basisdata">
-                                            <button
-                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
-             bg-gradient-to-r from-[#201349] to-[#513E99] 
-             shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
-             text-white font-[Montserrat] text-[14px] font-semibold 
-             leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
-                                            >
-                                                Lebih Lanjut
-                                                <span className="pl-16 text-xl">
-                                                    →
-                                                </span>
-                                            </button>
+                                        <Link
+                                            href="/modul/alprog"
+                                            className="w-full flex items-center justify-center px-[15px] py-[5px] md:px-[30px] md:py-[10px] rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0_4px_4px_rgba(0,0,0,0.15)] text-white font-[Montserrat] text-[10px] md:text-[14px] font-semibold leading-[30px] tracking-[0.1em] uppercase hover:text-secondary transition-all duration-300"
+                                        >
+                                            Lebih Lanjut{" "}
+                                            <span className="pl-8 md:pl-8 text-xl">
+                                                →
+                                            </span>
                                         </Link>
                                     </div>
                                     {/* Card 3 */}
                                     <div
-                                        className="w-full max-w-[400px] h-[505px] px-6 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
+                                        className="w-full max-w-[400px] h-[505px] px-8 py-8 flex flex-col justify-between items-center rounded-[10px] border border-[rgba(81,62,153,0.2)] bg-white mx-auto"
                                         data-aos="fade-up"
                                         data-aos-delay="300"
                                     >
@@ -507,27 +497,22 @@ export default function Welcome() {
                                         <img
                                             src="../asset/images/logo-jarkom.png"
                                             alt="Jaringan Komputer dan Komunikasi"
-                                            className="w-40 h-40 md:w-56 md:h-56 object-contain mb-4"
+                                            className="w-48 h-48 md:w-56 md:h-56 object-contain mb-4"
                                         />
-                                        <p className="text-center text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
+                                        <p className="text-justify text-sm text-[#4D4D4D] font-medium font-[Montserrat] mb-4">
                                             Mempelajari konsep dan arsitektur
                                             mengenai sistem jaringan komputer
                                             serta proses komunikasi pengiriman
                                             data antar perangkat.
                                         </p>
-                                        <Link href="/modul/jarkom">
-                                            <button
-                                                className="flex items-center justify-center px-[30px] py-[10px] rounded-[15px] 
-             bg-gradient-to-r from-[#201349] to-[#513E99] 
-             shadow-[0_4px_4px_rgba(0,0,0,0.15)] 
-             text-white font-[Montserrat] text-[14px] font-semibold 
-             leading-[30px] tracking-[0.1em] uppercase w-full  hover:text-secondary transition-all duration-300"
-                                            >
-                                                Lebih Lanjut{" "}
-                                                <span className="pl-16 text-xl">
-                                                    →
-                                                </span>
-                                            </button>
+                                        <Link
+                                            href="/modul/alprog"
+                                            className="w-full flex items-center justify-center px-[15px] py-[5px] md:px-[30px] md:py-[10px] rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0_4px_4px_rgba(0,0,0,0.15)] text-white font-[Montserrat] text-[10px] md:text-[14px] font-semibold leading-[30px] tracking-[0.1em] uppercase hover:text-secondary transition-all duration-300"
+                                        >
+                                            Lebih Lanjut{" "}
+                                            <span className="pl-8 md:pl-8 text-xl">
+                                                →
+                                            </span>
                                         </Link>
                                     </div>
                                 </div>
@@ -537,7 +522,7 @@ export default function Welcome() {
 
                     {/* Timeline Build IT */}
                     <div
-                        id="timeline"
+                        id="Timeline"
                         className="relative mt-40 w-full max-w-[1440px] mx-auto rounded-[150px] border-t border-[#513E98]/50 bg-[linear-gradient(180deg,_#FAFAFA_50%,_#FFF_100%)] flex flex-col items-center py-24 px-4 sm:px-8 md:px-16 overflow-hidden"
                         data-aos="fade-up"
                         data-aos-delay="300"
@@ -613,7 +598,7 @@ export default function Welcome() {
                             <h3 className="text-[35px] sm:text-[40px] md:text-[48px] font-bold tracking-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-[#201349] to-[#513E99] font-[Montserrat] uppercase mb-4">
                                 TIMELINE
                             </h3>
-                            <p className="text-[#808080] text-center font-[Montserrat] text-sm sm:text-base font-medium tracking-[0.1em]">
+                            <p className="text-[#808080] text-center font-[Montserrat] text-sm sm:text-base font-semibold tracking-[0.1em]">
                                 Catat tanggalnya dan pastikan Anda tidak
                                 melewatkan momen di BUILD-IT 2025
                             </p>
@@ -644,11 +629,11 @@ export default function Welcome() {
             px-6 py-5 border border-[rgba(81,62,153,0.2)] rounded-2xl bg-white shadow-md hover:shadow-lg 
             transition-all duration-300 ease-in-out"
                                         >
-                                            <h4 className="w-full text-center text-black font-[Montserrat] text-base font-semibold">
+                                            <h4 className="w-full text-left text-black font-[Montserrat] text-base font-semibold">
                                                 {event.title}
                                             </h4>
 
-                                            <p className="text-[#808080] text-sm font-medium font-[Montserrat]">
+                                            <p className="text-[#808080] text-sm font-semibold font-[Montserrat]">
                                                 {event.date}
                                             </p>
 
@@ -700,7 +685,7 @@ export default function Welcome() {
                                     </h1>
 
                                     <p
-                                        className="mt-8 w-full max-w-[618px] text-center text-[#808080] font-[Montserrat] text-[16px] font-medium leading-normal tracking-[1.6px]"
+                                        className="mt-8 w-full max-w-[618px] text-center text-[#808080] font-[Montserrat] text-[16px] font-semibold leading-normal tracking-[1.6px]"
                                         data-aos="fade-right"
                                     >
                                         Pertanyaan umum yang sering ditanyakan
@@ -722,7 +707,7 @@ export default function Welcome() {
                                         />
                                         <AccordionLanding
                                             heading="Apakah kegiatan ini wajib dihadiri?"
-                                            description="Ya, kegiatan ini wajib dihadiri oleh mahasiswa baru teknologi informasi angkatan 2024. Untuk mahasiswa lama yang belum mengikuti pada tahun lalu wajib hadir di pembukaan dan sharing session"
+                                            description="Ya, kegiatan ini wajib dihadiri oleh mahasiswa baru teknologi informasi angkatan 2025. Untuk mahasiswa lama yang belum mengikuti pada tahun lalu wajib hadir di pembukaan dan sharing session"
                                             isOpen={openIndex === 1}
                                             onClick={() =>
                                                 handleAccordionClick(1)
@@ -760,7 +745,7 @@ export default function Welcome() {
                                     </h2>
 
                                     <p
-                                        className="mt-8 max-w-[640px] text-[#808080] text-[16px] font-medium leading-normal tracking-[1.6px] font-montserrat"
+                                        className="mt-8 max-w-[640px] text-[#808080] text-[16px] font-semibold leading-normal tracking-[1.6px] font-montserrat"
                                         data-aos="fade-up"
                                         data-aos-delay="100"
                                     >
@@ -779,7 +764,7 @@ export default function Welcome() {
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
                                                 Najwa Tahir
                                             </h3>
-                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
+                                            <p className="text-primary underline font-montserrat text-[14px] font-normal mt-2">
                                                 <a
                                                     href="https://wa.me/+62895386344682"
                                                     target="_blank"
@@ -791,7 +776,7 @@ export default function Welcome() {
                                                 href="https://line.me/ti/p/3cQjHYB5-h"
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                className="text-[#808080] font-montserrat text-[14px] font-normal mt-1 inline-block"
+                                                className="text-primary underline font-montserrat text-[14px] font-normal mt-1 inline-block"
                                             >
                                                 LINE: najwatahir8
                                             </a>
@@ -802,7 +787,7 @@ export default function Welcome() {
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
                                                 Tri Dharma
                                             </h3>
-                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
+                                            <p className="text-primary underline font-montserrat text-[14px] font-normal mt-2">
                                                 <a
                                                     href="https://wa.me/+6281333486847"
                                                     target="_blank"
@@ -814,7 +799,7 @@ export default function Welcome() {
                                                 href="https://line.me/ti/p/ub_KYB7MKh"
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                className="text-[#808080] font-montserrat text-[14px] font-normal mt-1 inline-block"
+                                                className="text-primary underline font-montserrat text-[14px] font-normal mt-1 inline-block"
                                             >
                                                 LINE: tri.dharma.
                                             </a>
@@ -825,7 +810,7 @@ export default function Welcome() {
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
                                                 Adel
                                             </h3>
-                                            <p className="text-[#808080] font-montserrat text-[14px] font-normal mt-2">
+                                            <p className="text-primary underline font-montserrat text-[14px] font-normal mt-2">
                                                 <a href="https://wa.me/+6283147664176">
                                                     WA: 0831-4766-4176
                                                 </a>
@@ -834,7 +819,7 @@ export default function Welcome() {
                                                 href="https://line.me/ti/p/7PbxuJQ9hp"
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                className="text-[#808080] font-montserrat text-[14px] font-normal mt-1 inline-block"
+                                                className="text-primary underline font-montserrat text-[14px] font-normal mt-1 inline-block"
                                             >
                                                 LINE: adeliawirasantii
                                             </a>
@@ -861,7 +846,7 @@ export default function Welcome() {
                             </h1>
 
                             <p
-                                className="mt-8 w-full text-center font-montserrat text-[16px] font-medium leading-normal tracking-[1.6px] text-black"
+                                className="mt-8 w-full text-center font-montserrat text-[16px] font-semibold leading-normal tracking-[1.6px] text-black"
                                 data-aos="fade-left"
                             >
                                 Rayakan semangat inovasi dengan T-shirt edisi
@@ -869,7 +854,7 @@ export default function Welcome() {
                             </p>
                         </div>
 
-                        <div className="flex justify-center items-center min-h-screen py-10 sm:px-8">
+                        <div className="flex justify-center items-center py-10 sm:px-8">
                             <div
                                 className="relative flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 p-6 sm:p-8 pt-32 w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1000px] rounded-[15px] border border-[#CCC] shadow-md transition-all duration-300"
                                 data-aos="fade-up"
@@ -907,7 +892,7 @@ export default function Welcome() {
                                         />
                                     </svg>
                                     <span className="text-sm sm:text-base">
-                                        26 Jul – 14 AUG 2025
+                                        {batchInfo.batchDate}
                                     </span>
                                 </div>
 
@@ -955,7 +940,7 @@ export default function Welcome() {
                 {showPopup && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 px-4">
                         <div
-                            className="relative w-full max-w-md sm:max-w-lg bg-gradient-to-r from-[#F2F2F2] via-white to-[#F2F2F2] rounded-2xl border border-[#CCC] shadow-xl p-6 sm:p-8 transition-all duration-300"
+                            className="relative w-full max-w-md sm:max-w-2xl bg-gradient-to-r from-[#F2F2F2] via-white to-[#F2F2F2] rounded-2xl border border-[#CCC] shadow-xl p-6 sm:p-10 transition-all duration-300"
                             data-aos="fade-up"
                         >
                             {/* Tombol Close */}
@@ -988,7 +973,7 @@ export default function Welcome() {
                                             : "../asset/images/merch/merch-white.png"
                                     }
                                     alt="MERCH BUILD IT 2025"
-                                    className="w-full max-w-[280px] sm:max-w-[350px] object-contain"
+                                    className="w-full max-w-[280px] sm:max-w-[400px] object-contain"
                                 />
                             </div>
 
@@ -1011,7 +996,7 @@ export default function Welcome() {
 
 const AccordionLanding = ({ heading, description, isOpen, onClick }) => {
     return (
-        <div className="w-full md:w-[636px] border border-primary rounded-[10px] m-2 p-2 shadow-lg">
+        <div className="w-full md:w-[636px] border border-primary rounded-[10px] m-2 p-2 shadow-lg bg-white">
             <button
                 className="w-full px-4 py-2 text-left focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
                 onClick={onClick}

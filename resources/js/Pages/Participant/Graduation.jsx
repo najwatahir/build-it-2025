@@ -46,7 +46,7 @@ export default function Graduation() {
                         </p>
                         <div className="flex flex-col justify-center items-center space-y-10 min-h-screen">
                             <h1 className="font-bold text-primary text-4xl">
-                                Selamat Anda Telah Lulus BUILD IT 2024
+                                Selamat Anda Telah Lulus BUILD IT 2025!
                             </h1>
                             <span>
                                 <i className="pi pi-star text-[14rem] text-primary"></i>

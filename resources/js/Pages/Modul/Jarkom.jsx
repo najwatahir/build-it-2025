@@ -201,9 +201,9 @@ export default function JaringanKomputer() {
                             >
                                 PENGISI MATERI
                             </h1>
-                            <div className="divider h-[2px] w-5/6 md:w-[706px] bg-primary mt-6 mb-6"></div>
+
                             <p
-                                className="md:w-full w-5/6 md:text-center text-justify mt-3 md:text-xl text-base  leading-loose tracking-widest font-montserrat"
+                                className="md:w-[980px] w-5/6 md:text-center text-justify mt-3 md:text-xl text-base  leading-loose tracking-widest font-montserrat"
                                 data-aos="fade-left"
                             >
                                 Pengisi materi untuk matakuliah Jaringan
@@ -216,7 +216,7 @@ export default function JaringanKomputer() {
                             <CardPembicara
                                 imageSrc="../../../asset/images/modul/Dea.png"
                                 quotation="Learn before you earn."
-                                userInstagram="https://instagram.com/baskarateja"
+                                userInstagram="https://www.instagram.com/deaaalma/"
                                 name="Dea"
                                 batch="TI'23"
                             />

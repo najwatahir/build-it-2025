@@ -40,7 +40,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                     menuOpen ? "ml-0" : "ml-[-100%]"
                 } lg:ml-0`}
             >
-                <div className="font-montserrat overflow-auto">
+                <div className="font-montserrat">
                     <div className="px-6 py-4 ml-2">
                         <Link href={route("Welcome")} title="home">
                             <img
@@ -275,7 +275,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
 
             <div className="ml-auto lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
                 <div className="">
-                    <div className="flex items-center justify-between space-x-4 2xl:container">
+                    <div className="flex items-center justify-between space-x-4">
                         {/* <h5 className="text-2xl text-gray-800 font-medium md:block hidden capitalize">
                             {headerTitle}
                         </h5> */}

@@ -252,7 +252,7 @@ export default function Daftar() {
                                         </form>
 
                                         <p className="text-[#808080] font-semibold text-[14px] leading-[30px] tracking-[1.6px] uppercase font-montserrat mt-8">
-                                            Belom punya akun?
+                                            Belum punya akun?
                                             <Link
                                                 href={route("register")}
                                                 className="text-[#513E99] font-semibold ml-1 hover:text-secondary"

@@ -51,7 +51,7 @@ export default function Register() {
             toast.current.show({
                 severity: "error",
                 summary: "Peringatan",
-                detail: "Maaf, pendaftaran Build-IT 2024 telah ditutup",
+                detail: "Maaf, pendaftaran Build-IT 2025 telah ditutup",
                 life: 3000,
             });
             return;
@@ -131,7 +131,7 @@ export default function Register() {
                     sticky: true,
                     severity: "error",
                     icon: "pi",
-                    summary: "Maaf, pendaftaran Build-IT 2024 telah ditutup",
+                    summary: "Maaf, pendaftaran Build-IT 2025 telah ditutup",
                     detail: "",
                     closable: false,
                 });
@@ -251,7 +251,7 @@ export default function Register() {
                                                     NIM
                                                 </label>
                                                 <input
-                                                    type="text"
+                                                    type="number"
                                                     name="nim"
                                                     id="nim"
                                                     maxLength={10}
@@ -370,7 +370,7 @@ export default function Register() {
                                                     Whatsapp
                                                 </label>
                                                 <input
-                                                    type="text"
+                                                    type="number"
                                                     name="whatsapp"
                                                     id="whatsapp"
                                                     maxLength={120}

@@ -53,19 +53,13 @@ export default function Alprog() {
                         <div className="flex flex-col justify-between mt-20 mb-20 md:mb-36">
                             <div className="flex flex-col z-20 items-center">
                                 <p
-                                    className="text-3xl font-extrabold md:text-[36px] leading-[50px] tracking-[0.16em] text-wrap md:text-start text-center bg-gradient-to-r from-purpleStart to-purpleEnd bg-clip-text text-transparent"
+                                    className="text-3xl font-extrabold md:text-[36px] leading-[50px] tracking-[0.16em] text-wrap md:text-start text-center bg-gradient-to-r from-purpleStart to-purpleEnd bg-clip-text text-transparent font-montserrat"
                                     data-aos="fade-up"
                                 >
                                     ALGORITMA DAN PEMROGRAMAN
                                 </p>
                                 <p
-                                    className="text-black font-montserrat text-justify justify-start
-    mx-4 md:mx-0 my-6 md:my-10 
-    text-[14px] sm:text-[15px] md:text-[20px] 
-    w-11/12 md:w-[817px] 
-    leading-[24px] sm:leading-[28px] md:leading-10 
-    tracking-normal sm:tracking-wide md:tracking-widest 
-    text-balance"
+                                    className="text-black font-montserrat text-justify justify-start mx-10 md:mx-0 my-6 md:my-10 text-[14px] sm:text-[15px] md:text-[20px] w-11/12 md:w-[817px] leading-[24px] sm:leading-[28px] md:leading-10 tracking-normal sm:tracking-wide md:tracking-widest text-balance"
                                     data-aos="fade-up"
                                 >
                                     Mata kuliah Algoritma dan Pemrograman adalah
@@ -82,7 +76,7 @@ export default function Alprog() {
                                     masalah.
                                 </p>
                                 <a
-                                    href="https://drive.google.com/file/d/1_KNPU1kA40tlwIhmDBCe4n4vEoOT_9hy/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1DvJ7GvvlOUEFpcBaniPJ7EI67Jn5J8KC/view?usp=sharing"
                                     target="_blank"
                                     className="mb-12"
                                 >
@@ -193,9 +187,9 @@ export default function Alprog() {
                             >
                                 PENGISI MATERI
                             </h1>
-                            <div className="divider h-[2px] w-5/6 md:w-[706px] bg-primary mt-6 mb-6"></div>
+
                             <p
-                                className="md:w-full w-5/6 md:text-center text-justify mt-3 md:text-xl text-base  leading-loose tracking-widest font-montserrat"
+                                className="md:w-[980px] w-5/6 md:text-center text-justify mt-3 md:text-xl text-base  leading-loose tracking-widest font-montserrat"
                                 data-aos="fade-left"
                             >
                                 Pengisi materi untuk matakuliah Algoritma dan
@@ -268,10 +262,10 @@ function CardPembicara({ imageSrc, name, batch, quotation, userInstagram }) {
                 </div>
             </div>
             <div className="text-start">
-                <p className="text-[24px] font-montserrat font-medium leading-[24px] text-black">
+                <p className="text-[24px] font-montserrat font-semibold leading-[24px] text-black">
                     {name}
                 </p>
-                <p className="text-[20px] font-montserrat font-thin text-gray-700">
+                <p className="text-[20px] font-montserrat font-semibold text-gray-700">
                     {batch}
                 </p>
             </div>

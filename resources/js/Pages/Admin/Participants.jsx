@@ -187,7 +187,7 @@ export default function Participants() {
                type: 'array'
          });
 
-         saveAsExcelFile(excelBuffer, 'Peserta Build IT 2024');
+         saveAsExcelFile(excelBuffer, 'Peserta Build IT 2025');
       });
    };
 
@@ -301,7 +301,7 @@ export default function Participants() {
    );
 
    return (
-       <AdminAuthentication user={user} headerTitle="Peserta Build IT 2024">
+       <AdminAuthentication user={user} headerTitle="Peserta Build IT 2025">
            <Head title="participants" />
            <Toast ref={toast} />
            <div className="card p-6 bg-white shadow border border-gray-200 rounded-lg">
