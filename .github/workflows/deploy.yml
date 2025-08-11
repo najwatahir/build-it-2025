@@ -49,5 +49,5 @@ jobs:
           username: ${{ secrets.HOSTINGER_USER }}
           ssh_private_key: ${{ secrets.HOSTINGER_KEY }}
           local_path: './public/build/*'
-          remote_path: '~/public_html/build-it-2025/public/build/'
+          remote_path: '/home/u1111095/public_html/build-it-2025/public/build/'
           args: '-r'
