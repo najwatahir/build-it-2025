@@ -200,7 +200,7 @@ export default function Alprog() {
                         </div>
                         <div className="flex flex-col md:flex-row justify-center gap-28 md:gap-x-4 items-center mt-36">
                             <CardPembicara
-                                imageSrc="../../../asset/images/modul/Tri.jpg"
+                                imageSrc="../../../asset/images/modul/Arya.png"
                                 quotation="Jangan takut gagal, bahkan semesta aja dimulai dari big bang, bukan big plan."
                                 userInstagram="https://www.instagram.com/aryaekananda/"
                                 name="Arya"
