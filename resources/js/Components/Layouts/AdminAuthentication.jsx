@@ -51,11 +51,11 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                         </Link>
                     </div>
 
-                    <div className="w-full md:w-auto mt-8 text-center flex flex-col justify-center items-center">
+                    <div className="w-full md:w-auto text-center flex flex-col justify-center items-center">
                         <img
                             src={`https://api.dicebear.com/9.x/bottts-neutral/png?seed=${user.name}`}
                             alt=""
-                            className="md:block w-10 h-10 m-auto rounded-xl object-cover lg:w-20 lg:h-20 outline outline-offset-2 outline-4 outline-primary"
+                            className="md:block w-10 h-10 m-auto rounded-xl object-cover lg:w-20 lg:h-20 outline outline-offset-2 mt-2 outline-4 outline-primary"
                         />
                         <h5 className="mt-4 text-xl font-semibold text-gray-800 lg:block">
                             {user.name}
@@ -76,7 +76,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("dashboard")}
                                     aria-label="dashboard"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "dashboard"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -92,7 +92,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("participants.index")}
                                     aria-label="peserta"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "participants.index"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -108,7 +108,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("twibbons.index")}
                                     aria-label="twibbon"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "twibbons.index"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -124,7 +124,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("teams.index")}
                                     aria-label="Tim"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "teams.index"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -140,7 +140,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("submissions.index")}
                                     aria-label="pengumpulan tugas"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "submissions.index"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -157,12 +157,12 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
 
                     {/* menu participant */}
                     {user.roles[0].name === "participant" && (
-                        <ul className="space-y-2 h-48 2xl:h-full tracking-wide mt-8">
+                        <ul className="space-y-2 h-48 2xl:h-full tracking-wide 2">
                             <li>
                                 <Link
                                     href={route("dashboard")}
                                     aria-label="dashboard"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "dashboard"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -178,7 +178,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("participant.profile")}
                                     aria-label="profile"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "participant.profile"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -194,7 +194,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("participant.twibbon")}
                                     aria-label="twibbon"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "participant.twibbon"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -210,7 +210,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("participant.team")}
                                     aria-label="team"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute === "participant.team"
                                             ? "bg-primary text-white border-transparent"
                                             : "text-gray-800 hover:border-[#FCB215] hover:text-[#FCB215] border-transparent"
@@ -226,7 +226,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("participant.submissions")}
                                     aria-label="pengumpulan tugas"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute ===
                                         "participant.submissions"
                                             ? "bg-primary text-white border-transparent"
@@ -243,7 +243,7 @@ export default function AdminAuthentication({ user, headerTitle, children }) {
                                 <Link
                                     href={route("participant.graduation")}
                                     aria-label="informasi kelulusan"
-                                    className={`relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
+                                    className={`relative px-4 py-2 flex items-center space-x-4 rounded-xl text-gray-800 transition-all duration-300 ${
                                         currentRoute ===
                                         "participant.graduation"
                                             ? "bg-primary text-white border-transparent"
