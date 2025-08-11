@@ -144,7 +144,7 @@ export default function Profile() {
                                     🔗 https://line.me/R/ti/g/ukT9xDEADS
                                 </a>
                             ) : (
-                                <p className="px-4 py-3 bg-gray-100 text-gray-500 rounded-lg">
+                                <p className="px-4 py-3 bg-gray-100 text-[12px] text-gray-500 rounded-lg">
                                     Anda belum terverifikasi
                                 </p>
                             )}
@@ -167,7 +167,7 @@ export default function Profile() {
                                 <a
                                     href="https://line.me/R/ti/g/3w2qM8pQ8k"
                                     target="_blank"
-                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                    className="flex items-center gap-2 text-[12px] px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
                                     🔗 https://line.me/R/ti/g/3w2qM8pQ8k
                                 </a>
@@ -175,7 +175,7 @@ export default function Profile() {
                                 <a
                                     href="https://line.me/R/ti/g/-Dxb3zkbnd"
                                     target="_blank"
-                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                    className="flex items-center gap-2 text-[12px] px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
                                     🔗 https://line.me/R/ti/g/-Dxb3zkbnd
                                 </a>
@@ -183,12 +183,12 @@ export default function Profile() {
                                 <a
                                     href="https://line.me/R/ti/g/UbrAHF6gpt"
                                     target="_blank"
-                                    className="flex items-center gap-2 px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
+                                    className="flex items-center gap-2 text-[12px] px-4 py-3 bg-purple-100 text-purple-800 rounded-lg"
                                 >
                                     🔗 https://line.me/R/ti/g/UbrAHF6gpt
                                 </a>
                             ) : (
-                                <p className="px-4 py-3 bg-gray-100 text-gray-500 rounded-lg">
+                                <p className="px-4 py-3 bg-gray-100 text-[12px] text-gray-500 rounded-lg">
                                     Anda belum tergabung dalam grup
                                 </p>
                             )}
