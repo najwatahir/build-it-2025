@@ -177,321 +177,288 @@ export default function Submission({ team }) {
        <AdminAuthentication user={user} headerTitle="Pengumpulan Tugas Peserta">
            <Head title="Participant Submission" />
            <Toast ref={toast} />
-           <div className="md:p-6">
-               <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
-                   {submissionClose() && (
-                       <>
-                           {user.status === "Terverifikasi" && (
-                               <div className="flex flex-col justify-center items-center space-y-10 min-h-screen font-montserrat">
-                                   <h1 className="font-bold text-red-500 text-4xl">
-                                       Kamu tidak dapat mengumpulkan tugas
-                                   </h1>
-                                   <span>
-                                       <i className="pi pi-times-circle text-[14rem] text-red-500"></i>
-                                   </span>
-                                   <div className="flex flex-col justify-center items-center text-red-500 font-semibold">
-                                       <h2>Pengumpulan tugas sudah ditutup</h2>
-                                       <h2>Semoga kamu lulus BUILD IT 2025</h2>
-                                   </div>
-                               </div>
-                           )}
-                       </>
+           {submissionClose() && (
+               <>
+                   {user.status === "Terverifikasi" && (
+                       <div className="flex flex-col justify-center items-center space-y-10 min-h-screen font-montserrat">
+                           <h1 className="font-bold text-red-500 text-4xl">
+                               Kamu tidak dapat mengumpulkan tugas
+                           </h1>
+                           <span>
+                               <i className="pi pi-times-circle text-[14rem] text-red-500"></i>
+                           </span>
+                           <div className="flex flex-col justify-center items-center text-red-500 font-semibold">
+                               <h2>Pengumpulan tugas sudah ditutup</h2>
+                               <h2>Semoga kamu lulus BUILD IT 2025</h2>
+                           </div>
+                       </div>
+                   )}
+               </>
+           )}
+
+           {!submissionClose() && (
+               <>
+                   {(user.status === "Belum Terverifikasi" ||
+                       user.status === "Ditolak") && (
+                       <div className="flex flex-col justify-center items-center space-y-10 min-h-screen font-montserrat">
+                           <h1 className="font-bold text-red-500 text-xl">
+                               Halaman pengumpulan tugas tersedia jika status
+                               peserta sudah terverifikasi
+                           </h1>
+                           <span>
+                               <i className="pi pi-exclamation-circle text-[10rem] text-red-500"></i>
+                           </span>
+                       </div>
                    )}
 
-                   {!submissionClose() && (
-                       <>
-                           {(user.status === "Belum Terverifikasi" ||
-                               user.status === "Ditolak") && (
-                               <div className="flex flex-col justify-center items-center space-y-10 min-h-screen font-montserrat">
-                                   <h1 className="font-bold text-red-500 text-xl">
-                                       Halaman pengumpulan tugas tersedia jika
-                                       status peserta sudah terverifikasi
-                                   </h1>
-                                   <span>
-                                       <i className="pi pi-exclamation-circle text-[10rem] text-red-500"></i>
-                                   </span>
-                               </div>
-                           )}
-
-                           {user.status === "Terverifikasi" && (
-                               <div className="md:p-6 pb-6 font-montserrat">
-                                   <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
-                                       <p className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-2">
-                                           Pengumpulan Tugas
-                                       </p>
-                                       <p className="text-gray-600 mb-6 text-sm">
-                                           Unggah link tugasmu di sini. Pastikan
-                                           sudah dibagikan dengan akses publik.
-                                       </p>
-                                       <form
-                                           onSubmit={submitAlprog}
-                                           className="flex flex-col gap-2 w-full"
+                   {user.status === "Terverifikasi" && (
+                       <div className="md:p-6 pb-6 font-montserrat">
+                           <div className="bg-white shadow rounded-[30px] p-8 border border-[#CCCCCC]">
+                               <p className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-2">
+                                   Pengumpulan Tugas
+                               </p>
+                               <p className="text-gray-600 mb-6 text-sm">
+                                   Unggah link tugasmu di sini. Pastikan sudah
+                                   dibagikan dengan akses publik.
+                               </p>
+                               <form
+                                   onSubmit={submitAlprog}
+                                   className="flex flex-col gap-2 w-full"
+                               >
+                                   <h3 className="text-xl text-black font-semibold uppercase">
+                                       Algoritma dan Pemrograman
+                                   </h3>
+                                   <label
+                                       htmlFor="alprog"
+                                       className="text-gray-600 text-sm"
+                                   >
+                                       Kumpulkan Link Reporistory Github kamu di
+                                       sini
+                                   </label>
+                                   <div className="space-y-4 md:space-x-4">
+                                       <input
+                                           type="text"
+                                           name="alprog"
+                                           id="alprog"
+                                           value={data.alprog}
+                                           onChange={(e) =>
+                                               setData("alprog", e.target.value)
+                                           }
+                                           className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
+                                               errors.alprog
+                                                   ? "border-red-500 focus:border-red-500"
+                                                   : "border-[#CCCC] focus:border-primary"
+                                           }`}
+                                       />
+                                       <button
+                                           type="button"
+                                           onClick={() => {
+                                               setShowModal(true);
+                                               setCurrentLink(data.alprog);
+                                               setCurrentMatkul(
+                                                   "Algoritma dan Pemrograman"
+                                               );
+                                           }}
+                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
                                        >
-                                           <h3 className="text-xl text-black font-semibold uppercase">
-                                               Algoritma dan Pemrograman
-                                           </h3>
-                                           <label
-                                               htmlFor="alprog"
-                                               className="text-gray-600 text-sm"
-                                           >
-                                               Kumpulkan Link Reporistory Github
-                                               kamu di sini
-                                           </label>
-                                           <div className="space-y-4 md:space-x-4">
-                                               <input
-                                                   type="text"
-                                                   name="alprog"
-                                                   id="alprog"
-                                                   value={data.alprog}
-                                                   onChange={(e) =>
-                                                       setData(
-                                                           "alprog",
-                                                           e.target.value
-                                                       )
-                                                   }
-                                                   className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
-                                                       errors.alprog
-                                                           ? "border-red-500 focus:border-red-500"
-                                                           : "border-[#CCCC] focus:border-primary"
-                                                   }`}
-                                               />
-                                               <button
-                                                   type="button"
-                                                   onClick={() => {
-                                                       setShowModal(true);
-                                                       setCurrentLink(
-                                                           data.alprog
-                                                       );
-                                                       setCurrentMatkul(
-                                                           "Algoritma dan Pemrograman"
-                                                       );
-                                                   }}
-                                                   className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
-                                               >
-                                                   <img
-                                                       src="/asset/images/edit_square.png"
-                                                       alt=""
-                                                       className="w-[15px] mx-auto"
-                                                   />
-                                               </button>
-                                           </div>
-                                           <small className="text-red-500">
-                                               {errors.alprog}
-                                           </small>
-                                       </form>
-                                       <form
-                                           onSubmit={submitBasis}
-                                           className="flex flex-col gap-2 w-full"
-                                       >
-                                           <h3 className="text-xl text-black font-semibold uppercase">
-                                               Basis Data
-                                           </h3>
-                                           <label
-                                               htmlFor="alprog"
-                                               className="text-gray-600 text-sm"
-                                           >
-                                               Kumpulkan Link Google Drive kamu
-                                               di sini
-                                           </label>
-                                           <div className="space-y-4 md:space-x-4">
-                                               <input
-                                                   type="text"
-                                                   name="basis"
-                                                   id="basis"
-                                                   value={data.basis}
-                                                   onChange={(e) =>
-                                                       setData(
-                                                           "basis",
-                                                           e.target.value
-                                                       )
-                                                   }
-                                                   className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
-                                                       errors.basis
-                                                           ? "border-red-500 focus:border-red-500"
-                                                           : "border-[#CCCC] focus:border-primary"
-                                                   }`}
-                                               />
-                                               <button
-                                                   type="button"
-                                                   onClick={() => {
-                                                       setShowModal(true);
-                                                       setCurrentLink(
-                                                           data.basis
-                                                       );
-                                                       setCurrentMatkul(
-                                                           "Basis Data"
-                                                       );
-                                                   }}
-                                                   className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
-                                               >
-                                                   <img
-                                                       src="/asset/images/edit_square.png"
-                                                       alt=""
-                                                       className="w-[15px] mx-auto"
-                                                   />
-                                               </button>
-                                           </div>
-                                           <small className="text-red-500">
-                                               {errors.basis}
-                                           </small>
-                                       </form>
-                                       <form
-                                           onSubmit={submitJarkom}
-                                           className="flex flex-col gap-2 w-full"
-                                       >
-                                           <h3 className="text-xl text-black font-semibold uppercase">
-                                               Jaringan Komputer dan Komunikasi
-                                           </h3>
-                                           <label
-                                               htmlFor="alprog"
-                                               className="text-gray-600 text-sm"
-                                           >
-                                               Kumpulkan Link Google Drive kamu
-                                               di sini
-                                           </label>
-                                           <div className="space-y-4 md:space-x-4">
-                                               <input
-                                                   type="text"
-                                                   name="jarkom"
-                                                   id="jarkom"
-                                                   value={data.jarkom}
-                                                   onChange={(e) =>
-                                                       setData(
-                                                           "jarkom",
-                                                           e.target.value
-                                                       )
-                                                   }
-                                                   className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
-                                                       errors.jarkom
-                                                           ? "border-red-500 focus:ring-red-500"
-                                                           : "border-[#CCCC] focus:border-primary"
-                                                   }`}
-                                               />
-                                               <button
-                                                   type="button"
-                                                   onClick={() => {
-                                                       setShowModal(true);
-                                                       setCurrentLink(
-                                                           data.jarkom
-                                                       );
-                                                       setCurrentMatkul(
-                                                           "Jaringan Komputer dan Komunikasi"
-                                                       );
-                                                   }}
-                                                   className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
-                                               >
-                                                   <img
-                                                       src="/asset/images/edit_square.png"
-                                                       alt=""
-                                                       className="w-[15px] mx-auto"
-                                                   />
-                                               </button>
-                                           </div>
-                                           <small className="text-red-500">
-                                               {errors.jarkom}
-                                           </small>
-                                       </form>
-                                       {isLeader && (
-                                           <form
-                                               onSubmit={submitProposal}
-                                               className="flex flex-col gap-2 w-full font-montserrat"
-                                           >
-                                               <h3 className="text-xl text-black font-semibold uppercase">
-                                                   Pengumpulan Proposal GEMASTIK
-                                               </h3>
-                                               <label
-                                                   htmlFor="alprog"
-                                                   className="text-gray-600 text-sm"
-                                               >
-                                                   Kumpulkan Link Google Drive
-                                                   tim kamu di sini (hanya ketua
-                                                   tim yang dapat mengirim)
-                                               </label>
-                                               <div className="space-y-4 md:space-x-4 font-montserrat">
-                                                   <input
-                                                       type="text"
-                                                       name="submission_link"
-                                                       id="submission_link"
-                                                       value={
-                                                           data.submission_link
-                                                       }
-                                                       onChange={(e) =>
-                                                           setData(
-                                                               "submission_link",
-                                                               e.target.value
-                                                           )
-                                                       }
-                                                       className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
-                                                           errors.submission_link
-                                                               ? "border-red-500 focus:ring-red-500"
-                                                               : "border-[#CCCC] focus:border-primary"
-                                                       }`}
-                                                   />
-                                                   <button
-                                                       type="button"
-                                                       onClick={() => {
-                                                           setShowModal(true);
-                                                           setCurrentLink(
-                                                               data.submission_link
-                                                           );
-                                                           setCurrentMatkul(
-                                                               "Proposal Gemastik"
-                                                           );
-                                                       }}
-                                                       className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
-                                                   >
-                                                       <img
-                                                           src="/asset/images/edit_square.png"
-                                                           alt=""
-                                                           className="w-[15px] mx-auto"
-                                                       />
-                                                   </button>
-                                               </div>
-                                               <small className="text-red-500">
-                                                   {errors.submission_link}
-                                               </small>
-                                           </form>
-                                       )}
+                                           <img
+                                               src="/asset/images/edit_square.png"
+                                               alt=""
+                                               className="w-[15px] mx-auto"
+                                           />
+                                       </button>
                                    </div>
-                               </div>
-                           )}
-                       </>
+                                   <small className="text-red-500">
+                                       {errors.alprog}
+                                   </small>
+                               </form>
+                               <form
+                                   onSubmit={submitBasis}
+                                   className="flex flex-col gap-2 w-full"
+                               >
+                                   <h3 className="text-xl text-black font-semibold uppercase">
+                                       Basis Data
+                                   </h3>
+                                   <label
+                                       htmlFor="alprog"
+                                       className="text-gray-600 text-sm"
+                                   >
+                                       Kumpulkan Link Google Drive kamu di sini
+                                   </label>
+                                   <div className="space-y-4 md:space-x-4">
+                                       <input
+                                           type="text"
+                                           name="basis"
+                                           id="basis"
+                                           value={data.basis}
+                                           onChange={(e) =>
+                                               setData("basis", e.target.value)
+                                           }
+                                           className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
+                                               errors.basis
+                                                   ? "border-red-500 focus:border-red-500"
+                                                   : "border-[#CCCC] focus:border-primary"
+                                           }`}
+                                       />
+                                       <button
+                                           type="button"
+                                           onClick={() => {
+                                               setShowModal(true);
+                                               setCurrentLink(data.basis);
+                                               setCurrentMatkul("Basis Data");
+                                           }}
+                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
+                                       >
+                                           <img
+                                               src="/asset/images/edit_square.png"
+                                               alt=""
+                                               className="w-[15px] mx-auto"
+                                           />
+                                       </button>
+                                   </div>
+                                   <small className="text-red-500">
+                                       {errors.basis}
+                                   </small>
+                               </form>
+                               <form
+                                   onSubmit={submitJarkom}
+                                   className="flex flex-col gap-2 w-full"
+                               >
+                                   <h3 className="text-xl text-black font-semibold uppercase">
+                                       Jaringan Komputer dan Komunikasi
+                                   </h3>
+                                   <label
+                                       htmlFor="alprog"
+                                       className="text-gray-600 text-sm"
+                                   >
+                                       Kumpulkan Link Google Drive kamu di sini
+                                   </label>
+                                   <div className="space-y-4 md:space-x-4">
+                                       <input
+                                           type="text"
+                                           name="jarkom"
+                                           id="jarkom"
+                                           value={data.jarkom}
+                                           onChange={(e) =>
+                                               setData("jarkom", e.target.value)
+                                           }
+                                           className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
+                                               errors.jarkom
+                                                   ? "border-red-500 focus:ring-red-500"
+                                                   : "border-[#CCCC] focus:border-primary"
+                                           }`}
+                                       />
+                                       <button
+                                           type="button"
+                                           onClick={() => {
+                                               setShowModal(true);
+                                               setCurrentLink(data.jarkom);
+                                               setCurrentMatkul(
+                                                   "Jaringan Komputer dan Komunikasi"
+                                               );
+                                           }}
+                                           className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
+                                       >
+                                           <img
+                                               src="/asset/images/edit_square.png"
+                                               alt=""
+                                               className="w-[15px] mx-auto"
+                                           />
+                                       </button>
+                                   </div>
+                                   <small className="text-red-500">
+                                       {errors.jarkom}
+                                   </small>
+                               </form>
+                               {isLeader && (
+                                   <form
+                                       onSubmit={submitProposal}
+                                       className="flex flex-col gap-2 w-full font-montserrat"
+                                   >
+                                       <h3 className="text-xl text-black font-semibold uppercase">
+                                           Pengumpulan Proposal GEMASTIK
+                                       </h3>
+                                       <label
+                                           htmlFor="alprog"
+                                           className="text-gray-600 text-sm"
+                                       >
+                                           Kumpulkan Link Google Drive tim kamu
+                                           di sini (hanya ketua tim yang dapat
+                                           mengirim)
+                                       </label>
+                                       <div className="space-y-4 md:space-x-4 font-montserrat">
+                                           <input
+                                               type="text"
+                                               name="submission_link"
+                                               id="submission_link"
+                                               value={data.submission_link}
+                                               onChange={(e) =>
+                                                   setData(
+                                                       "submission_link",
+                                                       e.target.value
+                                                   )
+                                               }
+                                               className={`bg-white w-full md:w-7/12 border-2 rounded-lg focus:outline-none focus:ring-1  text-primary p-2 ${
+                                                   errors.submission_link
+                                                       ? "border-red-500 focus:ring-red-500"
+                                                       : "border-[#CCCC] focus:border-primary"
+                                               }`}
+                                           />
+                                           <button
+                                               type="button"
+                                               onClick={() => {
+                                                   setShowModal(true);
+                                                   setCurrentLink(data.submission_link);
+                                                   setCurrentMatkul(
+                                                       "Proposal Gemastik"
+                                                   );
+                                               }}
+                                               className="py-4 px-4 bg-gradient-to-r from-[#201349] to-[#513E99] hover:bg-secondary font-bold text-white rounded-2xl transition-all duration-300 text-center"
+                                           >
+                                               <img
+                                                   src="/asset/images/edit_square.png"
+                                                   alt=""
+                                                   className="w-[15px] mx-auto"
+                                               />
+                                           </button>
+                                       </div>
+                                       <small className="text-red-500">
+                                           {errors.submission_link}
+                                       </small>
+                                   </form>
+                               )}
+                           </div>
+                       </div>
                    )}
-                   <EditModal
-                       visible={showModal}
-                       onClose={() => setShowModal(false)}
-                       value={currentLink}
-                       setValue={setCurrentLink}
-                       matkul={currentMatkul}
-                       onSubmit={(e) => {
-                           e.preventDefault();
-                           if (currentMatkul === "Algoritma dan Pemrograman")
-                               setData("alprog", currentLink);
-                           else if (currentMatkul === "Basis Data")
-                               setData("basis", currentLink);
-                           else if (
-                               currentMatkul ===
-                               "Jaringan Komputer dan Komunikasi"
-                           )
-                               setData("jarkom", currentLink);
-                           else if (currentMatkul === "Proposal Gemastik")
-                               setData("submission_link", currentLink);
-                           setShowModal(false);
+               </>
+           )}
+           <EditModal
+               visible={showModal}
+               onClose={() => setShowModal(false)}
+               value={currentLink}
+               setValue={setCurrentLink}
+               matkul={currentMatkul}
+               onSubmit={(e) => {
+                   e.preventDefault();
+                   if (currentMatkul === "Algoritma dan Pemrograman")
+                       setData("alprog", currentLink);
+                   else if (currentMatkul === "Basis Data")
+                       setData("basis", currentLink);
+                   else if (currentMatkul === "Jaringan Komputer dan Komunikasi")
+                    setData("jarkom", currentLink);
+                else if (currentMatkul === "Proposal Gemastik")
+                    setData("submission_link", currentLink)
+                   setShowModal(false);
 
-                           if (currentMatkul === "Algoritma dan Pemrograman")
-                               submitAlprog(e);
-                           if (currentMatkul === "Basis Data") submitBasis(e);
-                           if (
-                               currentMatkul ===
-                               "Jaringan Komputer dan Komunikasi"
-                           )
-                               submitJarkom(e);
-                           if (currentMatkul === "Proposal Gemastik")
-                               submitProposal(e);
-                       }}
-                   />
-               </div>
-           </div>
+                   if (currentMatkul === "Algoritma dan Pemrograman")
+                       submitAlprog(e);
+                   if (currentMatkul === "Basis Data") submitBasis(e);
+                   if (currentMatkul === "Jaringan Komputer dan Komunikasi")
+                       submitJarkom(e);
+                    if (currentMatkul === "Proposal Gemastik")
+                        submitProposal(e);
+               }}
+           />
        </AdminAuthentication>
    );
 }
