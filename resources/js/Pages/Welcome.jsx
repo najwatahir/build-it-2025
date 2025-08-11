@@ -808,7 +808,7 @@ export default function Welcome() {
                                         {/* Card 3 */}
                                         <div className="w-[300px] h-[184px] min-w-[300px] bg-white border border-[rgba(81,62,153,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.05)] rounded-3xl flex flex-col justify-center items-center px-4 py-6">
                                             <h3 className="text-[#201349] font-montserrat text-[16px] font-bold uppercase w-[200px] truncate text-center">
-                                                Adel
+                                                Adelia Wirashanti
                                             </h3>
                                             <p className="text-primary underline font-montserrat text-[14px] font-normal mt-2">
                                                 <a href="https://wa.me/+6283147664176">
