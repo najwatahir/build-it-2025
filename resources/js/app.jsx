@@ -48,7 +48,7 @@ const AppWrapper = ({ App, props }) => {
     );
 };
 
-const appName = import.meta.env.VITE_APP_NAME || "Laravel";
+const appName = import.meta.env.VITE_APP_NAME || "BUILD IT Official Website";
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
