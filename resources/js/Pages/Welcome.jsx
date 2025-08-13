@@ -50,18 +50,36 @@ export default function Welcome() {
     };
 
     const [batchInfo, setBatchInfo] = useState({
-        batchName: "Pre-Order",
+        batchName: "Pre-Order Batch 2",
         batchDate: "15 Agustus 2025 - 4 September 2025",
     });
 
     useEffect(() => {
         const currentDate = new Date();
+        const batch1Start = new Date("2025-07-26");
+        const batch1End = new Date("2025-08-14");
         const batch2Start = new Date("2025-08-15");
         const batch2End = new Date("2025-09-04");
+        const batch3Start = new Date("2025-09-05");
+        const batch3End = new Date("2025-10-05");
+
+        if (currentDate >= batch1Start && currentDate <= batch1End) {
+            setBatchInfo({
+                batchName: "Pre-Order Batch 1",
+                batchDate: "26 Juli 2025 - 14 Agustus 2025",
+            });
+        }
 
         if (currentDate >= batch2Start && currentDate <= batch2End) {
             setBatchInfo({
-                batchName: "Extended Pre-Order",
+                batchName: "Pre-Order Batch 2",
+                batchDate: "15 Agustus 2025 - 4 Oktober 2025",
+            });
+        }
+
+        if (currentDate >= batch3Start && currentDate <= batch3End) {
+            setBatchInfo({
+                batchName: "Extended Pre-Order Batch 3",
                 batchDate: "5 September 2025 - 5 Oktober 2025",
             });
         }
@@ -236,7 +254,9 @@ export default function Welcome() {
                                 data-aos-delay="100"
                             >
                                 <p>Master the basics</p>
-                                <p className="mb-2">Unlock your IT Superpower</p>
+                                <p className="mb-2">
+                                    Unlock your IT Superpower
+                                </p>
                             </div>
 
                             <div
@@ -853,7 +873,7 @@ export default function Welcome() {
                                 }}
                             >
                                 {/* Warna Palet */}
-                                <div className="absolute top-4 left-4 flex gap-3 sm:gap-2 flex-col sm:flex-row">
+                                <div className="absolute md:top-4 top-16 left-4 flex gap-3 sm:gap-2 sm:flex-row">
                                     <button
                                         onClick={() => setShirtColor("black")}
                                         className="w-12 aspect-square rounded-[10px] border-2 hover:border-[#513E99] bg-black hover:scale-105 transition-transform"

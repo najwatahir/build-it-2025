@@ -1,11 +1,67 @@
-import { React, useRef } from "react";
+import { React, useRef, useEffect } from "react";
 import { Head, usePage, Link, router } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 import { Toast } from "primereact/toast";
+import { confirmDialog } from "primereact/confirmdialog";
 
-export default function Team() {
-    const { user, team } = usePage().props;
+export default function Team({user, team}) {
     const toast = useRef(null);
+    const { flash } = usePage().props;
+
+    useEffect(() => {
+        if (flash?.success) {
+            toast.current.show({
+                severity: "success",
+                summary: "Berhasil",
+                detail: flash.success,
+                life: 5000,
+            });
+        }
+        if (flash?.error) {
+            toast.current.show({
+                severity: "error",
+                summary: "Gagal",
+                detail: flash.error,
+                life: 5000,
+            });
+        }
+    }, [flash]);
+
+
+    const leaveTeam = () => {
+        confirmDialog({
+            message: "Yakin ingin keluar dari tim?",
+            header: "Konfirmasi Keluar Tim",
+            icon: "pi pi-exclamation-triangle",
+            acceptLabel: "Ya",
+            rejectLabel: "Batal",
+            acceptClassName: "p-button-danger",
+            accept: () => {
+                router.post(
+                    route("participant.team.leave"),
+                    {},
+                    {
+                        onSuccess: () => {
+                            toast.current.show({
+                                severity: "success",
+                                summary: "Berhasil",
+                                detail: "Kamu telah keluar dari tim!",
+                                life: 3000,
+                            });
+                        },
+                        onError: () => {
+                            toast.current.show({
+                                severity: "error",
+                                summary: "Gagal",
+                                detail: "Terjadi kesalahan saat keluar dari tim.",
+                                life: 3000,
+                            });
+                        },
+                    }
+                );
+            },
+        });
+    };
 
     return (
         <AdminAuthentication user={user} headerTitle="Tim">
@@ -48,19 +104,7 @@ export default function Team() {
                                     <div className="flex flex-col md:flex-row gap-2 items-center">
                                         <button
                                             className="w-full md:w-auto px-4 py-2 bg-gradient-to-r from-[#201349] to-[#513E99] hover:text-[#FCB215] text-white rounded-xl text-sm font-semibold shadow-md"
-                                            onClick={() => {
-                                                if (
-                                                    confirm(
-                                                        "Yakin ingin keluar dari tim?"
-                                                    )
-                                                ) {
-                                                    router.post(
-                                                        route(
-                                                            "participant.team.leave"
-                                                        )
-                                                    );
-                                                }
-                                            }}
+                                            onClick={leaveTeam}
                                         >
                                             KELUAR
                                         </button>

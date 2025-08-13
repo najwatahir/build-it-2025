@@ -1,5 +1,7 @@
 import React from "react";
-import { Head, useForm, router, Link } from "@inertiajs/react";
+import { Toast } from "primereact/toast";
+import { useEffect, useRef } from "react";
+import { Head, useForm, router, Link, usePage } from "@inertiajs/react";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
 
 export default function JoinTeam({ user }) {
@@ -16,9 +18,32 @@ export default function JoinTeam({ user }) {
         });
     };
 
+    const { flash } = usePage().props;
+    const toast = useRef(null);
+
+    useEffect(() => {
+        if (flash?.success) {
+            toast.current.show({
+                severity: "success",
+                summary: "Berhasil",
+                detail: flash.success,
+                life: 3000,
+            });
+        }
+        if (flash?.error) {
+            toast.current.show({
+                severity: "error",
+                summary: "Gagal",
+                detail: flash.error,
+                life: 3000,
+            });
+        }
+    }, [flash]);
+
     return (
         <AdminAuthentication user={user} headerTitle="Join Team">
-            <div className="p-6">
+            <Toast ref={toast}/>
+            <div className="p-6 font-montserrat">
                 <div className="bg-white shadow rounded-[30px] p-8">
                     <Link
                         href={route("participant.team")}
@@ -27,10 +52,10 @@ export default function JoinTeam({ user }) {
                         <p className="pi pi-arrow-left text-primary p-2 rounded-full"></p>
                         KEMBALI
                     </Link>
-                    <h2 className="text-2xl font-bold mb-2">BANGUN TIM</h2>
+                    <h2 className="text-2xl font-bold mb-2">GABUNG TIM</h2>
                     <p className="text-gray-600 mb-6">
-                        Buat tim baru untuk mengerjakan tugas kelompok bersama
-                        temanmu.
+                        Gabung ke dalam tim untuk mengerjakan tugas kelompok bersama
+                        temanmu. Jika tim sudah terdiri dari 3 orang, kamu tidak dapat bergabung.
                     </p>
 
                     <form onSubmit={handleSubmit}>

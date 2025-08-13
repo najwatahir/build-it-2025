@@ -63,26 +63,32 @@ class TeamController extends Controller
     }
 
     public function join(Request $request)
-    {
-        $user = Auth::user();
+{
+    $user = Auth::user();
 
-        if ($user->team()->exists()) {
-            return back()->with('error', 'Anda sudah tergabung dalam tim.');
-        }
-
-        $request->validate([
-            'code' => 'required|string|exists:teams,code',
-        ]);
-
-        $team = Team::where('code', $request->code)->first();
-        if ($team->members()->count() >= 3) {
-            return back()->with('error', 'Tim sudah penuh (maksimal 3 anggota).');
-        }
-
-        $team->members()->attach($user->id);
-
-        return redirect()->back()->with('success', 'Berhasil bergabung dengan tim.');
+    if ($user->team()->exists()) {
+        return redirect()->route('participant.team')
+            ->with('error', 'Anda sudah tergabung dalam tim.');
     }
+
+    $request->validate([
+        'code' => 'required|string|exists:teams,code',
+    ]);
+
+    $team = Team::where('code', $request->code)->first();
+
+    if ($team->members()->count() >= 3) {
+        return redirect()->route('participant.team')
+            ->with('error', 'Tim sudah penuh (maksimal 3 anggota).');
+    }
+
+    $team->members()->attach($user->id);
+
+    return redirect()->route('participant.team')
+        ->with('success', 'Berhasil bergabung dengan tim.');
+}
+
+
 
     public function leave()
     {
