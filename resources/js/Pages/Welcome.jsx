@@ -7,6 +7,7 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
+import { Dialog } from "primereact/dialog";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SponsorSlider from "@/Components/SponsorSlider";
@@ -280,15 +281,27 @@ export default function Welcome() {
                                     </button>
                                 </Link>
 
-                                <Link href="#">
+                                <div>
+                                    <Dialog 
+                                        header="How to Join BUILD IT 2025"
+                                        variant="ghost"
+                                        visible={visible} 
+                                        modal={false}
+                                        onHide={() => { if (!visible) return; setVisible(false); }}
+                                        className="w-full md:w-9/12 md:h-[564px] h-full rounded-[10px] !px-0 py-0">
+                                            <div className="w-full h-full max-[580px]">
+                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/woI-BxH1wBs?si=iLP-yaHxwiNkMPql" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            </div>
+                                    </Dialog>
                                     <button
                                         className="px-[62px] md:px-6 py-3 rounded-xl border-2 border-[#201349] text-[#201349]
                font-[Montserrat] text-sm sm:text-base font-bold leading-[30px]
                tracking-[1.6px] uppercase flex items-center gap-2 hover:bg-[#f4f4f4] hover:border-secondary hover:text-secondary transition-all duration-200"
+               onClick={() => setVisible(true)}
                                     >
                                         How to Join
                                     </button>
-                                </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
