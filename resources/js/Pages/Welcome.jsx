@@ -51,25 +51,16 @@ export default function Welcome() {
     };
 
     const [batchInfo, setBatchInfo] = useState({
-        batchName: "Pre-Order Batch 2",
-        batchDate: "15 Agustus 2025 - 4 September 2025",
+        batchName: "Pre-Order Batch 1",
+        batchDate: "26 Juli 2025 - 14 Agustus 2025",
     });
 
     useEffect(() => {
         const currentDate = new Date();
-        const batch1Start = new Date("2025-07-26");
-        const batch1End = new Date("2025-08-14");
         const batch2Start = new Date("2025-08-15");
         const batch2End = new Date("2025-09-04");
         const batch3Start = new Date("2025-09-05");
         const batch3End = new Date("2025-10-05");
-
-        if (currentDate >= batch1Start && currentDate <= batch1End) {
-            setBatchInfo({
-                batchName: "Pre-Order Batch 1",
-                batchDate: "26 Juli 2025 - 14 Agustus 2025",
-            });
-        }
 
         if (currentDate >= batch2Start && currentDate <= batch2End) {
             setBatchInfo({
