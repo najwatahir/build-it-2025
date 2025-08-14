@@ -90,7 +90,7 @@ export default function JaringanKomputer() {
                                     jaringan.
                                 </p>
                                 <a
-                                    href="https://drive.google.com/file/d/1g673vjj-9H9FdCbrPQ_yOEJKYbanJWXL/view?usp=sharing"
+                                    href="https://drive.google.com/file/d/1uCrhZ1q13_6UubPZYMdDmCT-Iw-GoIJS/view?usp=sharing"
                                     target="_blank"
                                     className="mb-12"
                                 >

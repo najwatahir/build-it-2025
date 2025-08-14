@@ -144,7 +144,7 @@ export default function Register() {
             <Head title="Pendaftaran" />
             <UserGuest>
                 <Toast ref={toast} />
-                <div className="relative w-full h-[1300px] overflow-hidden">
+                <div className="relative w-full h-[1500px] overflow-hidden">
                     <div className="absolute inset-0 z-0 rotate-[3.779deg]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

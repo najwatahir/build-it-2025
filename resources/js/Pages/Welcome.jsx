@@ -489,7 +489,7 @@ export default function Welcome() {
                                             memanipulasi data.
                                         </p>
                                         <Link
-                                            href="/modul/alprog"
+                                            href="/modul/basisdata"
                                             className="w-full flex items-center justify-center px-[15px] py-[5px] md:px-[30px] md:py-[10px] rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0_4px_4px_rgba(0,0,0,0.15)] text-white font-[Montserrat] text-[10px] md:text-[14px] font-semibold leading-[30px] tracking-[0.1em] uppercase hover:text-secondary transition-all duration-300"
                                         >
                                             Lebih Lanjut{" "}
@@ -519,7 +519,7 @@ export default function Welcome() {
                                             data antar perangkat.
                                         </p>
                                         <Link
-                                            href="/modul/alprog"
+                                            href="/modul/jarkom"
                                             className="w-full flex items-center justify-center px-[15px] py-[5px] md:px-[30px] md:py-[10px] rounded-[15px] bg-gradient-to-r from-[#201349] to-[#513E99] shadow-[0_4px_4px_rgba(0,0,0,0.15)] text-white font-[Montserrat] text-[10px] md:text-[14px] font-semibold leading-[30px] tracking-[0.1em] uppercase hover:text-secondary transition-all duration-300"
                                         >
                                             Lebih Lanjut{" "}
