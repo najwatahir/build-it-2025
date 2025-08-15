@@ -1005,7 +1005,7 @@ export default function Welcome() {
 
                             {/* Tombol Order */}
                             <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSetpvbbp8uZ_j3ldweE0fOmqgNyAN2bB-bcly7gqWT-YArAxA/viewform"
+                                href="https://forms.gle/w5okLj7YyA8scWEX6"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-[#201349] to-[#513E99] text-white text-sm sm:text-base font-bold uppercase tracking-wide font-['Montserrat'] transition hover:brightness-110 hover:scale-[1.02] hover:shadow-lg"
