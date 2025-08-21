@@ -33,13 +33,17 @@ export default function Register() {
     }, []);
 
     const registerClose = () => {
-        const closingDate = new Date("2025-09-05");
+        const closingDate1 = new Date("2025-08-20");
+        const openDate2 = new Date ("2025-08-22");
+        const closingDate2 = new Date ("2025-09-05")
         const currentDate = new Date();
 
-        if (currentDate > closingDate) {
-            return true;
-        } else {
+        if (currentDate <= closingDate1) {
             return false;
+        } else if (currentDate >= openDate2 && currentDate <= closingDate2) {
+            return false;
+        } else {
+            return true;
         }
     };
 
