@@ -158,7 +158,7 @@ export default function Submission({ team }) {
 
     const submissionClose = () => {
         const currentDate = new Date();
-        const closingDate = new Date("2025-10-12");
+        const closingDate = new Date("2025-10-11T23:59:59");
 
         return currentDate > closingDate ? true : false;
     };

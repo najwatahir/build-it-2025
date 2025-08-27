@@ -1,18 +1,27 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useForm, usePage } from "@inertiajs/react";
 import { InputText } from "primereact/inputtext";
 import AdminAuthentication from "@/Components/Layouts/AdminAuthentication";
+import { useMountEffect } from "primereact/hooks";
 import { Toast } from "primereact/toast";
+import { Messages } from "primereact/messages";
 
 export default function Twibbon({ user }) {
     const { data, setData, put, processing, errors } = useForm({
         twibbon: user.twibbon || "",
     });
 
-    const toast = useRef(null);
-
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (twibbonClose()) {
+            toast.current.show({
+                severity: "error",
+                summary: "Peringatan",
+                detail: "Maaf, pengumpulan twibbon telah ditutup.",
+                life: 3000,
+            });
+            return;
+        }
         put(route("participant.submittwibbon"), {
             onSuccess: () => {
                 toast.current.show({
@@ -33,6 +42,38 @@ export default function Twibbon({ user }) {
         });
     };
 
+    const twibbonClose = () => {
+        const closingDate = new Date("2025-09-19T23:59:59");
+        const currentDate = new Date();
+
+        if (currentDate <= closingDate) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    const toast = useRef(null);
+
+
+    const msgs = useRef(null);
+    useMountEffect(() => {
+        if (twibbonClose()) {
+            if (msgs.current) {
+                msgs.current.clear();
+                msgs.current.show({
+                    id: "1",
+                    sticky: true,
+                    severity: "error",
+                    icon: "pi",
+                    summary: "Maaf, pengumpulan twibbon telah ditutup.",
+                    detail: "",
+                    closable: false,
+                });
+            }
+        }
+    });
+
     return (
         <>
             <Toast ref={toast} />
@@ -43,8 +84,8 @@ export default function Twibbon({ user }) {
                             user.status === "Ditolak") && (
                             <div className="flex flex-col justify-center items-center space-y-10 min-h-screen font-montserrat">
                                 <h1 className="font-bold text-red-500 text-xl">
-                                    Halaman twibbon akan tersedia jika
-                                    status peserta sudah terverifikasi
+                                    Halaman twibbon akan tersedia jika status
+                                    peserta sudah terverifikasi
                                 </h1>
                                 <span>
                                     <i className="pi pi-exclamation-circle text-[10rem] text-red-500"></i>
@@ -57,6 +98,7 @@ export default function Twibbon({ user }) {
                                 <h2 className="text-2xl font-bold text-gray-800 mb-2 uppercase">
                                     Twibbon
                                 </h2>
+                                <Messages ref={msgs} />
                                 <p className="text-[#999999] mb-6">
                                     Terima kasih telah ikut meramaikan acara
                                     ini! Yuk, lengkapi partisipasimu dengan
