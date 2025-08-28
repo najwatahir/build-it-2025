@@ -103,7 +103,11 @@ export default function Twibbon({ user }) {
                                     Terima kasih telah ikut meramaikan acara
                                     ini! Yuk, lengkapi partisipasimu dengan
                                     mengunduh twibbon resmi dan mengunggah bukti
-                                    postingan Instagram kamu.
+                                    postingan Instagram kamu. Pengumpulan
+                                    terakhir pada{" "}
+                                    <span className="font-bold">
+                                        19 September 2025 pukul 23.59
+                                    </span>
                                 </p>
 
                                 <div className="mb-8">

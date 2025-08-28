@@ -224,7 +224,7 @@ export default function Submission({ team }) {
                                 </p>
                                 <p className="text-gray-600 mb-6 text-sm">
                                     Unggah link tugasmu di sini. Pastikan sudah
-                                    dibagikan dengan akses publik.
+                                    dibagikan dengan akses publik. Pengumpulan terakhir pada <span className="font-bold">11 Oktober 2025 pukul 23.59</span>
                                 </p>
                                 <form
                                     onSubmit={submitAlprog}
