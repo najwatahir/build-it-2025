@@ -43,7 +43,7 @@ export default function Twibbon({ user }) {
     };
 
     const twibbonClose = () => {
-        const closingDate = new Date("2025-09-19T23:59:59");
+        const closingDate = new Date("2025-09-15T23:59:59");
         const currentDate = new Date();
 
         if (currentDate <= closingDate) {
@@ -106,7 +106,7 @@ export default function Twibbon({ user }) {
                                     postingan Instagram kamu. Pengumpulan
                                     terakhir pada{" "}
                                     <span className="font-bold">
-                                        19 September 2025 pukul 23.59
+                                        15 September 2025 pukul 23.59
                                     </span>
                                 </p>
 
