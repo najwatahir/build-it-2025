@@ -9,6 +9,7 @@ const sponsors = [
     "/asset/images/sponsor5.png",
     "/asset/images/sponsor3.jpg",
     "/asset/images/sponsor4.jpg",
+    "/asset/images/sponsor6.jpg",
 ];
 
 const SponsorSlider = () => {
