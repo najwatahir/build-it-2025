@@ -5,6 +5,7 @@ import { FilterMatchMode } from 'primereact/api';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { InputText } from 'primereact/inputtext';
+import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
 import { Tag } from 'primereact/tag';
 import { Button } from 'primereact/button';
@@ -30,6 +31,12 @@ export default function Participants() {
       kelompok: '',
       kelulusan: '',
       alasan_tidak_lulus: '',
+      nilai_alprog: '',
+      nilai_jarkom: '',
+      nilai_basdat: '',
+      nilai_gemastik: '',
+      nilai_kehadiran: '',
+      nilai_akhir: ''
    });
 
    const [statuses] = useState(['Terverifikasi', 'Belum Terverifikasi', 'Ditolak']);
@@ -66,7 +73,7 @@ export default function Participants() {
 
    useEffect(() => {
       if (editedRow !== null) {
-         const { id, nim, name, email, whatsapp_id, line_id, status, kelompok, kelulusan, alasan_tidak_lulus } = editedRow;
+         const { id, nim, name, email, whatsapp_id, line_id, status, kelompok, kelulusan, alasan_tidak_lulus, nilai_alprog, nilai_jarkom, nilai_basdat, nilai_kehadiran, nilai_gemastik, nilai_akhir } = editedRow;
 
          if(status === "Terverifikasi" && kelompok == null){
             setTimeout(() => {
@@ -87,6 +94,12 @@ export default function Participants() {
                kelompok,
                kelulusan,
                alasan_tidak_lulus,
+               nilai_alprog,
+               nilai_jarkom,
+               nilai_basdat,
+               nilai_gemastik,
+               nilai_kehadiran,
+               nilai_akhir
             },
             onSuccess: () => {
                reset();
@@ -128,6 +141,18 @@ export default function Participants() {
 
    const textEditor = (options) => {
       return <InputText type="text" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} />;
+   };
+
+   const numberEditor = (options) => {
+       return (
+           <InputNumber
+               value={options.value}
+               onValueChange={(e) => options.editorCallback(e.value)}
+               mode="decimal"
+               min={0}
+               max={100}
+           />
+       );
    };
 
    const statusEditor = (options) => {
@@ -378,6 +403,48 @@ export default function Participants() {
                        field="kelompok"
                        header="Kelompok"
                        editor={(options) => textEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="nilai_alprog"
+                       header="Nilai Alprog"
+                       editor={(options) => numberEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="nilai_jarkom"
+                       header="Nilai Jarkom"
+                       editor={(options) => numberEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="nilai_basdat"
+                       header="Nilai Basis Data"
+                       editor={(options) => numberEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="nilai_gemastik"
+                       header="Nilai GEMASTIK"
+                       editor={(options) => numberEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="nilai_kehadiran"
+                       header="Nilai Kehadiran"
+                       editor={(options) => numberEditor(options)}
+                       sortable
+                       style={{ minWidth: "12rem" }}
+                   />
+                   <Column
+                       field="nilai_akhir"
+                       header="Nilai Akhir"
+                       editor={(options) => numberEditor(options)}
                        sortable
                        style={{ minWidth: "12rem" }}
                    />

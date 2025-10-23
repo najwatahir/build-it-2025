@@ -27,6 +27,12 @@ class UserResourceShared extends JsonResource
             'kelulusan' => $this->kelulusan,
             'alasan_tidak_lulus' => $this->alasan_tidak_lulus,
             'twibbon' => $this->twibbon,
+            'nilai_alprog' => $this->nilai_alprog,
+            'nilai_jarkom' => $this->nilai_jarkom,
+            'nilai_basdat' => $this->nilai_basdat,
+            'nilai_gemastik' => $this->nilai_gemastik,
+            'nilai_kehadiran' => $this->nilai_kehadiran,
+            'nilai_akhir' => $this->nilai_akhir,
         ];
     }
 }

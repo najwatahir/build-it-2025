@@ -11,7 +11,13 @@ export default function Graduation() {
         name: user.name,
         nim: user.nim,
         kelulusan: user.kelulusan,
-        alasan_tidak_lulus: user.alasan_tidak_lulus
+        alasan_tidak_lulus: user.alasan_tidak_lulus,
+        nilai_alprog: user.nilai_alprog,
+        nilai_jarkom: user.nilai_jarkom,
+        nilai_basdat: user.nilai_basdat,
+        nilai_gemastik: user.nilai_gemastik,
+        nilai_kehadiran: user.nilai_kehadiran,
+        nilai_akhir: user.nilai_akhir
     });
 
     const toast = useRef(null);
@@ -44,27 +50,89 @@ export default function Graduation() {
                         <p className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-2">
                             Informasi Kelulusan
                         </p>
-                        <div className="flex flex-col justify-center items-center space-y-10 min-h-screen">
-                            <h1 className="font-bold text-primary text-4xl">
+                        <div className="flex flex-col justify-center items-center space-y-10 md:min-h-screen">
+                            <h1 className="font-bold text-primary md:text-4xl text-xl">
                                 Selamat Anda Telah Lulus BUILD IT 2025!
                             </h1>
                             <span>
-                                <i className="pi pi-star text-[14rem] text-primary"></i>
+                                <i className="pi pi-star md:text-[14rem] text-[8rem] text-primary"></i>
                             </span>
                             <div className="flex flex-col justify-center items-center text-primary font-semibold">
                                 <h2>NIM : {data.nim}</h2>
                                 <h2>Nama : {data.name}</h2>
                             </div>
 
-                            <ButtonViewCertificate
+                            {/* <ButtonViewCertificate
                                 userName={data.name}
                                 status={data.kelulusan === "Lulus"}
-                            />
-                            {/* <a href="https://drive.google.com/drive/folders/1R9Q3GWaLoUIKSWwN8S6K_BwuNSfd39tt?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  <button className="py-3 px-6 bg-primary hover:bg-secondary font-bold text-white rounded-lg transition-all duration-300 text-center disabled:bg-primary/80">
-                     Cari Sertifikat
-                  </button>
-               </a> */}
+                            /> */}
+                            {/* tabel nilai */}
+                            <div className="block w-full md:overflow-x-hidden overflow-x-auto rounded-lg shadow-md">
+                                <table className="w-full text-sm text-left rtl:text-right text-primary">
+                                    <thead className="text-xs uppercase bg-primary text-white">
+                                        <tr>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas Alprog
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas Jarkom
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas Basis Data
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas GEMASTIK
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Kehadiran
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className-="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Akhir
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="bg-white">
+                                        <tr className="border-b border-gray-200">
+                                            <td className="px-6 py-4">
+                                                {data.nilai_alprog}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_jarkom}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_basdat}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_gemastik}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_kehadiran}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_akhir}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,15 +144,82 @@ export default function Graduation() {
                         <p className="text-xl md:text-2xl font-bold tracking-widest uppercase mb-2">
                             Informasi Kelulusan
                         </p>
-                        <div className="flex flex-col justify-center items-center space-y-10 min-h-screen">
-                            <h1 className="font-bold text-red-500 md:text-4xl text-xl">
+                        <div className="flex flex-col justify-center items-center space-y-10 md:min-h-screen">
+                            <h1 className="font-bold text-red-500 md:text-4xl  tracking">
                                 Maaf Anda Tidak Lulus BUILD IT 2025
                             </h1>
                             <span>
                                 <i className="pi pi-times-circle md:text-[14rem] text-[7rem] text-red-500"></i>
                             </span>
-                            <div className="font-bold text-red-500 md:text-4xl text-xl flex">
+                            <div className="font-bold text-red-500 md:text-4xl  flex">
                                 {data.alasan_tidak_lulus}
+                            </div>
+
+                            <div className="block w-full md:overflow-x-hidden overflow-x-auto rounded-lg shadow-md">
+                                <table className="w-full text-sm text-left rtl:text-right text-primary">
+                                    <thead className="text-xs uppercase bg-primary text-white">
+                                        <tr>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas Alprog
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas Jarkom
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas Basis Data
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Tugas GEMASTIK
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Kehadiran
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className-="px-6 py-3 min-w-[150px]"
+                                            >
+                                                Nilai Akhir
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="bg-white">
+                                        <tr className="border-b border-gray-200">
+                                            <td className="px-6 py-4">
+                                                {data.nilai_alprog}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_jarkom}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_basdat}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_gemastik}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_kehadiran}
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                {data.nilai_akhir}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <div className="flex flex-col justify-center items-center text-red-500 font-semibold text-center">
                                 <h2>Semangat mengikuti BUILD IT 2026</h2>

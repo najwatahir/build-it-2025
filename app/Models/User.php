@@ -36,6 +36,12 @@ class User extends Authenticatable
         'kelulusan',
         'alasan_tidak_lulus',
         'twibbon',
+        'nilai_alprog',
+        'nilai_jarkom',
+        'nilai_basdat',
+        'nilai_gemastik',
+        'nilai_kehadiran',
+        'nilai_akhir'
     ];
 
     /**

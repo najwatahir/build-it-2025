@@ -38,6 +38,12 @@ class AdminParticipantsController extends Controller
             'kelompok' => 'nullable|string|max:255',
             'kelulusan' => 'required|string|in:Lulus,Belum Lulus,Tidak Lulus',
             'alasan_tidak_lulus' => Rule::requiredIf($request->kelulusan === 'Tidak Lulus'),
+            'nilai_alprog' => 'nullable|integer|min:0|max:100',
+            'nilai_jarkom' => 'nullable|integer|min:0|max:100',
+            'nilai_basdat' => 'nullable|integer|min:0|max:100',
+            'nilai_gemastik' => 'nullable|integer|min:0|max:100',
+            'nilai_kehadiran' => 'nullable|integer|min:0|max:100',
+            'nilai_akhir' => 'nullable|numeric|max:100'
         ]);
 
         $participant = User::findOrFail($id);
@@ -52,6 +58,12 @@ class AdminParticipantsController extends Controller
             'kelompok' => $request->kelompok,
             'kelulusan' => $request->kelulusan,
             'alasan_tidak_lulus' => $request->alasan_tidak_lulus,
+            'nilai_alprog' => $request->nilai_alprog,
+            'nilai_jarkom' => $request->nilai_jarkom,
+            'nilai_basdat' => $request->nilai_basdat,
+            'nilai_gemastik' => $request->nilai_gemastik,
+            'nilai_kehadiran' => $request->nilai_kehadiran,
+            'nilai_akhir' => $request->nilai_akhir,
         ]);
 
         return to_route('participants.index');
