@@ -62,10 +62,10 @@ export default function Graduation() {
                                 <h2>Nama : {data.name}</h2>
                             </div>
 
-                            <ButtonViewCertificate
+                            {/* <ButtonViewCertificate
                                 userName={data.name}
                                 status={data.kelulusan === "Lulus"}
-                            />
+                            /> */}
                             {/* tabel nilai */}
                             <div className="block w-full md:overflow-x-hidden overflow-x-auto rounded-lg shadow-md">
                                 <table className="w-full text-sm text-left rtl:text-right text-primary">
