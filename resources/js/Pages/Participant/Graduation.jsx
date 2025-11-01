@@ -57,7 +57,7 @@ export default function Graduation() {
                             <span>
                                 <i className="pi pi-star md:text-[14rem] text-[8rem] text-primary"></i>
                             </span>
-                            <div className="flex flex-col justify-center items-center text-primary font-semibold">
+                            <div className="flex flex-col justify-center items-center text-primary font-semibold md:text-2xl text-base">
                                 <h2>NIM : {data.nim}</h2>
                                 <h2>Nama : {data.name}</h2>
                             </div>
@@ -73,37 +73,37 @@ export default function Graduation() {
                                         <tr>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 min-w-[150px]"
+                                                className="px-6 py-3 min-w-[100px]"
                                             >
                                                 Nilai Tugas Alprog
                                             </th>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 min-w-[150px]"
+                                                className="px-6 py-3 min-w-[100px]"
                                             >
                                                 Nilai Tugas Jarkom
                                             </th>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 min-w-[150px]"
+                                                className="px-6 py-3 min-w-[100px]"
                                             >
                                                 Nilai Tugas Basis Data
                                             </th>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 min-w-[150px]"
+                                                className="px-6 py-3 min-w-[100px]"
                                             >
                                                 Nilai Tugas GEMASTIK
                                             </th>
                                             <th
                                                 scope="col"
-                                                className="px-6 py-3 min-w-[150px]"
+                                                className="px-6 py-3 min-w-[100px]"
                                             >
                                                 Nilai Kehadiran
                                             </th>
                                             <th
                                                 scope="col"
-                                                className-="px-6 py-3 min-w-[150px]"
+                                                className-="px-6 py-3 min-w-[100px]"
                                             >
                                                 Nilai Akhir
                                             </th>
