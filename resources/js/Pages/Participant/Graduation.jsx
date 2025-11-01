@@ -51,7 +51,7 @@ export default function Graduation() {
                             Informasi Kelulusan
                         </p>
                         <div className="flex flex-col justify-center items-center space-y-10 md:min-h-screen">
-                            <h1 className="font-bold text-primary md:text-4xl text-xl">
+                            <h1 className="font-bold text-primary md:text-4xl space-y-2">
                                 Selamat Anda Telah Lulus BUILD IT 2025!
                             </h1>
                             <span>
@@ -62,10 +62,10 @@ export default function Graduation() {
                                 <h2>Nama : {data.name}</h2>
                             </div>
 
-                            {/* <ButtonViewCertificate
+                            <ButtonViewCertificate
                                 userName={data.name}
                                 status={data.kelulusan === "Lulus"}
-                            /> */}
+                            />
                             {/* tabel nilai */}
                             <div className="block w-full md:overflow-x-hidden overflow-x-auto rounded-lg shadow-md">
                                 <table className="w-full text-sm text-left rtl:text-right text-primary">

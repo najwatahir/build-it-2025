@@ -28,6 +28,11 @@ class AdminParticipantsController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
+        $request->merge([
+        'nilai_akhir' => str_replace(',', '.', $request->nilai_akhir)
+    ]);
+
         $request->validate([
             'nim' => 'required|string|max:10',
             'name' => 'required|string|max:255',
@@ -43,7 +48,7 @@ class AdminParticipantsController extends Controller
             'nilai_basdat' => 'nullable|integer|min:0|max:100',
             'nilai_gemastik' => 'nullable|integer|min:0|max:100',
             'nilai_kehadiran' => 'nullable|integer|min:0|max:100',
-            'nilai_akhir' => 'nullable|numeric|max:100'
+            'nilai_akhir' => ['nullable', 'numeric', 'min:0', 'max:100']
         ]);
 
         $participant = User::findOrFail($id);

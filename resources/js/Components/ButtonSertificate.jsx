@@ -14,7 +14,7 @@ const ButtonViewCertificate = ({ userName, status }) => {
         <button
             onClick={handleViewCertificate}
             disabled={!status}
-            className={`py-3 px-6 font-bold text-white rounded-lg transition-all ease-in-out duration-300 text-center ${status ? 'bg-primary hover:bg-secondary' : 'bg-primary/80 cursor-not-allowed'
+            className={`font-montserrat py-3 md:px-6 px-3 text-sm md:text-lg uppercase font-bold text-white rounded-lg transition-all ease-in-out duration-300 text-center ${status ? 'bg-primary hover:bg-secondary' : 'bg-primary/80 cursor-not-allowed'
                 }`}
         >
             {status ? 'Lihat Sertifikat' : 'Belum Tersedia'}

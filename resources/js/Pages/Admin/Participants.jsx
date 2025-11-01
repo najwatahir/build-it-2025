@@ -149,8 +149,9 @@ export default function Participants() {
                value={options.value}
                onValueChange={(e) => options.editorCallback(e.value)}
                mode="decimal"
-               min={0}
-               max={100}
+               minFractionDigits={1}
+               maxFractionDigits={2}
+               useGrouping={false}
            />
        );
    };
